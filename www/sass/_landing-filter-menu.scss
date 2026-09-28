@@ -1,0 +1,191 @@
+/*
+------------------------------------------------------------
+	landing filter menu
+-------------------------------------------------------------
+*/
+
+	#filter-wrap
+	{
+		position:fixed;
+		top:85px;
+		left:0;
+		width:100%;
+		z-index:5;
+		color:#fff;
+		border-top:1px solid #8c9180;
+	}
+	
+	#filter-wrap a {
+		color:#fff;
+	}
+	
+	
+	#filter{
+		position:relative;
+		margin-top:0;
+		margin-left:0;
+		width:100%;
+		background:rgba(0,0,0,0.7);
+		text-align:center;
+		height:0;
+		overflow:hidden;
+		
+		-webkit-transition-property: height;
+		-webkit-transition-duration: 0.3s;
+		
+		border-bottom:1px solid #8c9180;
+	}
+	
+	#filter-wrap.showFilter #filter{
+		height:42px; 
+	}
+
+	.storeListMap #filter-wrap.showFilter #filter{
+		height:90px;
+		overflow: scroll;
+	}
+	
+	#filter-wrap.hideFilter #filter{
+		height:0px;
+	}
+
+	/* Apply Filters Tab Arrows */
+	#filter-wrap.showFilter #apply-filters{
+		position: relative;
+	}
+	#filter-wrap.showFilter #apply-filters:before, #filter-wrap.showFilter #apply-filters:after{
+		position: absolute;
+		top:0px;
+		height: 28px;
+		width: 28px;
+		background-size: 28px 28px;
+		content: '';
+		background-image: url('../img/filter-cat-imgs/filtercat-img_arrow-up.png')
+	}
+	#filter-wrap.showFilter #apply-filters:before{
+		left:0px;
+	}
+	#filter-wrap.showFilter #apply-filters:after{
+		right: 0px;
+	}
+
+	#filter-wrap.hideFilter #apply-filters{
+		position: relative;
+	}
+	#filter-wrap.hideFilter #apply-filters:before, #filter-wrap.hideFilter #apply-filters:after{
+		position: absolute;
+		top:0px;
+		height: 28px;
+		width: 28px;
+		background-size: 28px 28px;
+		content: '';
+		background-image: url('../img/filter-cat-imgs/filtercat-img_arrow-down.png')
+	}
+	#filter-wrap.hideFilter #apply-filters:before{
+		left:0px;
+	}
+	#filter-wrap.hideFilter #apply-filters:after{
+		right: 0px;
+	}
+	/* Apply Filters Tab Arrows */
+	
+	#filter:after{
+		content:"\0020";
+		clear:both;
+	}
+	
+	#filter ul li {
+		position:relative;
+		float:left;
+		display:inline-block;
+		width:33.2%;
+		border-top:1px solid #8c9180;
+		border-bottom:1px solid #8c9180;
+		height:45px;
+		line-height:45px;
+	}
+	#filter ul li+li {
+		border-left:1px solid #8c9180;
+	}
+	#filter ul:after {
+		content:"\0020";
+		clear:both;
+		display:block;
+	}
+	#filter ul {
+		display:none; /* future release */
+	}
+	
+	#featured-prod-link {
+		height:45px;
+		line-height:39px;
+		display:block;
+		position:relative;
+		width:100%;
+		text-align:left;
+		padding-left:20px;
+	}
+
+	#featured-prod-link:after {
+	  position:absolute;
+		top:9%;
+		content:url('../img/forwardArrow.png');
+		zoom:50%;
+		text-align:right;
+		padding-left:54%;
+	}
+
+	#apply-filters {
+		display:block;
+		position:relative;
+		width:44%;
+		height:28px;
+		line-height:28px;
+		border-bottom-right-radius:5px;
+		border-bottom-left-radius:5px;
+		margin-left:auto;
+		margin-right:auto;
+		background:rgba(0,0,0,0.8);
+		text-align:center;
+		span {
+			font-size:14px;
+		}
+	}
+
+/*
+------------------------------------------------------------
+	other locations menu
+-------------------------------------------------------------
+*/
+
+.landingView.storeListMap {
+	#filter-wrap.showFilter{
+		#filter {
+			height: 95px;
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+			overflow-y: hidden;
+			padding-top:7px;
+		}
+	}
+	#filter-wrap{
+		#filter {
+			#container_grid {
+				height:100%;
+				width: 665px;
+				padding-left:5px;
+				padding-right:5px;
+			}
+			a {
+				color:#fff;
+				display:block;
+				width:60px;
+				float:left;
+				font-size:12px;
+				padding-bottom:0;
+				padding-top:55px;
+				margin-right:5px;
+			}
+		}
+	}
+}

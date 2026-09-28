@@ -1,0 +1,16 @@
+
+<section class = "{{viewClass}}" ng-controller="StoreServiceViewCtrl">
+	<h3 class="slideMe"><b>{{params.StoreName}}</b></h3>
+
+    <div class="inner">
+        
+        <img src="{{params.ImagePathLarge}}"/>
+        <p><br/></p>
+        <b>{{params.ServiceName}}</b>
+        <p><br/></p>
+        <div ng-bind-html-unsafe="params.Description"></div>
+        <p><br/></p>
+        <div ng-bind-html-unsafe="params.ServiceHours"></div>
+    </div>
+</section>
+

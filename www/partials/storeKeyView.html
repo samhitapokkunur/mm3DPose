@@ -1,0 +1,15 @@
+
+<section class = "{{viewClass}}" >
+    <div class="inner">
+        <ul class="storeListItems last_{{ $last }}" ng-repeat="(key, val) in keys">
+          <li class="heading">{{ key | capitalize_first_letter }}</li>
+          <li class="storeListItem" ng-repeat="item in val">
+            <div class="storeListItemIcons">
+              <span class="icon_span {{ item.class }}"></span>
+              <span class="icon_identifier">{{ item.name }}</span>
+            </div>
+          </li>
+        </ul>    
+    </div>
+</section>
+

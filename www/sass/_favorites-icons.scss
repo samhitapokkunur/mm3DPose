@@ -1,0 +1,33 @@
+/*
+-----------------------------
+favorites icons
+-----------------------------
+*/
+
+@import "favorites-imgs/*.png";
+@include all-favorites-imgs-sprites;
+
+
+.icon-style.icon-favorites:before {
+	display: block;
+	content: '\0020';
+	width: 166px;
+    height: 166px;
+	zoom:50%;
+	margin-left:-88px;
+}
+
+.icon-curators:before {
+  	@include favorites-imgs-sprite(favorites-curators);
+}
+
+.icon-products:before {
+	@include favorites-imgs-sprite(favorites-products);
+}
+.icon-recipes:before {
+	@include favorites-imgs-sprite(favorites-recipes);
+}
+.icon-stores:before {
+	@include favorites-imgs-sprite(favorites-stores);
+}
+	

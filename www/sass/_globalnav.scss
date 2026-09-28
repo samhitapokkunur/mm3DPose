@@ -1,0 +1,365 @@
+/*
+--------------------------------------------------
+Global Navigation
+--------------------------------------------------
+*/
+
+// #global_nav{
+//   position: static;
+//   // display: block;
+//   display: none;
+//   float: left;
+//   margin-left: -85%;
+//   float:left;
+//   width: 85%;
+//   height: 2000px;
+//   z-index: 1;
+//   background-color: orange;
+// }
+
+/*
+-----------------------------
+side navigation - global nav
+-----------------------------
+*/
+
+@import "gnav-imgs/*.png";
+@include all-gnav-imgs-sprites;
+
+@mixin gnav-background ($hgt:70px, $wid:70px, $toploc:-25px, $lftloc:50%, $mrgoff:-35px) {
+    width: $wid;
+    height: $hgt;
+    background-color: transparent;
+    content:' ';
+    top: $toploc;
+    left: $lftloc;
+    margin-left: $mrgoff;
+}
+
+
+.detailView #globalNav, .filterView #globalnav {
+    display:none;
+}
+
+#global-nav {
+    position:fixed;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top:0;
+    left:0;
+    width: 85%;
+    z-index: 0;
+    border-top:2px solid #000;
+    border-bottom:2px solid #000;
+    //
+    @include background-image(linear-gradient(45deg, #000, #3d3d3d, #545454));
+    @include single-box-shadow(#111, -8px, 0px, 8px, -8px, true);
+}
+
+#global-nav nav a {
+    color: #fff;
+    display:block;
+    padding:0.5em;
+    text-decoration:none;
+}
+
+
+#global-nav nav .table-view h2 {
+    position:relative;
+    padding:0.5em;
+    font-size:14px;
+    color: #ccc;
+    font-style:italic;
+    background:rgba(255,255,255,0.2);
+}
+
+#global-nav nav ul {
+  position:relative;
+}
+
+#global-nav nav .fancy-nav {
+    position:relative;
+    padding:0;
+    margin:2px 0 0 0;
+    text-align:center;
+}
+
+/*-- clearing after each navigation group --*/
+#global-nav nav .fancy-nav:after {
+    display:block;
+    content:"\0020";
+    clear:both;
+    margin:0;
+}
+
+/*-- navigation group title (circle in the middle) --*/
+#global-nav nav .fancy-nav h2{
+    padding:0;
+    line-height:32px;
+    height:32px;
+    color: #606060;
+    font-size:20px;
+    text-transform:uppercase;
+    text-align:center;
+    overflow:visible;
+    z-index:5;
+    zoom:1;
+    white-space:nowrap;
+    background:rgba(255,255,255,0.1);
+    font-family: 'roboto_condensedregular';
+}
+
+/*-- navigaton links semi-transparent backgrounds --*/
+#global-nav nav .fancy-nav li {
+    position:relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width:49.8%;
+    float:left;
+    margin-top:1px;
+    margin-left:1px;
+    background:rgba(255,255,255,0.1);
+}
+
+#global-nav nav .fancy-nav.trio li {
+    width:33.3%;
+}
+#global-nav nav .fancy-nav.single li {
+    width:100%;
+}
+
+/*-- navigation links and icons --*/
+#global-nav nav .fancy-nav li a {
+    position:relative;
+    min-height:52px;
+    // letter-spacing:-1px;
+    font-weight:lighter;
+    // font-size:1.2em;
+    color:#cecece;
+    z-index:2;
+    text-align:center;
+}
+
+#global-nav nav .fancy-nav li a span {
+    display:block;
+    position:relative;
+    font-family: 'roboto_condensedlight';
+    width:100%;
+    height:20px;
+    line-height:20px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:40px;
+    color: white;
+    font-size: 13px;
+}
+
+#global-nav #gnav-explore h2{
+    color:#191919;
+    // color: red;
+}
+#global-nav #gnav-plan h2{
+    color: #191919;
+    // color: orange;
+}
+#global-nav #gnav-personalize h2{
+    color: #191919;
+    // color: yellow;
+}
+#global-nav #gnav-contact h2{
+    color: #191919;
+    // color: green;
+}
+
+
+
+
+
+#global-nav nav .fancy-nav li a span:before {
+    // content: url("../img/sprite_gnav.png");
+    // clip:rect(0px 0px 0px 0px);
+    zoom:50%;
+    display:block;
+    position:absolute;
+    width:60px;
+    height:60px;
+    top:50%;
+    left:50%;
+    margin-top:-50px;
+    margin-left:-15px;
+    background:green;
+}
+
+/*-- icons --*/
+#global-nav nav .fancy-nav li.home a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(home);
+}
+#global-nav nav .fancy-nav li.products a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(products);
+}
+#global-nav nav .fancy-nav li.recipes a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(recipes);
+}
+#global-nav nav .fancy-nav li.departments a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(departments);
+}
+
+
+#global-nav nav .fancy-nav li.shopping-list a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(shoppinglist);
+}
+#global-nav nav .fancy-nav li.store-locations a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(locations);
+}
+
+
+#global-nav nav .fancy-nav li.favorites a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(favorites);
+}
+#global-nav nav .fancy-nav li.favorites{
+    margin-left: 0px;
+}
+#global-nav nav .fancy-nav li.rewards a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(rewards);
+}
+#global-nav nav .fancy-nav li.dietary-prefs a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(dietaryprefs);
+}
+#global-nav nav .fancy-nav li.dietary-prefs{
+    //
+}
+#global-nav nav .fancy-nav li.dietary-prefs a span{
+    // font-size: .8em;
+    //font-size: 11px;
+}
+
+#global-nav nav .fancy-nav li.customer-service a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(custserv);
+}
+
+#global-nav nav .fancy-nav li.app-settings a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(appsettings);
+}
+
+#global-nav nav .fancy-nav li.about-this-app a span:before {
+    @include gnav-background();
+    @include gnav-imgs-sprite(about);
+}
+#global-nav nav .fancy-nav li.about-this-app  {
+    margin-left: 0px;
+}
+
+
+/*-- fairways logo on the bottom --*/
+#gnav-bottom {
+    text-align:center;
+    padding:10px 0;
+    opacity:0.6;
+}
+
+
+/*
+-----------------------------------------------------------------------------------
+side navigation - global nav - transition
+
+apply .slideMe class to main container + all elements
+that have position fixed: its only header, footer and page title
+do not use fixed positioning anywhere else - it messes up global nav menu transition
+-----------------------------------------------------------------------------------
+*/
+.slideMe {
+  -webkit-transition-property: margin-left;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+/*
+---------------------------------------------------------
+This will be layed over the content
+so that the content is unclickable while menu is shown
+TODO - this maybe deprecated, need to check
+---------------------------------------------------------
+*/
+
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15%;
+    z-index: 7;
+}
+/* 
+---------------------------------------------------------
+    search box 
+---------------------------------------------------------    
+*/
+
+#global-nav form#search {
+    position:relative;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    //padding:5% 3%;
+    height: 42px;
+    text-align:center;
+    background:#1a1a1a;
+    //background-color: yellow;
+}
+
+#searchSubmit {
+    $search_icon_aspect: 18px;
+    -webkit-appearance:square-button;
+    display:block;
+    position:absolute;
+    margin-top:10px;
+    margin-left:13px;
+    //border:1px solid transparent;
+    width:$search_icon_aspect;
+    height:$search_icon_aspect;
+    background-color:transparent;
+    background-image:url('../img/search.png');
+    background-repeat:no-repeat;
+    background-size:$search_icon_aspect $search_icon_aspect;
+    border: none;
+    background-position: center;
+    z-index:20;
+}
+
+input[type="search"]#searchValue {
+    width:94%;
+    -webkit-appearance:none !important;
+    background-color:transparent;
+    //padding:3px;
+    text-indent:25px;
+    font-size:16px;
+    color: #aaa;
+    background-color: transparent;
+    margin-top:5px;
+    border: 1px solid white;
+    height: 28px;
+}
+
+.menuOpenSwiper{
+    z-index: 100;
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    right: 0px;
+    display: none;
+    background-color: transparent;
+}

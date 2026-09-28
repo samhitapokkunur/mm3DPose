@@ -1,0 +1,90 @@
+
+<section class = "{{viewClass}}" ng-controller="StoreViewCtrl" ng-init="selected=1">
+
+	<h3 class="storeDetailNeighborhood">{{store_info.Name}}</h3>
+    
+    <div class="inner">
+        <div class="address_container">
+        <span class="storeDetailAddress">{{ store_info.Address1 }}{{ store_info.Address2 ? ', ' + store_info.Address2 : "" }}</span>
+        <span class="storeDetailAddress">{{ store_info.City }}, {{ store_info.State }} {{ store_info.PostalCode }}</span>
+        <br />
+        <a class="storeDetailPhone" href="tel:{{ store_info.Phone | clean_up_phone }}">
+            {{store_info.Phone}}
+        </a>
+        </div>
+        <div class="storeDetailIcons">
+            <span ng-repeat="item in store_info.store_services" class="{{item.IconClass}}"></span>
+        </div>
+        
+        <ul id="tab" class="divider storeDetailDisplayControls">
+            <li><a class="button small-button active" href ng:click="selected=1" ng-class="{active: selected == 1}">Hours</a></li>
+            <li id="besttime"><a class="button small-button" href ng:click="selected=2" ng-class="{active: selected == 2}">Best Time</a></li>
+            <li ng-show="store_info.ImagePathStoreLayout" id="floorplan"><a class="button small-button" href ng:click="selected=3" ng-class="{active: selected == 3}">Floor Plan</a></li>
+            <li ng-show="store_info.Description" id="about"><a class="button small-button" href ng:click="selected=4" ng-class="{active: selected == 4}">About</a></li>
+        </ul>
+        
+        <div class="summary info_container" id="summary_container" ng:show="selected == 1">
+        <div>
+            <div class="hours_container" id="store_hours_container">
+                <div class="hours_header">Store</div>
+                <div class="hours_content" ng-repeat="hours in store_info.store">
+                    {{ hours.start }}{{ hours.end != hours.start && hours.end != "" ? '-' + hours.end : "" }}: {{ hours.openTime }} - {{ hours.closeTime }}
+                </div>
+            </div>
+            <div ng-repeat="(key, val) in store_info.store_hours" class="hours_container">
+                <div class="hours_header">{{ key | capitalize_first_letter }}</div>
+                <div class="hours_content" ng-repeat="hours in val">
+                    {{ hours.start }}{{ hours.end != hours.start && hours.end != "" ? '-' + hours.end : "" }}: {{ hours.openTime }} - {{ hours.closeTime }}
+                </div>
+            </div>
+            <!--<span ng-bind-html-unsafe="params.StoreServiceHours"></span>-->
+        </div>
+                                   
+        </div>  
+        
+        <div class="tips info_container best_shop" ng:show="selected == 2">
+            {{params.BestTitle}}<br ng-show="params.BestTitle" />
+            <div ng-bind-html-unsafe="params.BestDescription"></div><br/>
+            <div ng-bind-html-unsafe="params.BestOverview"></div>
+        </div>
+        <div class="tips info_container" ng:show="selected == 3">
+            <div id="floorplan_wrap" >
+                <img src="{{store_info.ImagePathStoreLayout}}" data-test="bla" /> 
+            </div>
+        </div>
+        <div class="tips info_container" ng:show="selected == 4">
+            <div ng-bind-html-unsafe="store_info.Description"></div> 
+        </div>
+        <div class="storeDetailViewOnMapAff">
+            <a href="index.html#/store-view-on-map/{{ store_info.StoreID }}">View on Map</a>
+        </div> 
+    </div>
+
+</section>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<script>
+    /*
+    |- - - - - - - - - - - - - - - - - - - - - - - - - - -
+    | open flooplan in standalone "zoomable" window 
+    |- - - - - - - - - - - - - - - - - - - - - - - - - - -
+    */
+
+    var openFloorplan = function() {
+        var ngParm = angular.element('section').scope().store_info;
+        var src = encodeURI(ngParm.ImagePathStoreLayout);
+        var url = encodeURI('index.html#/store-view/'+ ngParm.StoreID);
+        var winurl = "floorplan.html?src=" + src + '&url=' + url;
+
+        // note that we are NOT using location.href, because, if we do, this window will refersh (with splashsreen) every time we close
+        // floorplan window using history.back() or location.href
+        fpWin = open(winurl,'_blank',"toolbar=yes,location=no");
+    };
+
+    $("#floorplan_wrap").bind('touchstart',openFloorplan); 
+ 
+</script>
+
+

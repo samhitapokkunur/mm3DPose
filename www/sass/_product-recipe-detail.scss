@@ -1,0 +1,391 @@
+/*
+---------------------------------------------------------
+recipe and product detail pages
+---------------------------------------------------------
+*/
+@import "recipe-details/*.png";
+@include all-recipe-details-sprites;
+
+
+.icon-style.icon-recipedetail:before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    zoom:50%;
+    margin-left:0;
+}
+
+
+
+.icon-cooktime:before {
+  @include recipe-details-sprite(cook_time);
+}
+.icon-course:before {
+  @include recipe-details-sprite(course);
+}
+.icon-exlink:before {
+  @include recipe-details-sprite(ex_link);
+}
+.icon-music:before {
+  @include recipe-details-sprite(music);
+}
+.icon-preptime:before {
+  @include recipe-details-sprite(prep_time);
+}
+.icon-servingnum:before {
+  @include recipe-details-sprite(serving_num);
+}
+.icon-skilllevel:before {
+  @include recipe-details-sprite(skill_level);
+}
+.icon-totaltime:before {
+  @include recipe-details-sprite(total_time);
+}
+.icon-winepairing:before {
+  @include recipe-details-sprite(wine_pairing);
+}
+
+section.detailView.recipe .blur{
+    -webkit-filter: blur(3px);
+}
+
+section.detailView.product .detailSection{
+    margin-top:320px;
+}
+
+section.detailView.product .divider,
+section.detailView.recipe .divider{
+    border-bottom:1px solid #fad214;
+    padding-bottom:5px;
+}
+section.detailView.product .divider {
+  padding-bottom: 15px;
+}
+section.detailView.product .dept{
+    color:white;
+    font-size:21px;
+    font-weight:normal;
+    margin-top:12px;
+}
+
+.ingredients, .steps {
+    color: white;
+    font-size: 14px;
+}
+
+.ingredients ul, .steps ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ingredients li, .steps li {
+    padding-bottom: 10px;
+    a, a:link, a:visited {
+        //color:#fad214;
+        text-decoration: underline;
+        color:white;
+    }
+}
+
+li.group {
+    list-style-type:none;
+    font-weight:bold;
+    text-indent:-12px;
+}
+
+.description {
+    color: #dcdcdc;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    border-bottom: 1px solid #fad214;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    b{
+      color: #fff;
+    }
+    br{
+      display: none;
+    }
+}
+
+.icons {
+    float: right;
+    color: white;
+    width: 100%;
+}
+
+.icons li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+a.favorites,
+a.shopping-list {
+    position: relative;
+    display: block;
+    text-align: center;
+    float: left;
+}
+
+a.favorites {
+    margin-left: -1px;
+    margin-right: 1px;
+}
+
+a.favorites:after,
+a.shopping-list:after {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    content: url("../img/sprite_productdetail.png");
+    left: 50%;
+    top: 50%;
+    zoom: 50%;
+    clip: rect(0px 0px 0px 0px);
+}
+
+a.favorites:after {
+    clip: rect(10px 70px 70px 10px);
+    margin-left: -40px;
+    margin-top: -40px;
+}
+
+a.shopping-list:after {
+    clip: rect(10px 190px 70px 130px);
+    margin-left: -160px;
+    margin-top: -40px;
+}
+
+.dietpref {
+  display:block;
+  position:relative;
+  text-align:left;
+  width:100%;
+  overflow:hidden;
+}
+section.detailView.product {
+  .product_department {
+    padding-bottom:12px;
+    a{
+      font-size: 14px;
+    }
+  }
+  .dietpref {
+    padding-bottom:0;
+  }
+}
+.dietpref ul {
+    margin-right:auto;
+    margin-left:auto;
+    overflow:hidden;
+}
+.dietpref {
+    ul.count_3, ul.count_2, ul.count_1 {
+        margin:0;
+    }
+}
+.dietpref li.icon-style{
+  display:block;
+  float:left;
+  position:relative;
+  margin:5px;
+  width:57px;
+  height:75px;
+  line-height:12px;
+  padding-top:53px;
+  text-align:center;
+    font-size:13px;
+}
+.dietpref ul.count_5 li.icon-style,
+.dietpref ul.count_6 li.icon-style {
+    margin-left:23px;
+    margin-right:16px;
+}
+.dietpref ul.count_4 li.icon-style {
+    margin-left: 7px;
+    margin-right: 8px;
+}
+.dietpref:before
+, .dietpref:after{
+  display:block;
+  clear:both;
+  content:"\0020";
+  margin-bottom:10px;
+}
+.summary div#recipeDetails {
+    overflow:hidden;
+    position:relative;
+    height:155px;
+    width:100%;
+    padding-bottom:5px;
+    ul {
+      width:50%;
+    }
+    ul#details_right {
+      float:right;
+      width:40%;
+    }
+    ul#details_left {
+      float:left;
+    }
+    ul li {
+      display:block;
+      position:relative;
+      height:40px;
+      width: 100%;
+      font-size:15px;
+      padding-top:8px;
+      margin-bottom:8px;
+    span {
+      position:absolute;
+      display:block;
+    }
+    span.icon_style {
+      left:0;
+      top:0;
+      width:60px;
+      height:60px;
+    }
+    span.details_heading, span.details_content {
+      left: 35px;
+      width:70%;
+    }
+    span.details_heading {
+      font-size:12px;
+      color:#726f6e;
+    }
+    span.details_content {
+      top:20px;
+    }
+    span#course_1 {
+      top:35px;
+    }
+    }
+}
+.prod_description{
+  font-size: 16px;
+  line-height: 18px;
+  color: #dcdcdc;
+}
+.prod_attribute {
+  padding-top:12px;
+  padding-bottom:12px;
+  border-bottom: 1px solid #fad214;
+  span {
+    display:block;
+  }
+  span.details_heading {
+    font-size:20px;
+    margin-bottom:6px;
+  }
+  span.details_content {
+    font-size:16px;
+    line-height: 18px;
+    color: #dcdcdc;
+  }
+}
+.summary div#wine_pairing_div, .prod_attribute#wine_pairing {
+  height:63px;
+  position:relative;
+  border-bottom:1px solid #fad214;
+  span {
+    position:absolute;
+    display:block;
+    top:8px
+  }
+  span.icon-winepairing {
+    left:0;
+    top:10px;
+  }
+  span.details_heading {
+    font-size:12px;
+    color:#726f6e;
+    left:35px;
+  }
+  span.details_content {
+    top:21px;
+    left:35px;
+    font-size: 15px;
+  }
+}
+.prod_attribute#winepairing {
+  height:53px;
+}
+#music-link {
+  position:relative;
+  display:block;
+  width:100%;
+  span {
+    position:absolute;
+    top:0;
+  }
+  span.icon-exlink {
+    right:37px;
+  }
+  span.icon-music {
+    left:3px;
+  }
+}
+#music_msg {
+  padding-top:10px;
+}
+
+.detailView{
+  .tips{
+    .tipsContainer{
+      border-bottom:1px solid #fad214;
+      padding-bottom:0px;
+      //
+      .ServingTips, .PreparationTips, .StorageTips{
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-origin: left top;
+        background-size: 30px 30px;
+      }
+      .ServingTips{
+        background-image: url('../img/tip_icon_serving.png');
+      }
+      .PreparationTips{
+        background-image: url('../img/tip_icon_preparation.png');
+      }
+      .StorageTips{
+        background-image: url('../img/tip_icon_storage.png');
+      }
+      //
+    }
+    .tipsH2{
+      color:white;
+      font-size:15px;
+      font-weight:normal;
+      padding-top:7px;
+      margin-top: 10px;
+      height: 30px;
+      font-family: 'robotomedium';
+    }
+    .tipsCopy{
+      color:#dcdcdc;
+      padding-top:5px;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 15px;
+    }
+  }
+}
+.detailView.product {
+  .dept_li {
+    position:relative;
+    a {
+      font-size:14px;
+      color:white;
+    }
+    a#dept_related_recipes:before {
+      text-align:right;
+      left:18%;
+      top:65%;
+      zoom:40%;
+    }
+  }
+}

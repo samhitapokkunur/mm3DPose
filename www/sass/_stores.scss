@@ -1,0 +1,552 @@
+/*
+------------------------------------
+ stores
+------------------------------------
+*/
+
+#store_list_ttl{
+  display: none;
+}
+
+body.storeList, body.storeListMap {
+  #store_list_ttl {
+     display:block;
+  }
+}
+/* using smaller font for page view title */
+.storeList, .storeListMap {
+  #top_ttl h3 .page_title_inner{
+    margin-top:12px;
+    margin-bottom:12px;
+    font-size:16px;
+    min-height:16px;
+  }
+}
+
+
+/* icon mixins */
+@mixin store-icon-set {
+  .icon-cafe{
+    background: url('../img/storeservices-icons/cafe.png') no-repeat;
+  }
+  .icon-restaurant{
+    background: url('../img/storeservices-icons/restaurant.png') no-repeat;
+  }
+  .icon-fwtogo{
+    background: url('../img/storeservices-icons/togo.png') no-repeat;
+  }
+  .icon-fwwine{
+    background: url('../img/storeservices-icons/wine.png') no-repeat;
+  }
+  .icon-watertaxi{
+    background: url('../img/storeservices-icons/watertaxi.png') no-repeat;
+  }
+  .icon-floral{
+    background: url('../img/storeservices-icons/florist.png') no-repeat;
+  }
+  .icon-catering{
+    background: url('../img/storeservices-icons/catering.png') no-repeat;
+  }
+  .icon-shuttle{
+    background: url('../img/storeservices-icons/shuttle.png') no-repeat;
+  }
+  .icon-wifi{
+    background: url('../img/storeservices-icons/wifi.png') no-repeat;
+  }
+  .icon-delivery{
+    background: url('../img/storeservices-icons/delivery.png') no-repeat;
+  }
+  .icon-parking{
+    background: url('../img/storeservices-icons/parking.png') no-repeat;
+  }
+}
+//
+.storesLanding{
+
+}
+
+.regionalStoreList{
+  margin-top: 85px;
+  //
+  .storeListItems{
+    //
+    .storeListItem{
+      position: relative;
+      /*height: 150px;*/
+      width: 100%;
+      padding: 10px 0 10px 17px;
+      border-bottom: 1px solid #fad214;
+      background-position: left top;
+      background-size: cover;
+      //
+      .storeListItemTitle{
+        font-family: 'robotoregular';
+        font-size: 24px;
+        margin-bottom:4px;
+        color:#fff;
+      }
+      .storeListItemAddress{
+        font-family: 'robotothin';
+        font-size: 18px;
+        font-weight:bold;
+        color: #fff;
+      }
+      /*
+      .storeListItemAddress:after{
+        content: url('../img/forwardArrow.png') no-repeat;
+        height: 25px;
+        width: 25px;
+        padding-left: 20px;
+        zoom: 50%;
+      }
+      */
+      .storeListItemPhone{
+        font-family: 'robotothin';
+        padding-top: 2px;
+        a{
+          font-size: 18px;
+          color: #51a7dd;
+          text-decoration: underline;
+        }
+      }
+      .storeListItemIcons{
+        margin-top: 10px;
+        span{
+          display: inline-block;
+          height: 80px;
+          width: 80px;
+          margin-right: 11px;
+          background-color: transparent;
+          zoom: 50%;
+        }
+        @include store-icon-set;
+      }
+    }
+  }
+}
+
+section.detailView.store{
+  //
+  padding: 65px 15px 0 15px;
+  //
+  .storeDetailNeighborhood{
+    font-family: 'robotoregular';
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  //
+  .storeDetailAddress{
+    display: inline-block;;
+    font-family: 'robotothin';
+    font-size: 18px;
+    font-weight:bold;
+  }
+  //
+  .storeDetailPhone{
+    font-family: 'robotothin';
+    font-size: 18px;
+    color: #51a7dd;
+    text-decoration: underline;
+    display:block;
+    font-weight:bold;
+  }
+  //
+  .storeDetailIcons{
+    height: 40px;
+    width: 100%;
+    span{
+      display: inline-block;
+      height: 80px;
+      width: 80px;
+      margin-right: 5px;
+      background-color: blue;
+      zoom:50%;
+    }
+    @include store-icon-set;
+  }
+  //
+  #tab.storeDetailDisplayControls{
+    text-align: center;
+    overflow:hidden;
+    width:107%;
+    margin-left:-3%;
+    li{
+      width:72px;
+      float:left;
+      margin: 0 2px 0 2px;
+      .button {
+        width:92%;
+        padding: 0 4%;
+      }
+    }
+  }
+  .tips, .summary{
+    padding-top: 13px;
+    border-top: 1px solid #fad214;
+    margin: 0 auto;
+    width:92%;
+  }
+  .tips{
+    p {
+      a, a:link, a:visited {
+        //color:#fad214;
+        text-decoration: underline;
+        color:white;
+        }
+    }
+  }
+  .summary{
+
+  }
+  //
+  .storeDetailViewOnMapAff{
+    display: block;
+    width: 92%;
+    margin-top: 13px;
+    margin-left:auto;
+    margin-right:auto;
+    a{
+      @include border-radius(16px);
+      position: relative;
+      font-family: 'roboto_condensedlight';
+      font-size: 17px;
+      padding-left: 21px;
+      display: block;
+      height: 32px;
+      line-height: 1.9em;
+      background-color: rgba(255, 255, 255, .3);
+      color: #fff;
+    }
+    a:after{
+      position: absolute;
+      right: 13px;
+      top: 7px;
+      content: url('../img/forwardArrow.png') no-repeat;
+      height: 25px;
+      width: 25px;
+      zoom: 60%;
+    }
+  }
+}
+
+.storeKey,  #key_overlay {
+    position:absolute;
+    background-color: rgba(0,0,0, 0.85);
+    top:0;
+    width:100%;
+    z-index:100000;
+    color:white;
+    -webkit-overflow-scrolling: touch;
+    overflow-y:scroll;
+    ul {
+      border-bottom: 1px solid #fad214;
+      padding-bottom: 10px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  .last_true.storeListItems {
+    border: 0;
+  }
+  #detail-top-nav-key {
+      position:absolute;
+  top:0;
+  right:0;
+  z-index:7;
+  width:100%;
+  background-color:#505050;
+  line-height:3em;
+  // padding-top:0.4em;
+  // padding-bottom:0.4em;
+  border-bottom:1px #383838 solid;
+  height: 45px;
+  }
+  .inner {
+    margin-top:45px;
+  }
+  .storeListItems {
+    font-size:18px;
+    .storeListItem, .heading {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      padding: 10px 0 10px 17px;
+      //background-position: left top;
+      //background-size: cover;
+    }
+    .heading {
+      color:white;
+      height:30px;
+    }
+    .storeListItemIcons{
+      overflow:hidden;
+      span {
+        float:left
+      }
+      span.icon_span {
+        //display: inline-block;
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        background-color: transparent;
+        background-size: 100%;
+      }
+      span.icon_span.icon-watertaxi {
+        height:41px;
+      }
+      span.icon_identifier {
+        padding-top: 8px;
+      }
+      @include store-icon-set;
+
+  }
+
+}
+}
+
+
+
+// demo code
+#store_list_ttl {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    overflow:hidden;
+    div {
+      position:relative;
+      float:right;
+      img, a {
+        width:100%;
+        height:100%;
+      }
+      a {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+    }
+    #map_view_aff, #list_view_aff {
+      width: 30px;
+      height: 30px;
+      margin-top: 5px;
+    }
+    #map_view_aff {
+      margin-right:5px;
+    }
+    #list_view_aff {
+      margin-right:-4px;
+    }
+    #info_view_aff {
+      width:17px;
+      height:17px;
+      float:left;
+      margin-left:22px;
+      margin-top:11px;
+    }
+}
+
+body.storeListMap {
+  #innerInfoBox.hidden {
+    display:none;
+  }
+  #view_content_wrapper {
+    height:100%;
+    #view_div {
+      height:100%;
+      section.storeListMap {
+        height:100%;
+        .inner {
+          height:100%;
+          #map-canvas {
+            display:block;
+            height:85%;
+            margin-top:84px;
+            color:black;
+            .infoBox {
+              img {
+                z-index: 1000;
+                width:17px;
+                height:17px;
+                display:none;
+              }
+              #innerInfoBox {
+                color:white;
+                position:relative;
+                height:85px;
+                width:160px;
+                img {
+                  display:block;
+                  position:absolute;
+                  top:0;
+                  width:100%;
+                  height:100%;
+                  z-index: 900;
+                }
+                .infoBoxName {
+                  font-size:19px;
+                  font-weight:bold;
+                  padding-left:5px;
+                  padding-top:2px;
+                  padding-bottom:3px;
+                }
+                .infoBoxAddress {
+                  font-size:17px;
+                  padding:5px;
+                  padding-top:0;
+                }
+                #textBox {
+                  position:absolute;
+                  top:15px;
+                  color:white;
+                  font-size:15px;
+                  z-index:950;
+                  a {
+                    text-decoration: none;
+                    color:white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      } 
+    }
+  }
+}
+    .disable-link
+    {
+        text-decoration: none !important;
+        color: white !important;
+        cursor: default;
+    }
+#mapview {
+  height:100%;
+}
+
+body.store-map-view {
+  #view_content_wrapper {
+    height:100%;
+    #view_div {
+      height:100%;
+      section.store-map-view {
+        height:100%;
+        #map_container {
+          height:100%;
+          #map-canvas {
+            margin-top:45px;
+            height:92%;
+          }
+        }
+      }
+    }
+  }
+}
+body.detailView.store-map-view #top_nav_bar #top_ttl {
+  display:none;
+}
+
+#floorplan_wrap {
+  position:relative;
+  width:100%;
+  margin-left:0;
+  margin-right:10px;
+  overflow:scroll;
+}
+
+#floorplan_wrap img  {
+  width: 100%;
+  height:auto;
+}
+
+.storeListMap #filter{
+  .selected{
+    color: #FAD214;
+  }
+  .allLocationsIconsWrapper{
+      position: relative;
+      display: block;
+      background-color: rgba(0,0,0,.7); 
+      height: auto;
+      overflow: scroll;
+      width: auto;
+  }
+  .allLocationsIcons{
+      position: relative;
+      background-color: transparent;
+      height: 90px;
+      width: 1130px;
+  }
+  .iconWithCopy{
+      display: inline-block;
+      text-decoration: none;
+      width: auto;
+      height: 80px;
+      margin: 4px 0px 4px 14px;
+      background-color: transparent;
+      border: none;
+      text-align: center;
+      position: relative;
+      padding-right: 14px;
+  }
+  .iconWithCopy:after{
+    display: block;
+    width: 1px;
+    height: 50px;
+    margin:0;
+    padding:0;
+    background-color: rgba(255, 255, 255, .25);
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 0px;
+  }
+  .iconWithCopy:last-child:after{
+    display: none;
+  }
+  .iconCopy{
+      line-height: 130px;
+  }
+}
+
+.hours_container {
+  border-bottom: 1px solid #fad214;
+  padding-top:12px;
+  padding-bottom:12px;
+  .hours_header {
+    margin-bottom:5px;
+    font-size:20px;
+    font-weight:600;
+  }
+  .hours_content {
+    margin-bottom:1px;
+  }
+}
+
+.info_container {
+  border-bottom: 1px solid #fad214;
+  padding-bottom:13px;
+}
+.info_container#summary_container {
+  border-bottom:0;
+  padding-top:0;
+  padding-bottom:0;
+}
+.address_container {
+  margin-bottom:8px;
+}
+.info_container.best_shop {
+  p {
+    line-height: 18px;
+    margin-bottom:10px;
+  }
+  strong {
+    font-weight:bold;
+    margin-bottom:2px;
+    display:inline-block;
+    font-size:17px;
+  }
+}
+

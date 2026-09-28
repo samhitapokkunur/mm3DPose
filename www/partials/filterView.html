@@ -1,0 +1,50 @@
+
+<section class = "filterView">
+   
+   <div class="inner">
+
+	   <div id="dietPrefSettings">
+
+	   <div class="cell"><span>Dietary Preferences</span></div>
+	   <div class="cell"><a id="dietPrefLink" href="index.html#/my-food-profile-landing/">&nbsp;</a></div>	   
+	   <div class="cell">
+
+	   <!-- diet preferences switch -->	
+		   <div class="onoffswitch">
+			   <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffswitch" ng-checked="UseDietPref?'checked':''">
+				   <label class="onoffswitch-label" for="onoffswitch">
+					   <div class="onoffswitch-inner"></div>
+					   <div class="onoffswitch-switch"></div>
+				   </label>
+			</div>
+
+    </div>
+		</div>
+
+
+    <a ng-repeat = "item in labels" class = "filterCategory {{item.tagLabel}}" 
+        ng-class="{selected:item.itemCount > 0}"
+        href="index.html#/filter-view/{{itemType}}/{{item.tagLabel}}">
+    	  {{item.displayLabel}}<span class="hasSelection"> * </span>
+        <span class="forwardArrowSpan"></span>
+    </a>
+
+	  
+	  <h3 ng-show="filterLabel >''"> {{filterLabel}} </h3> 
+
+<!--
+    <div ng-bind-html-unsafe="params.TagTypes"></div>	 
+ -->   
+
+    <div ng-bind-html-unsafe="params.TagValues"></div>
+            
+		
+    </div>
+</section>
+
+<!-- 
+<script src="js/product-recipe-filter.js"></script>
+-->
+
+
+

@@ -1,0 +1,165 @@
+<section class = "{{viewClass}}" ng-init="selected=1">
+  
+  
+  <div class="inner">
+
+    <ul id="tab" class="tab3 divider">    
+      <li><a class="button short-button active" href ng:click="selected=1" ng-class="{active: selected == 1}">Summary</a></li>
+      <li><a class="button short-button" href ng:click="selected=2" ng-class="{active: selected == 2}">Ingredients</a></li>
+      <li><a class="button short-button" href ng:click="selected=3" ng-class="{active: selected == 3}">Steps</a></li>
+    </ul>
+    
+    <div class="summary" ng:show="selected == 1">
+        
+      <div class="description">
+          <b>{{params.RecipeDescriptionHeading}}</b>
+          <br/>
+          <div ng-bind-html-unsafe="params.RecipeDescription"></div>
+      </div>
+    <div class='divider dietpref' ng-show="(params.dietPrefCount>0)" >
+      <!--<span ng-bind-html-unsafe="params.dietPrefHTML"></span>-->
+      <ul class="count_{{ params.dietPrefCount }}" ng-bind-html-unsafe="params.dietPrefHTML">
+
+      </ul>
+    </div>
+
+      <div id="recipeDetails" class="divider">
+        <ul id="details_left">
+          <li>
+            <span class="icon-style icon-recipedetail icon-totaltime"></span>
+            <span class="details_heading">Total Time</span>
+            <span class="details_content">{{params.TimeTotal}}</span>
+          </li>
+          <li>
+            <span class="icon-style icon-recipedetail icon-preptime"></span>
+            <span class="details_heading">Prep Time</span>
+            <span class="details_content">{{params.TimePrep}}</span>
+          </li>
+          <li>
+            <span class="icon-style icon-recipedetail icon-cooktime"></span>
+            <span class="details_heading">Cook Time</span>
+            <span class="details_content">{{params.TimeCook}}</span>
+          </li>
+        </ul>
+        <ul id="details_right">
+          <li>
+            <span class="icon-style icon-recipedetail icon-servingnum"></span>
+            <span class="details_heading">Serves</span>
+            <span class="details_content">{{params.Serves}}</span>
+          </li>
+          <li>
+            <span class="icon-style icon-recipedetail icon-skilllevel"></span>
+            <span class="details_heading">Skill Level</span>
+            <span class="details_content">{{params.SkillLevel}}</span>
+          </li>
+          <li>
+            <span class="icon-style icon-recipedetail icon-course"></span>
+            <span class="details_heading">Course</span>
+            <span ng-repeat="course in params.courses" id="course_{{$index}}" class="details_content">{{course}}</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div id="wine_pairing_div">
+        <span class="icon-style icon-recipedetail icon-winepairing"></span>
+        <span class="details_heading">Wine Pairing</span>
+        <span class="details_content">{{params.winePairing}}</span>
+      </div>
+      
+      
+      <!--<ul class="divider icons">
+        <div ng-bind-html-unsafe="params.tagHTML"></div>
+        <p><br/></p>
+      </ul>-->
+      <!--
+      <div>
+        <a class="button long-button " href="">Music to play with this recipe</a>
+      </div>
+      -->
+    </div>
+    
+    <div class="ingredients htm" ng:show="selected == 2">
+      <ul class="divider" ng-bind-html-unsafe="params.IngAttrHTML"></ul>
+      <!--
+      <div>
+        <a class="button long-button" href="">Music to play with this recipe</a>
+      </div>  
+      -->
+    </div> 
+    
+    <div class="steps htm" ng:show="selected == 3">
+      <ul class="divider" ng-bind-html-unsafe="params.StepsHTML"></ul>
+    </div>
+    <span>
+      <a class="button long-button " ng-show="params.musicURL" id="music-link" onclick="window.open('{{ params.musicURL }}', '_system');"><span class="icon-style icon-recipedetail icon-music"></span>Play Music While You Cook<span class="icon-style icon-recipedetail icon-exlink"></span></a>
+      <p ng-show="params.musicURL" id="music_msg">Once you’ve discovered music that gets you in the good food  mood, be sure to come back to our app to continue exploring!</p>
+    </span>
+    
+  </div>
+      
+</section>
+
+
+<!-- <footer id="footer">
+  <a class="button-flat favorites" ng-href="#" ng-click="AddToFavorite(params.RecipeID)"></a>   
+  <a class="button-flat shopping-list" ng-href="#" ng-click="AddToShoppingList(params.RecipeID)"></a>
+</footer> -->
+
+
+<!--section class = "{{viewClass}}" ng-controller="RecipeCtrl" ng-init="selected=1">
+
+  <h3>{{params.RecipeName}}</h3>
+
+    <div class="recipe-bgd" style="background-image:url({{params.RecipeMainImage}});">
+    <div class="recipe-position">
+      <div class="recipe-content"> 
+
+        <ul id="tab" class=" bottom-border">
+            <li><a class="button short-button active" href ng:click="selected=1" ng-class="{active: selected == 1}">Summary</a></li>
+            <li><a class="button short-button" href ng:click="selected=2" ng-class="{active: selected == 2}">Ingredients</a></li>
+            <li><a class="button short-button" href ng:click="selected=3" ng-class="{active: selected == 3}">Steps</a></li>         
+        </ul>
+
+        <div class="summary" ng:show="selected == 1">      
+          
+          <div class="description">
+              <b>{{params.RecipeDescriptionHeading}}</b>
+              <br/>
+              <div ng-bind-html-unsafe="params.RecipeDescription"></div>
+          </div>
+          
+          <ul class="bottom-border icons">
+              <li>Serves : {{params.Serves}}</li>
+              <li>SkillLevel : {{params.SkillLevel}}</li>
+              <li>TimeTotal : {{params.TimeTotal}}</li>
+              <li>TimePrep : {{params.TimePrep}}</li>
+              <li>TimeCook : {{params.TimeCook}}</li>
+              <li>CaloriesPerServing : {{params.CaloriesPerServing}}</li>
+          </ul>
+          
+          <div class="divider">
+            <div ng-bind-html-unsafe="params.OverviewAttrHTML"></div>
+          </div>
+          
+          <p></p>
+
+          <span ng-bind-html-unsafe="params.OverviewAttrHTML"></span>
+          
+          <ul class="bottom-border icons">
+            <p><br/></p>
+            <b>Tags</b><br/>
+            <div ng-bind-html-unsafe="params.tagHTML"></div>
+            <p><br/></p>
+            <b>Diet Preferences</b><br/>
+            <div ng-bind-html-unsafe="params.dietPreferenceHTML"></div>
+          </ul>
+
+          -->
+  
+  <!-- <footer id="footer">
+    <a class="button-flat favorites" ng-href="#" ng-click="AddToFavorite(params.RecipeID)"></a>   
+    <a class="button-flat shopping-list" ng-href="#" ng-click="AddToShoppingList(params.RecipeID)"></a>
+  </footer>
+  
+</section -->
+

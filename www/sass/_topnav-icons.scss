@@ -1,0 +1,53 @@
+/*
+-----------------------------
+top navigation icons
+-----------------------------
+*/
+
+@import "topnav-imgs/*.png";
+@include all-topnav-imgs-sprites;
+
+
+#top-nav a:after, a#dept_related_prod:before, a#dept_related_recipes:before{
+  position:absolute;
+  height:64px;
+  width:64px;
+  text-indent:0;
+  content:'\0020'; 
+  left: 50%;
+  margin-left:-32px;
+  top: 50%;
+  margin-top:-32px;
+  zoom:50%;
+ }
+
+#top-nav a#tab-global-nav:after{
+  @include topnav-imgs-sprite(hamburger);
+}
+
+/*-- products --*/
+#top-nav a#tab-products:after, a#dept_related_prod:before {
+	@include topnav-imgs-sprite(products);
+}
+
+#top-nav a#tab-products.current:after{
+ 	@include topnav-imgs-sprite(products-active);
+}
+
+/*-- recipies --*/
+#top-nav a#tab-recipes:after, a#dept_related_recipes:before {
+	@include topnav-imgs-sprite(recipes);
+}
+
+#top-nav a#tab-recipes.current:after {
+ 	@include topnav-imgs-sprite(recipes-active);
+}
+
+/*-- favorites --*/
+#top-nav a#tab-favorites:after{
+ @include topnav-imgs-sprite(favorites);
+}
+
+#top-nav a#tab-favorites.current:after{
+ @include topnav-imgs-sprite(favorites-active);
+}

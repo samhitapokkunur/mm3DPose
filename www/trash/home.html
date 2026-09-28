@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    
+        <head>
+            <title>My Fairway</title>
+            <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1" name="viewport">
+            <link rel="stylesheet" href="css/reset.css"  media="screen">
+            <link rel="stylesheet" href="css/screen.css" media="screen">
+            <script src="js/jquery.js"></script>
+            <script src="js/jquery.mobile-1.3.1.min.js"></script>
+            <script src="js/globalNav.js"></script>
+        </head>
+    
+      <body>
+       
+      <div id="container">
+
+       <header>
+           <nav id="top-nav">
+               
+               <a id="tab-global-nav" href="#">...</a>
+               <a id="tab-products"  class="tab-button" href="#">products</a>
+               <a id="tab-recepies"  class="tab-button" href="#">recepies</a>
+               <a id="tab-favorites" class="tab-button" href="#">favorites</a>
+           </nav>
+       </header>
+        
+       
+       <nav id="global-nav">
+            <h2>Favorites</h2>
+            <ul id="gnav-favorites" class = "table-view">
+                    <li>
+                        <a href="#">Products</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Recepies &amp; Meal Plans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Departments</a>
+                    </li>
+                    <li>
+                        <a href="#">Stores</a>
+                    </li>
+                </ul>
+            
+
+                <h2>Plan Your Visit</h2>
+                <ul id="gnav-plan" class="table-view">
+                    <li>
+                        <a href="#">Shopping List</a>
+                    </li>
+                
+                    <li>
+                        <a href="#">Coupons</a>
+                    </li>
+                    <li>
+                        <a href="#">Store Locations</a>
+                    </li>
+                </ul>
+            
+
+                <h2>Settings</h2>
+            
+            <ul id="gnav-settings" class ="table-view">
+                <li>
+                    <a href="#">My Food Profile</a>
+                </li>
+                
+                <li>
+                    <a href="#">App Settings</a>
+                </li>
+
+            </ul>
+            
+        </nav>
+          
+          <!--The Layer that will be layed over the content
+           so that the content is unclickable while menu is shown-->
+        <div id="contentLayer"></div>
+          
+        <div id="content"></div>
+        </div>
+    </body>
+</html>

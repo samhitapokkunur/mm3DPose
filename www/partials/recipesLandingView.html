@@ -1,0 +1,37 @@
+<script>
+    var ReviseFilters = function () {
+        var db = window.openDatabase("FairwayMarket", "1.0", "Fairway Market", 200000);
+        db.transaction(
+                       function(tx) {
+                       tx.executeSql("Delete From User_Filters Where ItemType='recipes'");
+                       document.location.href="index.html#/recipes-landing/";
+                       }
+                       );
+    };
+</script>
+
+<section class = "{{viewClass}}" ng-init="filterState='hideFilter'">
+	
+    <div id="filter-wrap" class="{{filterState}} slideMe">
+		
+		<nav id="filter">
+            <!--
+			<ul>
+				<li><a ng-href="#"><span>Featured</span></a></li>
+				<li><a ng-href="#"><span>Popular</span></a></li>
+				<li><a ng-href="#"><span>Favorites</span></a></li>
+			</ul>
+             -->
+			<a id="featured-prod-link" href="index.html#/filter-view/recipes/" >All Featured Recipes</a>
+		</nav>
+		<div id="apply-filters" ng-click="filterState=(filterState == 'hideFilter')?'showFilter':'hideFilter'"><span>Apply Filters</span>
+		</div>
+	</div>
+	
+	<div class="mosaic hasGradients">
+        <div ng-bind-html-unsafe="params.homeHTML"></div>
+        <div ng-bind-html-unsafe="params.errorHTML"></div>
+    </div>
+</section>
+
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!--<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>-->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
+    
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/blur.js"></script>
+
+    <!--GSAP For Sublime Tweens! -->
+    <script src="lib/plugins/CSSPlugin.min.js"></script>
+    <script src="lib/easing/EasePack.min.js"></script>
+    <script src="lib/TweenMax.min.js"></script>
+
+    <title>My Fairway</title>
+  </head>
+    
+  <body class="{{bodyClass}}">
+
+  <div class="appContainer">
+    <div id="key_overlay" ng-show="store_key">
+    <div id="detail-top-nav-key">
+        <a class="backLink" ng-click="hideKey()"></a>
+        <span class="pageTitle">Icons Legend</span>
+    </div>
+    <div class="inner">
+        <ul class="storeListItems last_{{ $last }}" ng-repeat="(key, val) in keys">
+      <li class="heading">{{ key | capitalize_first_letter }}</li>
+      <li class="storeListItem" ng-repeat="item in val">
+        <div class="storeListItemIcons">
+          <span class="icon_span {{ item.class }}"></span>
+          <span class="icon_identifier">{{ item.name }}</span>
+        </div>
+      </li>
+    </ul> 
+    </div>
+</div>
+
+    <header id="top_nav_bar">
+
+      <!-- Top Navigation -->    
+      <div id="top_nav">
+        <ng-include src="'partials/_topnav.html'"></ng-include>
+      </div>
+
+      <div id="NotConnected"><span>NOT CONNECTED<span> <span class="last_updated">Last Updated:&nbsp;&nbsp;{{LastUpdate}}</span></div>
+      <!-- View Title -->  
+      <div id="top_ttl">
+        <ng-include src="'partials/_title.html'"></ng-include>
+      </div>
+
+    </header>
+
+    <!-- Global Navigation -->
+    <aside id="global_nav">
+      <ng-include src="'partials/_aside.html'"></ng-include>
+    </aside>
+
+    <!-- Background Image -->
+    <div id="bg_image" style="background-image:url('{{params.BackgroundImage}}');"></div>
+
+    <!-- View Content -->
+    <div id="view_content">
+      <div id="view_content_wrapper">
+        <div id="view_div" ng-view></div>
+      </div>
+    </div>
+
+    <!-- Footer Navigation -->
+    <footer id="foot_nav">
+      <div id="shopping_list_edit_view_footer">
+        <a id="delete_checked_items">Remove Checked Items</a>
+        <a id="delete_entire_list">Remove Entire List</a>
+      </div>
+      <div id="standard_footer">
+        <a id="aff_favorites" class="button-flat favorites" ng-click="AddToFavorite(params.ProductID)"></a>
+        <a id="aff_shopping" class="button-flat shopping-list" ng-click="AddToShoppingList(params.ProductID)"></a>
+      </div>
+    </footer>
+
+    <div id="gnav_menu_open_swiper" class="menuOpenSwiper"></div>
+  </div>
+
+
+  <!-- Comment out the following 2 lines to test on the browser-->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <!-- In production use min versions -->
+  <script src="lib/angular.js"></script>
+  <script src="lib/angular-mobile.js"></script>
+  <script src="lib/mobile-nav.js"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/data-access.js"></script>  
+  <script src="js/initializeDb.js"></script>
+    <script src="js/dataLoadDelta.js"></script>
+  <script src="js/deltaLoadFunctions.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/controllers-home.js"></script>  <!--includes search controller -->
+  <script src="js/controllers-navigation.js"></script>
+  <script src="js/controllers-products.js"></script>
+  <script src="js/controllers-recipes.js"></script>
+  <script src="js/controllers-curators.js"></script>
+  <script src="js/controllers-departments.js"></script>
+  <script src="js/controllers-rewards.js"></script>
+  <script src="js/controllers-filter.js"></script>
+  <script src="js/controllers-shopping-list.js"></script>
+  <script src="js/controllers-locations.js"></script>
+  <script src="js/controllers-dataload.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/GAPlugin.js"></script>    
+  <script src="js/GoogleAnalyticsPlugin.js"></script>
+  
+
+  <script src="lib/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="lib/jquery.ui.touch-punch.min.js"></script>
+  
+  <script type="text/javascript">
+      app.initialize();
+  </script>
+  <script type="text/javascript">
+      
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-43929026-1']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_setDomainName', 'none']);
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+      
+  </script>
+  </body>
+</html>
+
+
+ 

@@ -1,0 +1,318 @@
+/*
+-----------------------------   
+top navigation icons
+-----------------------------
+*/
+
+@import "shoplist-imgs/*.png";
+@include all-shoplist-imgs-sprites;
+
+
+
+@mixin add(){
+  @include shoplist-imgs-sprite(add);
+}
+
+/*-- products --*/
+@mixin delete(){
+	@include shoplist-imgs-sprite(delete);
+}
+
+@mixin deleteRed(){
+ 	@include shoplist-imgs-sprite(deleteRed);
+}
+
+/*-- recipies --*/
+@mixin deleteVerti(){
+	@include shoplist-imgs-sprite(deleteVerti);
+}
+
+@mixin edit() {
+ 	@include shoplist-imgs-sprite(edit); 
+}
+//
+#shopping_list_ttl{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: right;
+  padding-left: 70%;
+  padding-top: 8px;
+  display: none;
+}
+#shopping_list_edit_bar{
+  position: absolute;
+  z-index: 800;
+  width: 100%;
+  height: 45px;
+  top: 0px;
+  text-align: center;
+  background-color: #505050;
+  display: none;
+  line-height: 44px;
+  color: white;
+}
+#shopping_list_edit_cancel_aff{
+  position: absolute;
+  left: 10px;
+  text-align: left;
+  padding-left: 14px;
+}
+#shopping_list_edit_cancel_aff:before{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: url(../img/cancelArrow.png) no-repeat;
+  zoom: 50%;
+  height: 100%;
+  width: 100%;
+  font-size: 2em;
+}
+.shoppingListEditListViewTitle{
+  font-family: 'roboto_condensedregular';
+  font-size: 1.25em;
+  color: #fad214;
+  height: 100%;
+}
+.shoppingListAddEditViewTitle{
+  font-family: 'roboto_condensedregular';
+  font-size: 1.25em;
+  color: #fad214;
+  height: 100%;
+}
+#shopping_list_edit_done_aff{
+  position: absolute;
+  right: 10px;
+}
+//
+//
+//
+//
+body.shoppingList {
+  #top_ttl {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+.shoppingList #shopping_list_ttl{
+    display: block;
+}
+.both-lists{
+    margin: 85px 0 0 0;
+}
+.active-list, .inactive-list{
+    padding: 0;
+    margin: 0;
+}
+.active-list{
+    /*border-top: 1px solid white;*/
+    color: white;
+}
+.inactive-list{
+    color: #000;
+}
+.list-item{
+    position: relative;
+    display: block;
+    height: 56px;
+    padding: 0 0 0 50px;
+    line-height: 40px;
+    border-bottom: 1px solid #fad214;
+    background-color: transparent;
+    span{
+      line-height: 18px;
+      display: block;
+      padding-top: 0px;
+      margin-right: 38px;
+      height: 100%;
+      /*New Flexbox*/
+      display: -webkit-flex;
+      -webkit-flex-orient: vertical;
+      -webkit-flex-pack: center;
+      display: flex;
+      flex-orient: vertical;
+      flex-pack: center;
+      /*Old Flexbox*/
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-box-pack: center;
+    }
+}
+.list-item-checkbox{
+    position: absolute;
+    display: block;
+    width:40px;
+    height:56px;
+    top: 0px;
+    left: 0px;
+    text-align:left;
+}
+ .list-item-checkbox:before{
+    -webkit-box-sizing: content-box;
+    display:block;
+    position:absolute;
+    content: "";
+    width:16px;
+    height:16px;
+    line-height:16px;
+    left:50%;
+    top:50%;
+    background-color: transparent;
+    //border: 1px solid #fad214;
+    border: 1px solid lightgrey;
+    padding:0;
+    margin-top:-9px;
+    margin-left:-9px;
+}
+.list-item-activator {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    display: none;
+    background-image: url(../img/shopping-list-edit-activator.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+.list-item-activator-active {
+    -webkit-transform: rotate(90deg);
+}
+.list-item-editor {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    display: none;
+    background-image: url(../img/shopping-list-edit-aff.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+.list-item-delete{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 73px;
+    height: 55px;
+    display: none;
+    text-align: center;
+    color: white;
+    font-family: 'roboto_condensedlight';
+    font-size: 1.1em;
+    line-height: 3em;
+    background-color: #ff3b30;
+}
+.list-item-dragger{
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    width: 22px;
+    height: 100%;
+    background-image: url(../img/shopping-list-grabber-aff.png);
+    background-repeat: no-repeat;
+    background-size: 22px 9px;
+    background-position: 0px 24px;
+    
+}
+.active-list .list-item-dragger{
+    display: block;
+}
+.inactive-list .list-item-dragger{
+    display: none;
+}
+.inactive-list .list-item-checkbox:before{
+    //content:"\2573";
+    content:"\2713";
+    font-size:1em;
+    font-weight:bold;
+    overflow:hidden;
+    color:lightgrey;
+    opacity:0.5;
+    border: 1px solid lightgrey;
+    //border: 1px solid #ccc;
+}
+
+
+#shopping_list_addedit_view{
+    position: fixed;
+    top: 85px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+    background-color: rgba(0,0,0,.8);
+    input{
+      background-color: transparent;
+      color: #fff;
+      font-size: 14px;
+      border: none;
+    }
+}
+.shoppingListAddViewTop{
+    position: relative;
+    margin-top:25px;
+}
+#shopping_list_add_aff{
+    display: inline-block;
+    margin-right: 6px;
+    overflow: hidden;
+    background-color: transparent;
+}
+#shopping_list_edit_aff{
+    display: inline-block;
+    overflow: hidden;
+    background-color: transparent;
+}
+#shopping_list_done_aff{
+    position: absolute;
+    top: 3px;
+    right: 40px;
+    overflow: hidden;
+   /* background-color: purple; */
+}
+#shopping_list_cancel_aff{
+    position: absolute;
+    top: 3px;
+    right: 75%;
+    overflow: hidden;
+    /* background-color: green;  */
+}
+#shopping_list_addedit_field{
+    width: 90%;
+    height: 44px;
+}
+.shoppingListAddFieldContainer{
+    margin-top: 20px;
+}
+#edit_screen_head{
+    position: fixed;
+    top:80px;
+    height: 45px;
+    width: 100%;
+    background-color: orange;
+    z-index: 8000;
+}
+// #shopping_list_edit_view_footer{
+//     position: fixed;
+//     bottom: 0px;
+//     width: 100%;
+//     height: 44px;
+//     background-color: rgba(255, 255, 255, .4);
+//     display: none;
+// }
+// #shopping_list_edit_view_footer * {
+//     width: 50%;
+//     height: 100%;
+//     float: left;
+//     font-family: 'roboto_condensedlight';
+//     font-size: 1em;
+//     line-height: 2.8em;
+//     text-align: center;
+//     color: white;
+// }
+// #shopping_list_edit_view_footer #delete_checked_items {
+//     border-right: 1px solid white;
+// }
+// #shopping_list_edit_view_footer #delete_entire_list {
+
+// }

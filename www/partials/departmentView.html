@@ -1,0 +1,72 @@
+<section class = "{{viewClass}}" >
+    <div class="inner">
+		<ul id="tab" class="tab2 divider">
+			<li class="dept_li" ng-show = "params.ProductCount > 0">
+				<a id="dept_related_prod" ng-href="{{params.RelProductHref}}" class = "button medium-button">Featured Products</a>
+			</li>
+			<li class="dept_li" ng-show = "params.RecipeCount > 0">
+				<a id="dept_related_recipes" ng-href="{{params.RelRecHref}}" class = "button medium-button">Related Recipes</a>
+			</li>
+		</ul>
+		<div class="htm" ng-bind-html-unsafe="params.Description"></div>
+    </div>
+</section>
+
+<!--
+homeparams.DepartmentName = results.rows.item(0).Name;
+homeparams.DescriptionHeading = results.rows.item(0).DescriptionHeading;
+homeparams.Description = results.rows.item(0).Description;
+homeparams.ImagePathThumb = results.rows.item(0).ImagePathThumb;
+homeparams.ImagePathIcon = results.rows.item(0).ImagePathIcon;
+homeparams.MarqueeImagePath = results.rows.item(0).MarqueeImagePath;
+homeparams.MarqueeTitle = results.rows.item(0).MarqueeTitle;
+homeparams.MarqueeLinkText = results.rows.item(0).MarqueeLinkText;
+homeparams.MarqueeLinkPath = results.rows.item(0).MarqueeLinkPath;
+homeparams.FW_DeptCode = res
+ 
+ -->
+<!--
+ <section class = "fixed-background {{viewClass}}" ng-init="selected=1" style="background-image:url('{{params.ProductMainImage}}');">
+ 
+ <h3 id="ProductName">{{params.ProductName}}</h3>
+ 
+ <div class="inner">
+ 
+ <ul id="tab" class="divider">
+ <li><a class="button medium-button active" href ng:click="selected=1" ng-class="{active: selected == 1}">Overview</a></li>
+ <li><a class="button medium-button" href ng:click="selected=2" ng-class="{active: selected == 2}">Tips</a></li>
+ </ul>
+ 
+ <div class="summary" ng:show="selected == 1">
+ 
+ <div>
+ <b>{{params.ProductDescriptionHeading}}</b>
+ <br/>
+ <div ng-bind-html-unsafe="params.ProductDescription"></div>
+ </div>
+ 
+ <span ng-bind-html-unsafe="params.OverviewAttrHTML"></span>
+ <span ng-bind-html-unsafe="params.tagHTML"></span>
+ <span ng-bind-html-unsafe="params.Divider"></span>
+ 
+ <div class="divider">
+ <h2 class="dept">Department:</h2>
+ <span ng-bind-html-unsafe="params.DepartmentName"/>
+ </div>
+ 
+ 
+ <div style="border-bottom">
+ 
+ <span ng-bind-html-unsafe="params.RelatedRecipe"></span>
+ </div>
+ 
+ </div>
+ 
+ <div class="tips" ng:show="selected == 2">
+ <div ng-bind-html-unsafe="params.TipsAttrHTML"></div>
+ </div>
+ 
+ </div>
+ 
+ </section>
+-->

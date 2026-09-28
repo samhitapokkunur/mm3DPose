@@ -1,0 +1,53 @@
+
+<section class = "{{viewClass}}" ng-init="selected=1">
+  
+  <div class="inner">
+
+   <ul id="tab" class="tab2 divider">
+      <li><a class="button medium-button active" ng-click="selected=1" ng-class="{active: selected == 1}">Summary</a></li>
+      <li><a class="button medium-button" ng-click="selected=2" ng-class="{active: selected == 2}">Tips</a></li>
+    </ul>
+
+    <div class="summary" ng-show="selected == 1">
+	  	
+	    <div class='divider dietpref' ng-show="(params.dietPrefCount>0)" >
+			<ul class="count_{{ params.dietPrefCount }}" ng-bind-html-unsafe="params.dietPrefHTML"></ul>
+		</div>
+		
+    <div class="divider prod_description">
+        <b>{{params.ProductDescriptionHeading}}</b>
+        <br/>
+        <div ng-bind-html-unsafe="params.ProductDescription"></div>
+    </div>
+
+    <div ng-repeat="attribute in params.product_attributes" id="{{ attribute.css_id }}" class="prod_attribute">
+      <span class="icon-style icon-recipedetail icon-winepairing" ng-show="attribute.css_id == 'wine_pairing'"></span>
+      <span class="details_heading">{{ attribute.heading }}</span>
+      <span class="details_content">{{ attribute.content }}</span>
+    </div>
+        
+      <div class="divider product_department" ng-show="params.hasDepartment">
+        <h2 class="dept">Department:</h2>
+        <span ng-bind-html-unsafe="params.DepartmentName"/>
+      </div>
+    
+    </div>  
+
+    <div class="tips" ng-show="selected == 2">
+      <div ng-bind-html-unsafe="params.TipsAttrHTML"></div>
+    </div>
+    <div style="border-bottom">
+      
+      <span ng-bind-html-unsafe="params.RelatedRecipe"></span>
+    </div> 
+   
+  </div>
+
+</section>
+
+<!-- <footer id="footer">
+  <a class="button-flat favorites" ng-click="AddToFavorite(params.ProductID)"></a>
+  <a class="button-flat shopping-list" ng-click="AddToShoppingList(params.ProductID)"></a>
+</footer>
+
+</section>

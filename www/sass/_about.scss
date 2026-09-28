@@ -1,0 +1,67 @@
+/*
+------------------------------------------------------------------
+	rewards : Landing page
+------------------------------------------------------------------
+*/
+body.landingView.about {  
+	#top_ttl {
+		font-size: 21px;
+		font-weight: 500;
+	}
+}
+
+section.about {
+	font-size: 17px;
+	font-weight: 200;
+	.company_name {
+		font-weight: 600;
+		font-size: 16px;
+	}
+	p {
+		border-bottom:1px solid #cdaa11;
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		padding: 10px;
+		padding-bottom: 12px;
+	}
+
+	.legal {
+		position:relative;
+		span, a {
+			display:block;
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			padding:10px;
+			font-size: 17px;
+		}
+		span {
+			font-weight: bold;
+			padding-bottom: 3px;
+		}
+		a {
+			position: relative;
+			color: #fff;
+			border-bottom:1px solid #cdaa11;
+			padding-bottom: 12px;
+			img {
+				position: absolute;
+				width: 6px;
+				height: 13px;
+				top: 13px;
+				right: 13px;
+			}
+		}
+	}
+
+}
+
+/*section.about p,  section.about .legal a {
+	display:block;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	font-size:14px;
+	font-weight:lighter;
+	border-bottom:1px solid #fad214;
+	color:#fff;
+	padding:10px;
+}*/

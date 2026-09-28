@@ -1,0 +1,44 @@
+<script>
+var ReviseFilters = function () {
+        var db = window.openDatabase("FairwayMarket", "1.0", "Fairway Market", 200000);
+        db.transaction(
+           function(tx) {
+              tx.executeSql("Delete From User_Filters Where ItemType='products'");
+              document.location.href="index.html#/products-landing/";
+           }
+        );
+    };
+</script>
+
+<section class = "{{viewClass}}" ng-init="filterState='hideFilter'">
+	<!-- <h3 class="slideMe">Fairway Products</h3> -->
+	
+	<div id="filter-wrap" class="{{filterState}} slideMe">
+		
+		<nav id="filter">
+			<ul>
+				<li><a ng-href="#"><span>Featured</span></a></li>
+				<li><a ng-href="#"><span>Popular</span></a></li>
+				<li><a ng-href="#"><span>Favorites</span></a></li>
+			</ul>
+			<a id="featured-prod-link" href="index.html#/filter-view/products/">All Featured Products</a>
+		</nav>
+		<div id="apply-filters" ng-click="filterState=(filterState == 'hideFilter')?'showFilter':'hideFilter'"><span>Apply Filters</span>
+		</div>
+	</div>
+		
+	<div class="mosaic hasGradients">
+    <div ng-bind-html-unsafe="params.homeHTML"></div>
+    <div ng-bind-html-unsafe="params.errorHTML"></div> 
+	</div>
+</section>
+
+
+
+<script>
+/*	jQuery('.filter-wrap').bind('touchmove', function(e){e.preventDefault()});
+	jQuery('h3.slideMe').bind('touchmove', function(e){e.preventDefault()});
+	jQuery('header').bind('touchmove', function(e){e.preventDefault()});
+ */
+</script>
+

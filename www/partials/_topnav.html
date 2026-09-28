@@ -1,0 +1,40 @@
+
+<div class="slideMe">
+	<!-- main top navigation -->
+<nav id="top-nav" ng-init="prodStat ='', recStat='', favStat='' " >
+
+		<a id="tab-global-nav">&nbsp;</a>
+		<div id="tab-pages">
+			<a id="tab-products"  class="tab-button {{prodStat}}" ng-href="index.html#/products-landing/"></a>
+			<a id="tab-recipes"   class="tab-button {{recStat}}" ng-href="index.html#/recipes-landing/"></a>
+			<a id="tab-favorites" class="tab-button {{favStat}}" ng-href="index.html#/favorites-landing/"></a>
+		</div>
+		<!--<a id="tab-search"    class="tab-button" href="#"></a>-->      
+	</nav>
+	
+	<!-- detail page top navigation -->
+	<nav id="detail-top-nav">
+		<a class="backLink" ng-click="back()"></a>
+		<span class="pageTitle">{{params.topnavTitle}}</span>
+		<a href="{{ next_link }}" id="initial-next">Next
+			<img src="img/forwardArrow.png" id="initial-next-arrow" class="more_arrow" />
+		</a>
+	</nav>
+	
+	<!-- filter page top navigation -->
+	<nav id="filter-top-nav">
+		<a class="cancelLink">Cancel</a>
+		<span class="filterTitle">{{params.filterTitle}}</span>
+		<a class="doneLink">Done</a>
+	</nav>
+
+	<!-- shopping list top navigation -->
+	 <div id="shopping_list_edit_bar">
+          <span id="shopping_list_edit_cancel_aff">Cancel</span>
+          <span class="shoppingListEditListViewTitle">EDIT SHOPPING LIST</span>
+          <span id="shopping_list_edit_done_aff">Done</span>
+   </div>
+	
+</div>
+
+

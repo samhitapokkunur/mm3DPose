@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8" />
+    <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+     this is a standalone page intended to utilize device's pinch zoom to display store floorplan image
+     (note viewport settings)
+    - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <meta name="viewport" id="viewport" content="width=device-width, 
+                initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0,user-scalable=yes"  />
+    <!-- - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - -->
+                
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" type="text/css" href="css/floorplan.css" />
+
+    <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
+     
+    <title>Floorplan</title>
+  </head>
+    
+
+  <body class="detailView floorplan">
+
+    <div class="appContainer">
+<!-- will rely on the device's "done" button until we find the solution for window.close() issue, see comments in floorplan.js -->    
+<!--
+      <header id="top_nav_bar" >
+          <nav id="detail-top-nav">
+            <span class="backLink"></span>
+            <span class="pageTitle">Back</span>
+          </nav>
+      </header>
+-->
+
+      <section class = "detailView  floorplan">
+        <div id="large_floorplan_wrap">
+          <img src="assets/store/floor-plans/chelseafloorplan.jpg" > </img>
+        </div>
+
+      </section> 
+    </div>
+  </body>
+
+</html>
+
+<script src="js/floorplan.js"></script>
+

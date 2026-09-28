@@ -1,0 +1,126 @@
+/*
+-----------------------------
+buttons, misc ui elements
+-----------------------------
+*/
+
+
+.table-view li {
+    border-top:1px #bbb solid;
+    border-bottom:1px #383838 solid;
+}
+
+.button {
+  box-sizing:content-box;
+  display: inline-block; 
+  text-decoration:none;
+  -webkit-border-radius: 15px; 
+  padding: 5px; 
+  text-align:center;
+  margin-top: 10px;
+  color:#dcdcdc;
+  height: 20px; 
+  line-height:20px;
+  background-color: rgba(100,100,100,0.7); 
+  font-size:14px;   
+}
+.short-button {
+  width:80px;
+}
+.medium-button {
+  width:128px;
+}
+.long-button {
+  box-sizing:content-box;
+  display: inline-block; 
+  text-decoration:none;
+  font-size:18px; 
+  color:#dcdcdc; 
+  width: 100%;
+  padding-left:0px;
+  padding-right:0px;
+  background-color: rgba(100,100,100,0.7);     
+}
+
+.button-flat {
+  background-color: rgba(190,190,190,0.7);
+  height:40px;
+  line-height:20px;
+  width:50%;
+}
+.active {
+  color:#fad214;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.bottom-border{
+  border-bottom:1px solid #fad214;
+  padding-bottom:10px;     
+}
+
+
+ul#tab  {
+  width:100%;
+  padding:0;
+  /**/
+  text-align: center;
+}
+
+ul#tab li{
+  margin-right:0;
+  margin-left:0;
+  display:inline-block;
+  overflow:hidden;
+}
+
+
+ul#tab.tab2 li{
+  width:50%;
+}
+
+ul#tab.tab2 li:first-child {
+  float:left;
+  text-align:left;
+  margin-left: -2%;
+}
+
+ul#tab.tab2 li:last-child {
+  float:right;
+  text-align:right;
+  margin-right: -2%;
+}
+
+
+ul#tab.tab3 li{
+  width:33%;
+  margin-right:0;
+  margin-left:0;
+  display:block;
+  overflow:hidden;
+  float:left;
+}
+
+ul#tab.tab3 li:first-child {
+  float:left;
+  //text-align:left;
+  margin-left: -3.5%;
+}
+
+ul#tab.tab3 li:nth-child(2) {
+  position: relative;
+  left: 3.5%;
+}
+
+ul#tab.tab3 li:last-child {
+  float:right;
+  //text-align:right;
+  margin-right: -3%;
+}
+
+ul#tab:after {
+    display:block;
+    clear:both;
+    content:'\0020';
+    width:100%;
+    height:15px;
+}

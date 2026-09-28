@@ -1,0 +1,67 @@
+/*
+------------------------------------
+common styles for:
+department landing
+food profile landing
+favorites landing
+rewards landing
+about landing
+store list landing
+------------------------------------
+*/	
+
+  section.myFoodProfile .inner
+, section.departmentsLanding .inner
+, section.favoritesLanding .inner
+, section.locations .inner
+, section.about .inner  {
+    padding-left: 0px;
+    padding-right:0px;
+    margin-top: 100px;
+}
+
+ul.grid, div.grid {
+    display:block;
+}
+
+.grid:after {
+    content:'\0020';
+    display:block;
+    clear:both;
+}
+
+.grid-item {
+    position:relative;
+    width:33.2%;
+    overflow:hidden;
+    float:left;
+    display:block;
+    text-align:center;
+    color: #fff;
+    padding-top:95px;
+    padding-bottom:18px;
+    min-height:24px;
+    text-align:center;
+    line-height:14px;
+    font-size:14px;
+}
+	 
+.grid-item span {
+    display:block;
+    line-height:14px;
+    height:28px;
+}
+
+.icon-style:before {
+    display:block;
+    position:absolute;
+    top:0;
+    left:50%;
+    content:'\0020'; /* change to sprite url i.e url('img/sprite_departments_active.png');*/
+    /* clip: rect(0px, 0px, 0px, 0px); change to actual measurements all taken from top left corner of the sprite image (top, right, bottom, left) */
+    width: 166px;
+    height:166px;
+    margin-left:-83px;
+    z-index:1;
+}
+

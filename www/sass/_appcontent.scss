@@ -1,0 +1,134 @@
+/*
+--------------------------------------------------
+Application Content Container
+--------------------------------------------------
+*/
+
+#bg_image{
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  padding: 0 0 0 0;
+  display: block;
+  width: 100%; 
+  height: 100%;  
+  margin: 0;
+  background-position: center top;
+  -webkit-background-size: cover;
+  background-size: cover;  
+}
+
+#view_content{
+  position: fixed;
+  background-color: transparent;
+  color: white;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-x:hidden;
+  #view_content_wrapper{
+    position: relative;
+    margin: 0 0 0 0;
+    // background-color: transparent;
+  }
+}
+
+// clear
+.inner:after {
+  content:"\0020";
+  display:block;
+  width: 1px;
+  height: 1px;
+  clear:both;
+}
+
+/* standard pages */
+section.detailView.legal .inner,
+section.detailView.shoppingList .inner,
+section.landingView.shoppingList .inner,
+section.detailView.reward .inner {
+  padding: 90px 15px 15px 15px;
+}
+
+/* these pages have footer */
+.detailView.product #view_content, 
+.detailView.recipe  #view_content{
+  bottom: 40px;
+}
+
+/* the content on these pages starts lower to allow room for an image */
+section.detailView.product .inner,
+section.detailView.recipe .inner, 
+section.detailView.department .inner, 
+section.detailView.curatorpost .inner {
+	position:relative;
+  margin-top:320px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom: 46px;
+  width:100%;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 10%,rgba(2,0,0,0.7) 100%);
+}
+
+/* curator post detail page needs more room */
+section.detailView.curatorpost .inner {
+    margin-top:370px;
+    padding-top: 10px;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 4%,rgba(2,0,0,0.7) 100%);
+} 
+
+/* these pages don't have view title */
+.detailView.department #top_ttl,
+.filterView #top_ttl,
+.detailView.store #top_ttl,
+.detailView.reward #top_ttl,
+.detailView.storeKey #top_ttl    {
+  display:none;
+}
+
+/* adds list-style-type for ul lists in htm divs */
+.htm ul {
+  //list-style-type: circle;
+  list-style-type: none;
+  margin-left:15px;
+  padding-left:5px;
+  li {
+    color: #fad214;
+    margin-bottom:8px;
+    background-image:url('../img/thin_list_disc.png');
+    background-size: 9px 9px;
+    background-repeat: no-repeat;
+    background-position: 0px 4px;
+    margin-left: -15px;
+    padding-left: 20px;
+    span {
+      color: white;
+      position: relative;
+      left: -5px;
+    }
+  }
+  li.group{
+    padding-left: 0px;
+    margin-left: 0px;
+    background-image:none; 
+  }
+}
+.htm b{
+  font-weight:bold;
+}
+
+.no_data_message {
+  margin-top:100px;
+  text-align:center;
+  a, a:link {
+    color:#fff;
+    text-decoration:underline;
+  }
+}
+
+a#initial-next {
+  display:none;
+}

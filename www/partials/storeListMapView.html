@@ -1,0 +1,22 @@
+<section class = "{{viewClass}}">
+	
+    <div class="inner">
+    <div id="filter-wrap" class="{{filterState}}">
+    <nav id="filter" class="allLocationsIconsWrapper">
+        <div class="allLocationsIcons">
+            <a ng-repeat="location in locations" class="icon-style icon-locations {{ location.IconClass }} iconWithCopy" ng-class="{selected:(GeoRegionID == location.GeoRegionID)}" href="index.html#/store-list-map/{{ location.GeoRegionID }}/">
+            <span class="iconCopy">{{ location.Label }} ({{ location.Count }})</span>
+            </a>
+        </div>
+    </nav>
+    <div id="apply-filters" ng-click="filterState=(filterState == 'hideFilter')?'showFilter':'hideFilter'"><span>Other Locations</span>
+    </div>
+  </div>
+
+    <div id="mapview">
+        <div id="map-canvas"></div>
+    </div>
+      
+
+    </div>
+</section>

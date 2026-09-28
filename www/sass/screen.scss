@@ -1,0 +1,69 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+@import "fonts";
+
+@import "compass/reset";  
+@import "compass/css3/box";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
+
+@import "mixinvars"; 
+
+@import "common";
+
+@import "globalnav";
+
+@import "topnav"; 
+
+@import "appcontent"; 
+
+@import "mosaic";
+
+@import "product-recipe-detail";
+
+@import "footernav"; 
+
+@import "landing-filter-menu";
+
+@import "filter";
+
+@import "topnav-icons";
+
+@import "diet-icons";
+
+@import "favorites-icons";  
+
+@import "locations-icons";
+
+@import "dept-icons";
+
+@import "ui-elements";
+
+@import "landings";
+
+@import "favorites";
+
+@import "shopping-list";
+
+@import "food-profile";
+
+@import "stores";
+
+
+@import "rewards";
+
+@import "about";
+
+@import "departments";
+
+@import "users";
+
+@import "initial-flow";
+

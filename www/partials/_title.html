@@ -1,0 +1,29 @@
+<!-- standard page title -->
+	<h3><div class = "page_title_inner">
+      {{params.ViewTitle}}<div class="subtitle" ng-bind-html-unsafe="params.ViewSubtitle"></div>
+    </div>
+  </h3>
+
+<!-- shopping list view affordances -->
+		<div id="shopping_list_ttl">
+  		<span id="shopping_list_add_aff"><img src="img/shopping-list-add-aff.png" width="23" height="24" /></span>
+  		<span id="shopping_list_edit_aff"><img src="img/shopping-list-edit-aff.png" width="24" height="24" /></span>
+		</div>
+
+<!-- store list view affordances -->
+		<div ng-controller="StoreListAffCtrl" id="store_list_ttl">
+  			<div ng-tap="showKey()" id="info_view_aff" class = "icon_info">
+  				<img src="img/locations-imgs-aff/i.png" alt="key" />
+  			</div>
+  			<div id="map_view_aff"  class = "icon_map">
+  				<a href="index.html#/store-list-map/{{ GeoRegionID }}/"></a>
+
+  				<img src="img/locations-imgs-aff/Locations-MapView-active.png" ng-show="map_activity == 'active'" alt="map_on" />
+  				<img src="img/locations-imgs-aff/Locations-MapView.png" ng-show="map_activity == 'inactive'" alt="map_off" />
+  			</div>
+  			<div id="list_view_aff" class = "icon_list">
+  			  	<a href="index.html#/store-list/{{ GeoRegionID }}/"></a>
+  				<img src="img/locations-imgs-aff/Locations-ListView-active.png" ng-show="list_activity == 'active'" alt="list_on" />
+  				<img src="img/locations-imgs-aff/Locations-ListView.png" ng-show="list_activity == 'inactive'" alt="list_off" />
+  			</div>
+		</div>

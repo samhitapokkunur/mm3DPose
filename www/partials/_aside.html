@@ -1,0 +1,153 @@
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<aside id="global-nav" ng-controller="NavigationCtrl">
+
+<form id="search" method="post"	>
+	<input id="searchSubmit" type="submit" value ="" />
+	<input id="searchValue" placeholder="" type="search" />
+</form>
+
+
+<nav>
+	
+<!-- - - - - - - - - - - - - EXPLORE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	<div id="gnav-explore" class='fancy-nav'>
+	<h2>Explore</h2>
+	
+	<ul>
+		
+		<li class="home">
+			<!-- <a ng-href="#home" ng-click="slidePage('/home')"> -->
+			<a ng-href="index.html#/home/">
+				<span>Home</span>
+			</a>
+		</li>
+		
+		<li class="products">
+			<!-- <a ng-href="#products-landing"  ng-click="slidePage('/products-landing')">  -->
+			<a ng-href="index.html#/products-landing/">
+				<span>Products</spn>
+			</a>
+		</li>
+		
+		<li class="recipes">
+			<a ng-href="index.html#/recipes-landing/">
+				<span>Recipes</span>
+			</a>
+		</li>
+		
+		<li class="departments">
+			<a ng-href="index.html#/departments-landing/">
+				<span>Departments</span>
+			</a>
+		</li>
+	</ul>
+	</div>
+	
+<!-- - - - - - - - - - - - - - - PLAN - - - - - - - - - - - - - - - - - - - - -->
+	
+	<div id="gnav-plan" class='fancy-nav'>
+		<h2>Plan</h2>
+		
+		<ul>
+			
+			<li class="shopping-list">
+				<a ng-href="index.html#/shopping-list-landing/">
+					<span class="ico-above ico-list">Shopping List</span>
+				</a>
+			</li>
+			
+			<li class="store-locations">
+				<a ng-href="index.html#/locations-landing/">
+					<span>Store Locations</spn>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+<!-- - - - - - - - - - - - - - - PERSONALIZE - - - - - - - - - - - - - - - - - - - - -->
+	
+	<div id="gnav-personalize" class="fancy-nav">
+		<h2>Personalize</h2>
+		<ul>
+			<li class="favorites">
+				<a ng-href="index.html#/favorites-landing/">
+					<span>Favorites</span>
+				</a>
+			</li>
+			
+			<li class="rewards">
+				<a ng-href="index.html#/rewards-landing/">
+					<span>Store Offers</span>
+				</a>
+			</li>
+			
+			<li class="dietary-prefs">
+				<a ng-href="index.html#/my-food-profile-landing/">
+					<span>My Dietary Pref.</span>
+				</a>
+			</li>
+
+			<li class="app-settings">
+				<a ng-href="index.html#/app-settings/">
+					<span>App Settings</span>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+	
+	
+<!-- - - - - - - - - - - - - - - CONTACT US - - - - - - - - - - - - - - - - - - - - -->
+	
+	  <div id="gnav-contact" class='fancy-nav single'> 
+       <h2>Contact Us</h2>
+			<ul>
+				<!--
+				<li class="customer-service">
+					<a ng-href="index.html#/under-construction/">
+							<span>Customer Service</span>
+					</a>
+				</li>
+				 -->
+				<li class="about-this-app">
+					<a ng-href="index.html#/about-landing/">
+						<span>About This App</span>
+					</a>
+				</li>					
+			</ul>
+		</div>
+
+<!-- - - - - - - - - - - - - - - Test and Data Load - remove for the production release  - - - - - - -  -->
+
+<!-- 
+	<div id="gnav-test" class='table-view'>
+		<h2>Test Data</h2>
+		<ul>
+					<li><a id="tab-test" class="tab-button" href="index.html#/dataload-view/">Full Data Load</a></li>
+			<li><a id="tab-test" class="tab-button" href="index.html#/delta-dataload-view/">Delta Data Load</a></li> 
+          <li><a id="tab-test" class="tab-button" href="querydata.html">Data List</a></li>
+   -->
+           <!--         <a ng-href="index.html#/app-settings/">App Settings</a>
+					 <a ng-href="index.html#/product-view/103/"> test </a>
+					<a ng-href="index.html#/test">TestView</a>  -->
+<!--		</ul>
+		
+	</div>
+-->
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - -  -->	   
+	</nav>
+
+
+
+		<div id="gnav-bottom">
+			<img src="img/fairway_logo.png" width="200" height="80" alt="faiway_logo"/>
+		</div>
+</aside>
+
+<!--The Layer that will be layed over the content
+	so that the content is unclickable while menu is shown-->
+<div id="contentLayer"></div>
+

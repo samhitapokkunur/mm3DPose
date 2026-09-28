@@ -1,0 +1,130 @@
+/*
+-----------------------------
+diet preference icons
+-----------------------------
+*/
+
+@import "diet-imgs/*.png";
+@include all-diet-imgs-sprites;
+
+
+.icon-style.icon-foodprofile:before {
+	display: block;
+	content: '\0020';
+	width: 166px;
+    height: 166px;
+	zoom:50%;
+	margin-left:-88px;
+}
+
+
+.icon-style.icon-foodprofile-small:before {
+	display: block;
+	content: '\0020';
+	width: 166px;
+	height: 167px;
+	zoom:30%;
+	margin-left:-88px;
+}
+
+
+.icon-dairyfree:before {
+  @include diet-imgs-sprite(DietIcons_DF);
+}
+
+.icon-dairyfree.selected:before {
+	@include diet-imgs-sprite(DietIcons_DFa);
+}
+
+.icon-fatfree:before {
+	@include diet-imgs-sprite(DietIcons_FF);
+}
+.icon-fatfree.selected:before {
+	@include diet-imgs-sprite(DietIcons_FFa); 
+}
+	
+.icon-glutenfree:before {
+	@include diet-imgs-sprite(DietIcons_GF);
+}
+
+.icon-glutenfree.selected:before {
+	@include diet-imgs-sprite(DietIcons_GFa);
+}
+
+.icon-highfiber:before {
+	@include diet-imgs-sprite(DietIcons_HF);
+}
+.icon-highfiber.selected:before {
+	@include diet-imgs-sprite(DietIcons_HFa);
+}
+
+.icon-kosher:before{
+	@include diet-imgs-sprite(DietIcons_Kosher);
+}
+.icon-kosher.selected:before{
+	@include diet-imgs-sprite(DietIcons_Koshera);
+}
+
+.icon-lowfat:before {
+	@include diet-imgs-sprite(DietIcons_LF);
+}
+
+.icon-lowfat.selected:before {
+	@include diet-imgs-sprite(DietIcons_LFa);
+}
+
+.icon-lowsodium:before {
+	@include diet-imgs-sprite(DietIcons_LS);	
+}
+.icon-lowsodium.selected:before {
+	@include diet-imgs-sprite(DietIcons_LSa);
+}		
+
+.icon-vegetarian:before {
+	@include diet-imgs-sprite(DietIcons_Vegetarian);			
+}
+.icon-vegetarian.selected:before {
+	@include diet-imgs-sprite(DietIcons_Vegetariana);	
+}
+
+.icon-vegan:before {
+	@include diet-imgs-sprite(DietIcons_Vegan);
+}
+.icon-vegan.selected:before {
+	@include diet-imgs-sprite(DietIcons_Vegana);
+}
+
+.icon-wheatfree:before {
+	@include diet-imgs-sprite(DietIcons_WF);
+}
+
+.icon-wheatfree.selected:before {
+	@include diet-imgs-sprite(DietIcons_WFa);
+}
+
+.icon-sugarconscious:before {
+	@include diet-imgs-sprite(DietIcons_SC);
+}
+
+.icon-sugarconscious.selected:before {
+	@include diet-imgs-sprite(DietIcons_SCa);
+}
+
+
+.icon-lowcarb:before {
+	@include diet-imgs-sprite(DietIcons_LC);
+}
+.icon-lowcarb.selected:before {
+	@include diet-imgs-sprite(DietIcons_LCa);
+}
+
+.icon-sugarconscious.selected:before {
+	@include diet-imgs-sprite(DietIcons_SCa);
+}
+
+.icon-lowcarb:before {
+	@include diet-imgs-sprite(DietIcons_LC);
+}
+.icon-lowcarb.selected:before {
+	@include diet-imgs-sprite(DietIcons_LCa);	
+}

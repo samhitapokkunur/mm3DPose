@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Query DB</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+        <script>
+            var servername = "fairway.local";
+            var apikey = "ec027e0a707439dcdfbc71ee7a8c05b9";
+            var db, list;
+        </script>
+        <script>
+            $(document).ready(function() {
+                $("#submit").on("click", function(){
+                    var query = $("#query").val();
+                    list = $('#dataParsed');                             
+                    var db = window.openDatabase("FairwayMarket", "1.0", "Fairway Market", 200000);
+                    db.transaction(
+                        function(tx) {
+                                   tx.executeSql(query, [],
+                                        function(tx, results) {
+                                                 var len = results.rows.length;
+                                                 
+                                                 list.html ($(document.createElement('p')).html("Query Results : " + len));
+                                                 
+                                                 
+                                                 for (var i=0; i<len; i++){
+                                                    list.append($(document.createElement('p')).html(JSON.stringify(results.rows.item(i))));
+                                                 
+                                                 }
+                                              }
+                                              ,errorCB);
+                                }
+                                );
+                 });
+            });                        
+            function errorCB(tx, err) {
+                alert("Error processing SQL: "+err);
+            }
+            function AddToFavorite(tx, results) {
+                var len = results.rows.length;
+                if (len > 0){
+                alert(UserID + ":" + id + " added the prodct to your favorite")
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+        <div>
+            <a href="index.html" rel="external">Home</a>
+            <br/>
+            <a href="Querydata.html" rel="external">Show Table Data</a>
+            <br/>
+        </div>
+        <div>
+            <textarea rows=5 cols=10 id="query" name="query"></textarea>
+            <input type="submit" id="submit" name="submit" value="Query"/>
+        </div>
+        <div id="dataParsed" class="dataParsed"></div>
+        <script type="text/javascript">
+            //app.initialize();
+        </script>
+
+    </body>
+    
+</html>

@@ -1,0 +1,28 @@
+/*
+--------------------------------------------------
+Common Application Level Styles
+--------------------------------------------------
+*/
+
+html { 
+  //
+//   background-image: url("http://css-tricks.com/examples/FullPageBackgroundImage/images/bg.jpg");
+//   background-attachment: fixed;
+//   background-repeat: no-repeat;
+//
+}
+
+body{
+  background-color: #505050;
+  font-family:roboto_condensedlight;
+}
+
+.appContainer{
+  width: 100%;
+}
+
+a {
+	text-decoration:none;
+	font-family:roboto_condensedlight;
+	font-size:14px;
+}

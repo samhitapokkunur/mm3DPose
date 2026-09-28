@@ -1,0 +1,56 @@
+<section class="userView">
+  <div class="inner">
+    <div id="welcome_msg" ng-show="first_time">
+    <h3>
+      <p>Fairway’s exclusive mobile offers are a great way to explore Fairway’s specialty imported products. When we put our label on a product at Fairway, we mean business.</p>
+      <p>Please tell us a little about yourself to get started!</p>
+    </h3>
+    </div>
+    <div id="welcome_header" ng-show="first_time">
+      <img src="img/gnav-imgs/appsettings.png" />
+      <span>App Profile Settings</span>
+    </div>
+    <div ng-show="invalid_form" id="invalid_form_msg">Please complete profile</div>
+    <h2>Personal Information</h2>
+    <div id="input_fields">
+      <!--<div ng-repeat="(key, val) in inputs" class="input_container">
+        <div class="input_container">
+          <label>{{ key.replace('_', ' ') | capitalize_first_letter }}</label>
+          <input id="{{ key }}" focus-this="val.active" ng-show="val.active" ng-model="inputs.key" type="text" />
+          <div ng-hide="val.active" ng-tap="toggleVisibility({{ key + '' }})" class="overlay">{{ val.value || "Required" }}</div>
+        </div>
+      </div>-->
+      <div class="input_container">
+        <label>First Name</label>
+        <input focus-this="inputs.FirstName.active" ng-show="inputs.FirstName.active" id="FirstName" ng-model="inputs.FirstName.value" type="text" />
+        <div ng-hide="inputs.FirstName.active" ng-tap="toggleVisibility('FirstName')" class="empty_{{ inputs.FirstName.value || 'true' }} invalid_{{invalid_form}} overlay">{{ inputs.FirstName.value || "Required" }}</div>
+      </div>
+      <div class="input_container">
+        <label>Last Name</label>
+        <input focus-this="inputs.LastName.active" ng-show="inputs.LastName.active" id="LastName" ng-model="inputs.LastName.value" type="text" />
+        <div ng-hide="inputs.LastName.active" ng-tap="toggleVisibility('LastName')" class="empty_{{ inputs.LastName.value || 'true' }} invalid_{{invalid_form}} overlay">{{ inputs.LastName.value || "Required" }}</div>
+      </div>
+      <div class="input_container">
+        <label>Email</label>
+        <input focus-this="inputs.EmailAddress.active" ng-show="inputs.EmailAddress.active" id="EmailAddress" ng-model="inputs.EmailAddress.value" type="text" />
+        <div ng-hide="inputs.EmailAddress.active" ng-tap="toggleVisibility('EmailAddress')" class="empty_{{ inputs.EmailAddress.value || 'true' }} invalid_{{invalid_form}} overlay">{{ inputs.EmailAddress.value || "Required" }}</div>
+      </div>
+      <div class="input_container">
+        <label>Phone</label>
+        <input focus-this="inputs.Phone.active" ng-show="inputs.Phone.active" id="Phone" ng-model="inputs.Phone.value" type="tel" />
+        <div ng-hide="inputs.Phone.active" ng-tap="toggleVisibility('Phone')" class="overlay">{{ inputs.Phone.value || "Optional" }}</div>
+      </div>
+      <div class="input_container">
+        <label>Zip Code</label>
+        <input focus-this="inputs.PostalCode.active" ng-show="inputs.PostalCode.active" id="PostalCode" ng-model="inputs.PostalCode.value" type="text" pattern="[0-9]*" />
+        <div ng-hide="inputs.PostalCode.active" ng-tap="toggleVisibility('PostalCode')" class="empty_{{ inputs.PostalCode.value || 'true' }} invalid_{{invalid_form}} overlay">
+          {{ inputs.PostalCode.displayVal || "Required" }}
+          <!--{{ inputs.PostalCode.value.slice(0, 5) + (inputs.PostalCode.value.slice(5) ? '-' + inputs.PostalCode.value.slice(5) : '') || "Required" }} - test: {{ inputs.PostalCode.value}}--></div>
+      </div>
+    </div>
+  
+  <a ng-hide="first_time" class="button medium-button" href="index.html#/about-landing"><img src="img/locations-imgs-aff/i.png" class="info_icon" alt="key"> <span>About this App</span><img src="img/more_arrow.png" class="more_arrow"></a>
+  <a ng-show="first_time" class="button long-button" ng-tap="redirectHome()">Not Right Now, Thanks</a>
+  <div ng-show="first_time" id="note_msg">NOTE: These App Settings can always be set later to enable Rewards from the “App Settings” button on the app main menu.</div>
+  </div>
+</section>

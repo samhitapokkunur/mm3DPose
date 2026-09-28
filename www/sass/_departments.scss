@@ -1,0 +1,74 @@
+/*
+-----------------------------------
+ Departments Landing Grid Layout
+-----------------------------------
+*/
+section.departmentsLanding .grid-item span {
+    height: 28px;  
+    width: 99px;
+    font-size: 14px;
+} 
+
+.detailView.department #bg_image {
+    /*-webkit-filter: blur(3px); */
+}
+
+.detailView.department ul.description_ul { 
+    width: 91%;
+    padding-top: 15px;
+    border-top: 1px solid #fad214;
+    padding-left: 19px;
+}
+.detailView.department {
+    .htm ul li {
+      font-size: 16px;
+      line-height: 18px;
+    }
+}
+/*.detailView.department .dept_li {
+  position:relative;
+}
+.detailView.department .dept_li a {
+  font-size: 14px;
+  color:#FFFFFF;
+  background-color: rgba(167,167,167,0.7);
+}*/
+section.detailView.department {
+.dept_li {
+  position:relative;
+  a{
+    font-size: 14px;
+    color:#FFFFFF;
+    background-color: rgba(167,167,167,0.7);
+  }
+  a#dept_related_recipes {
+    width:72%;
+    padding-left:23%;
+  }
+  a#dept_related_prod {
+    width:70%;
+    padding-left:22%;
+  }
+  a#dept_related_prod:before, a#dept_related_recipes:before {
+    text-align:right;
+    left:18%;
+    top:65%;
+    zoom:40%;
+  }
+  a#dept_related_prod:before {
+    left:13%;
+  }
+  /*a#dept_related_recipes:after {
+    position: absolute;
+    right:10px;
+    top: 16px;
+    content: '';
+    height: 18px;
+    width: 18px;
+    background-image: url('../img/forwardArrow.png');
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-color: transparent;
+  }*/
+}
+}

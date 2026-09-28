@@ -1,0 +1,80 @@
+/*
+-----------------------------
+locations icons
+-----------------------------
+*/
+
+@import "locations-imgs/*.png";
+@include all-locations-imgs-sprites;
+
+
+// location landing icons
+.icon-style.icon-locations:before {
+	display: block;
+	content: '\0020';
+	width: 105px;
+  height: 105px;
+	zoom:83%;
+	margin-left:-53px;
+}
+
+// location legend on the map view : these icons are smaller
+.storeListMap .icon-style.icon-locations:before {
+		zoom: 50%;
+}
+
+
+.ct-southwest:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_CT);
+}
+.ct-southwest.selected:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_CTA);
+}
+
+.nj-northeast:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_NJ);
+}
+.nj-northeast.selected:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_NJA);
+}
+
+
+.ny-long-island:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_NY);
+}
+
+.ny-long-island.selected:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_NYA);
+}
+
+.ny-westchester:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_NY);
+}
+
+.ny-westchester.selected:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_NYA);
+}
+
+
+.nyc-brooklyn:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_Brklyn);
+}
+.nyc-brooklyn.selected:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_BrklynA);
+}
+
+
+.nyc-manhattan:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_Mthn);
+}
+.nyc-manhattan.selected:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_MthnA);
+}
+
+.nyc-queens:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_Qns);
+}
+
+.nyc-queens.selected:before {
+  	@include locations-imgs-sprite(StoreLtnIcons_NavMap_QnsA);
+}

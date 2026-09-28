@@ -1,0 +1,11 @@
+<section class = "{{viewClass}}" >
+  <div class="inner">     
+    <p class="company_name">{{params.Title}}</p>
+    <p>Version {{params.Version}}</p>
+    <p>{{params.Copyright}}</p>
+	<div class="legal">
+		<span class="strong">Legal Notices</span>
+    	<div ng-bind-html-unsafe="params.Legal"></div>
+	</div>
+  </div>
+</section>

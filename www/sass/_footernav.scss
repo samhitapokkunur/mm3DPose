@@ -1,0 +1,44 @@
+/*
+--------------------------------------------------
+Footer Navigation
+--------------------------------------------------
+*/
+#foot_nav{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  z-index: 30;
+  // background-color: rgba(252, 255, 7, 0.7);
+  display: none;
+  //
+  #standard_footer{
+    width: 100%;
+    height: 100%;
+  }
+  //
+  #shopping_list_edit_view_footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 44px;
+    background-color: rgba(255, 255, 255, .4);
+    display: none;
+  }
+  #shopping_list_edit_view_footer * {
+      width: 50%;
+      height: 100%;
+      float: left;
+      font-family: 'roboto_condensedlight';
+      font-size: 1em;
+      line-height: 2.8em;
+      text-align: center;
+      color: white;
+  }
+  #shopping_list_edit_view_footer #delete_checked_items {
+      border-right: 1px solid white;
+  }
+  #shopping_list_edit_view_footer #delete_entire_list {
+
+  }
+}

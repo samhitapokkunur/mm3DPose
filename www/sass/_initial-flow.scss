@@ -1,0 +1,153 @@
+body.initialFlow {
+  header {
+    #top_nav {
+      .backLink {
+        display:none;
+      }
+      #initial-next {
+        display: block;
+        font-size:18px;
+        color: #fff;
+        height:45px;
+        margin: 0;
+        padding: 0 0 0 15px;
+        position: static;
+        font-family: 'roboto_condensedlight';
+        text-align:center;
+        right:10px;
+        top:-1px;
+        position:absolute;
+        z-index:1000;
+      }
+      #initial-next-arrow {
+        width:12px;
+        height:12px;
+        margin-left:-5px;
+      }
+    }
+  }
+}
+
+body.initialFlow-agreement {
+  header {
+    #top_nav {
+      display: none;
+    }
+  }
+  text-align:center;
+  section.initialFlow-agreement {
+    padding-top: 13px;
+    .divider {
+      padding: 10px;
+      border-bottom: 1px solid #fad214;
+      p {
+        margin-bottom:6px;
+      }
+      #after_info {
+        margin-bottom:0;
+      }
+      a {
+        margin:0;
+      }
+      #agreement_box {
+        margin-bottom:5px;
+        a {
+          position:relative;
+          padding-left:13px;
+          width:95%;
+          img {
+            position: absolute;
+            top: 6px;
+            height: 17px;
+            right: 14px;
+          }
+        }
+      }
+    }
+    .divider#img_container {
+      text-align:center;
+      border-bottom:0;
+      h2 {
+        font-size: 23px;
+        margin-top:10px;
+      }
+      img {
+        width:100%;
+      }
+    }
+    .divider#view_agreement_container {
+      border-bottom: 1px solid #726f6e;
+    }
+    .divider#note_container {
+      border:0;
+      text-align:center;
+      font-weight:600;
+      p {
+        margin-bottom:0;
+      }
+    }
+  }
+}
+
+section.initialFlow {
+  .inner {
+    margin-top:90px;
+  }
+}
+
+body.userView.first-time {
+  header {
+    display:none;
+  }
+  .inner {
+    margin-top:0;
+    h2 {
+      font-size:14px;
+      padding:5px;
+      font-weight:600;
+    }
+    #input_fields {
+      border-top: 1px solid #726f6e;
+    }
+    .input_container {
+      height:40px;
+      font-size:16px;
+      label, .overlay {
+        top:12px;
+      }
+      input {
+        top:2px;
+      }
+    }
+  }
+  #welcome_msg, #note_msg {
+    padding:13px;
+    font-size:21px;
+    text-align:center;
+  }
+  #welcome_header {
+    border-bottom:1px solid #fad214;
+    overflow:hidden;
+    padding-left:4px;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-family: 'roboto_condensedregular';
+    text-transform: uppercase;
+    font-size:20px;
+    span {
+      display:block;
+      float:left;
+      margin-left:3px;
+      margin-top:2px;
+    }
+    img {
+      height:25px;
+      width:25px;
+      float:left;
+    }
+  }
+  #note_msg {
+    font-size:12px;
+    font-weight:600;
+  }
+}

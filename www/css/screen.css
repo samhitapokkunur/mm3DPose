@@ -1,0 +1,5230 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* apply a natural box layout model to all elements */
+/* line 7, ../sass/screen.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+--------------------------------------------------
+Fonts
+--------------------------------------------------
+*/
+/* ROBOTO THIN */
+@font-face {
+  font-family: 'robotothin';
+  src: url("../fonts/Roboto-Thin-webfont.eot");
+  src: url("../fonts/Roboto-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Thin-webfont.woff") format("woff"), url("../fonts/Roboto-Thin-webfont.ttf") format("truetype"), url("../fonts/Roboto-Thin-webfont.svg#robotothin") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotothin_italic';
+  src: url("../fonts/Roboto-ThinItalic-webfont.eot");
+  src: url("../fonts/Roboto-ThinItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-ThinItalic-webfont.woff") format("woff"), url("../fonts/Roboto-ThinItalic-webfont.ttf") format("truetype"), url("../fonts/Roboto-ThinItalic-webfont.svg#robotothin_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ROBOTO LIGHT */
+@font-face {
+  font-family: 'robotolight';
+  src: url("../fonts/Roboto-Light-webfont.eot");
+  src: url("../fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light-webfont.woff") format("woff"), url("../fonts/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/Roboto-Light-webfont.svg#robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotolight_italic';
+  src: url("../fonts/Roboto-LightItalic-webfont.eot");
+  src: url("../fonts/Roboto-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-LightItalic-webfont.woff") format("woff"), url("../fonts/Roboto-LightItalic-webfont.ttf") format("truetype"), url("../fonts/Roboto-LightItalic-webfont.svg#robotolight_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*ROBOTO REGULAR */
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/Roboto-Regular-webfont.eot");
+  src: url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotoitalic';
+  src: url("../fonts/Roboto-Italic-webfont.eot");
+  src: url("../fonts/Roboto-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Italic-webfont.woff") format("woff"), url("../fonts/Roboto-Italic-webfont.ttf") format("truetype"), url("../fonts/Roboto-Italic-webfont.svg#robotoitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ROBOTO BOLD */
+@font-face {
+  font-family: 'robotobold';
+  src: url("../fonts/Roboto-Bold-webfont.eot");
+  src: url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotobold_italic';
+  src: url("../fonts/Roboto-BoldItalic-webfont.eot");
+  src: url("../fonts/Roboto-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-BoldItalic-webfont.woff") format("woff"), url("../fonts/Roboto-BoldItalic-webfont.ttf") format("truetype"), url("../fonts/Roboto-BoldItalic-webfont.svg#robotobold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ROBOTO MEDIIUM */
+@font-face {
+  font-family: 'robotomedium';
+  src: url("../fonts/Roboto-Medium-webfont.eot");
+  src: url("../fonts/Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium-webfont.woff") format("woff"), url("../fonts/Roboto-Medium-webfont.ttf") format("truetype"), url("../fonts/Roboto-Medium-webfont.svg#robotomedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotomedium_italic';
+  src: url("../fonts/Roboto-MediumItalic-webfont.eot");
+  src: url("../fonts/Roboto-MediumItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-MediumItalic-webfont.woff") format("woff"), url("../fonts/Roboto-MediumItalic-webfont.ttf") format("truetype"), url("../fonts/Roboto-MediumItalic-webfont.svg#robotomedium_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ROBOTO BLACK */
+@font-face {
+  font-family: 'robotoblack';
+  src: url("../fonts/Roboto-Black-webfont.eot");
+  src: url("../fonts/Roboto-Black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Black-webfont.woff") format("woff"), url("../fonts/Roboto-Black-webfont.ttf") format("truetype"), url("../fonts/Roboto-Black-webfont.svg#robotoblack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotoblack_italic';
+  src: url("../fonts/Roboto-BlackItalic-webfont.eot");
+  src: url("../fonts/Roboto-BlackItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-BlackItalic-webfont.woff") format("woff"), url("../fonts/Roboto-BlackItalic-webfont.ttf") format("truetype"), url("../fonts/Roboto-BlackItalic-webfont.svg#robotoblack_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ROBOTO CONDENSED */
+@font-face {
+  font-family: 'roboto_condensedlight';
+  src: url("../fonts/RobotoCondensed-Light-webfont.eot");
+  src: url("../fonts/RobotoCondensed-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Light-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Light-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Light-webfont.svg#roboto_condensedlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_condensedlight_italic';
+  src: url("../fonts/RobotoCondensed-LightItalic-webfont.eot");
+  src: url("../fonts/RobotoCondensed-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-LightItalic-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-LightItalic-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-LightItalic-webfont.svg#roboto_condensedlight_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_condensedregular';
+  src: url("../fonts/RobotoCondensed-Regular-webfont.eot");
+  src: url("../fonts/RobotoCondensed-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Regular-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Regular-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Regular-webfont.svg#roboto_condensedregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_condenseditalic';
+  src: url("../fonts/RobotoCondensed-Italic-webfont.eot");
+  src: url("../fonts/RobotoCondensed-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Italic-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Italic-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Italic-webfont.svg#roboto_condenseditalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_condensedbold';
+  src: url("../fonts/RobotoCondensed-Bold-webfont.eot");
+  src: url("../fonts/RobotoCondensed-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Bold-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Bold-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Bold-webfont.svg#roboto_condensedbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_condensedbold_italic';
+  src: url("../fonts/RobotoCondensed-BoldItalic-webfont.eot");
+  src: url("../fonts/RobotoCondensed-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-BoldItalic-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-BoldItalic-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-BoldItalic-webfont.svg#roboto_condensedbold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+--------------------------------------------------
+Mixins and Variables
+--------------------------------------------------
+*/
+/*
+--------------------------------------------------
+Common Application Level Styles
+--------------------------------------------------
+*/
+/* line 15, ../sass/_common.scss */
+body {
+  background-color: #505050;
+  font-family: roboto_condensedlight;
+}
+
+/* line 20, ../sass/_common.scss */
+.appContainer {
+  width: 100%;
+}
+
+/* line 24, ../sass/_common.scss */
+a {
+  text-decoration: none;
+  font-family: roboto_condensedlight;
+  font-size: 14px;
+}
+
+/*
+--------------------------------------------------
+Global Navigation
+--------------------------------------------------
+*/
+/*
+-----------------------------
+side navigation - global nav
+-----------------------------
+*/
+/* line 130, gnav-imgs/*.png */
+.gnav-imgs-sprite, .gnav-imgs-about, .gnav-imgs-appsettings, .gnav-imgs-custserv, .gnav-imgs-departments, .gnav-imgs-dietaryprefs, .gnav-imgs-favorites, .gnav-imgs-home, .gnav-imgs-locations, .gnav-imgs-products, .gnav-imgs-recipes, .gnav-imgs-rewards, .gnav-imgs-shoppinglist, #global-nav nav .fancy-nav li.home a span:before, #global-nav nav .fancy-nav li.products a span:before, #global-nav nav .fancy-nav li.recipes a span:before, #global-nav nav .fancy-nav li.departments a span:before, #global-nav nav .fancy-nav li.shopping-list a span:before, #global-nav nav .fancy-nav li.store-locations a span:before, #global-nav nav .fancy-nav li.favorites a span:before, #global-nav nav .fancy-nav li.rewards a span:before, #global-nav nav .fancy-nav li.dietary-prefs a span:before, #global-nav nav .fancy-nav li.customer-service a span:before, #global-nav nav .fancy-nav li.app-settings a span:before, #global-nav nav .fancy-nav li.about-this-app a span:before {
+  background: url('../img/gnav-imgs-s311d980c6d.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-about {
+  background-position: 0 -592px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-appsettings {
+  background-position: 0 -148px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-custserv {
+  background-position: 0 -370px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-departments {
+  background-position: 0 -814px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-dietaryprefs {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-favorites {
+  background-position: 0 -444px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-home {
+  background-position: 0 -740px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-locations {
+  background-position: 0 -222px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-products {
+  background-position: 0 -74px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-recipes {
+  background-position: 0 -518px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-rewards {
+  background-position: 0 -296px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.gnav-imgs-shoppinglist {
+  background-position: 0 -666px;
+}
+
+/* line 40, ../sass/_globalnav.scss */
+.detailView #globalNav, .filterView #globalnav {
+  display: none;
+}
+
+/* line 44, ../sass/_globalnav.scss */
+#global-nav {
+  position: fixed;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  width: 85%;
+  z-index: 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  background-image: -webkit-linear-gradient(45deg, #000000, #3d3d3d, #545454);
+  background-image: -moz-linear-gradient(45deg, #000000, #3d3d3d, #545454);
+  background-image: -o-linear-gradient(45deg, #000000, #3d3d3d, #545454);
+  background-image: linear-gradient(45deg, #000000, #3d3d3d, #545454);
+  -webkit-box-shadow: inset -8px 0px 8px -8px #111111;
+  -moz-box-shadow: inset -8px 0px 8px -8px #111111;
+  box-shadow: inset -8px 0px 8px -8px #111111;
+}
+
+/* line 60, ../sass/_globalnav.scss */
+#global-nav nav a {
+  color: #fff;
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+/* line 68, ../sass/_globalnav.scss */
+#global-nav nav .table-view h2 {
+  position: relative;
+  padding: 0.5em;
+  font-size: 14px;
+  color: #ccc;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 77, ../sass/_globalnav.scss */
+#global-nav nav ul {
+  position: relative;
+}
+
+/* line 81, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav {
+  position: relative;
+  padding: 0;
+  margin: 2px 0 0 0;
+  text-align: center;
+}
+
+/*-- clearing after each navigation group --*/
+/* line 89, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav:after {
+  display: block;
+  content: "\0020";
+  clear: both;
+  margin: 0;
+}
+
+/*-- navigation group title (circle in the middle) --*/
+/* line 97, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav h2 {
+  padding: 0;
+  line-height: 32px;
+  height: 32px;
+  color: #606060;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: visible;
+  z-index: 5;
+  zoom: 1;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.1);
+  font-family: 'roboto_condensedregular';
+}
+
+/*-- navigaton links semi-transparent backgrounds --*/
+/* line 114, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 49.8%;
+  float: left;
+  margin-top: 1px;
+  margin-left: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 125, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav.trio li {
+  width: 33.3%;
+}
+
+/* line 128, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav.single li {
+  width: 100%;
+}
+
+/*-- navigation links and icons --*/
+/* line 133, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li a {
+  position: relative;
+  min-height: 52px;
+  font-weight: lighter;
+  color: #cecece;
+  z-index: 2;
+  text-align: center;
+}
+
+/* line 144, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li a span {
+  display: block;
+  position: relative;
+  font-family: 'roboto_condensedlight';
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  color: white;
+  font-size: 13px;
+}
+
+/* line 158, ../sass/_globalnav.scss */
+#global-nav #gnav-explore h2 {
+  color: #191919;
+}
+
+/* line 162, ../sass/_globalnav.scss */
+#global-nav #gnav-plan h2 {
+  color: #191919;
+}
+
+/* line 166, ../sass/_globalnav.scss */
+#global-nav #gnav-personalize h2 {
+  color: #191919;
+}
+
+/* line 170, ../sass/_globalnav.scss */
+#global-nav #gnav-contact h2 {
+  color: #191919;
+}
+
+/* line 179, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li a span:before {
+  zoom: 50%;
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -15px;
+  background: green;
+}
+
+/*-- icons --*/
+/* line 195, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.home a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -740px;
+}
+
+/* line 199, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.products a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -74px;
+}
+
+/* line 203, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.recipes a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -518px;
+}
+
+/* line 207, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.departments a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -814px;
+}
+
+/* line 213, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.shopping-list a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -666px;
+}
+
+/* line 217, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.store-locations a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -222px;
+}
+
+/* line 223, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.favorites a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -444px;
+}
+
+/* line 227, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.favorites {
+  margin-left: 0px;
+}
+
+/* line 230, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.rewards a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -296px;
+}
+
+/* line 234, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.dietary-prefs a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 0;
+}
+
+/* line 246, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.customer-service a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -370px;
+}
+
+/* line 251, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.app-settings a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -148px;
+}
+
+/* line 256, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.about-this-app a span:before {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  content: ' ';
+  top: -25px;
+  left: 50%;
+  margin-left: -35px;
+  background-position: 0 -592px;
+}
+
+/* line 260, ../sass/_globalnav.scss */
+#global-nav nav .fancy-nav li.about-this-app {
+  margin-left: 0px;
+}
+
+/*-- fairways logo on the bottom --*/
+/* line 266, ../sass/_globalnav.scss */
+#gnav-bottom {
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0.6;
+}
+
+/*
+-----------------------------------------------------------------------------------
+side navigation - global nav - transition
+
+apply .slideMe class to main container + all elements
+that have position fixed: its only header, footer and page title
+do not use fixed positioning anywhere else - it messes up global nav menu transition
+-----------------------------------------------------------------------------------
+*/
+/* line 282, ../sass/_globalnav.scss */
+.slideMe {
+  -webkit-transition-property: margin-left;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+/*
+---------------------------------------------------------
+This will be layed over the content
+so that the content is unclickable while menu is shown
+TODO - this maybe deprecated, need to check
+---------------------------------------------------------
+*/
+/* line 296, ../sass/_globalnav.scss */
+#contentLayer {
+  display: none;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15%;
+  z-index: 7;
+}
+
+/* 
+---------------------------------------------------------
+    search box 
+---------------------------------------------------------    
+*/
+/* line 313, ../sass/_globalnav.scss */
+#global-nav form#search {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 42px;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+/* line 324, ../sass/_globalnav.scss */
+#searchSubmit {
+  -webkit-appearance: square-button;
+  display: block;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 13px;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  background-image: url("../img/search.png");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  border: none;
+  background-position: center;
+  z-index: 20;
+}
+
+/* line 343, ../sass/_globalnav.scss */
+input[type="search"]#searchValue {
+  width: 94%;
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  text-indent: 25px;
+  font-size: 16px;
+  color: #aaa;
+  background-color: transparent;
+  margin-top: 5px;
+  border: 1px solid white;
+  height: 28px;
+}
+
+/* line 357, ../sass/_globalnav.scss */
+.menuOpenSwiper {
+  z-index: 100;
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  right: 0px;
+  display: none;
+  background-color: transparent;
+}
+
+/* line 1, ../sass/_topnav.scss */
+#top-nav, #detail-top-nav, #filter-top-nav, #department-top-nav {
+  display: none;
+}
+
+/* line 5, ../sass/_topnav.scss */
+.landingView #top-nav {
+  display: block;
+}
+
+/* line 8, ../sass/_topnav.scss */
+.detailView #detail-top-nav {
+  display: block;
+}
+
+/* line 11, ../sass/_topnav.scss */
+.filterView #filter-top-nav {
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 45px;
+  width: 100%;
+}
+
+/* line 20, ../sass/_topnav.scss */
+#detail-top-nav, #filter-top-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 7;
+  width: 100%;
+  background-color: #505050;
+  line-height: 3em;
+  border-bottom: 1px #383838 solid;
+  height: 45px;
+}
+
+/*
+--------------------------------------------------
+Top Navigation
+--------------------------------------------------
+*/
+/* line 40, ../sass/_topnav.scss */
+#top_nav_bar {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+
+/* line 48, ../sass/_topnav.scss */
+#top_nav {
+  position: static;
+  width: 100%;
+  height: 45px;
+  background-color: #505050;
+  overflow: hidden;
+  border-bottom: 1px #383838 solid;
+}
+
+/* line 57, ../sass/_topnav.scss */
+#top_ttl, #img_container, #welcome_msg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 65, ../sass/_topnav.scss */
+#top_ttl h3, #img_container h3, #welcome_msg h3 {
+  color: white;
+  height: 100%;
+  text-align: center;
+  font-family: 'roboto_condensedregular';
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  font-size: 20px;
+}
+/* line 75, ../sass/_topnav.scss */
+#top_ttl h3 .subtitle, #img_container h3 .subtitle, #welcome_msg h3 .subtitle {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* line 82, ../sass/_topnav.scss */
+#top_ttl h3 {
+  text-transform: uppercase;
+}
+
+/* line 86, ../sass/_topnav.scss */
+.page_title_inner {
+  margin-top: 10px;
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 93, ../sass/_topnav.scss */
+#top-nav:before,
+#top-nav:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 100, ../sass/_topnav.scss */
+#top-nav:after {
+  clear: both;
+}
+
+/* line 105, ../sass/_topnav.scss */
+#top-nav a {
+  position: relative;
+  float: left;
+  display: block;
+  float: left;
+  text-align: center;
+  color: #fff;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  text-decoration: none;
+  z-index: 20;
+  /* background-color:black; */
+}
+
+/* group of links in the center */
+/* line 122, ../sass/_topnav.scss */
+#tab-pages {
+  position: absolute;
+  width: 200px;
+  max-height: 64px;
+  height: auto;
+  overflow: hidden;
+  left: 50%;
+  top: 0;
+  margin-left: -75px;
+  margin-top: 9px;
+}
+
+/* line 135, ../sass/_topnav.scss */
+#tab-pages a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* hamburger */
+/* line 142, ../sass/_topnav.scss */
+a#tab-global-nav {
+  margin-top: 6px;
+  margin-left: 15px;
+}
+
+/*
+ ----------------------------------------------------
+ top navigation - non-landing pages
+ ----------------------------------------------------
+ */
+/* line 155, ../sass/_topnav.scss */
+header .pageTitle, #detail-top-nav-key .pageTitle {
+  display: block;
+  z-index: 8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  line-height: 45px;
+  height: 45px;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fad214;
+  font-family: 'roboto_condensedregular';
+}
+
+/* line 173, ../sass/_topnav.scss */
+header .backLink, #detail-top-nav-key .backLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  zoom: 1;
+  line-height: 45px;
+  height: 45px;
+  width: 45px;
+}
+
+/* line 184, ../sass/_topnav.scss */
+header .backLink:before, #detail-top-nav-key .backLink {
+  display: block;
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  content: url("../img/backArrow.png");
+  zoom: 50%;
+  top: 50%;
+  margin-top: -45px;
+}
+
+/* line 196, ../sass/_topnav.scss */
+.cancelLink, .doneLink {
+  color: #fff;
+  font-size: 18px;
+  height: 45px;
+  display: block;
+  position: absolute;
+  top: 0px;
+}
+
+/* line 205, ../sass/_topnav.scss */
+.filterTitle {
+  display: block;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fad214;
+  height: 45px;
+  margin: 0;
+  padding: 0 0 0 15px;
+  position: static;
+  font-family: 'roboto_condensedregular';
+  text-align: center;
+  background-color: transparent;
+}
+
+/* line 218, ../sass/_topnav.scss */
+.cancelLink {
+  left: 0;
+  padding-left: 20px;
+  background-color: transparent;
+}
+
+/* line 224, ../sass/_topnav.scss */
+.doneLink {
+  padding-right: 15px;
+  right: 0px;
+  background-color: transparent;
+}
+
+/* line 230, ../sass/_topnav.scss */
+.cancelLink:before {
+  box-sizing: content-box;
+  position: absolute;
+  content: url("../img/cancelArrow.png");
+  zoom: 50%;
+  left: 0;
+  top: 6px;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+/*
+ ----------------------------------------------------
+ not connected bar
+ ----------------------------------------------------
+ */
+/* line 247, ../sass/_topnav.scss */
+#NotConnected {
+  display: none;
+  position: absolute;
+  height: 30px;
+  padding: 3px 20px;
+  background-color: lightgrey;
+  font-size: 11px;
+  top: 84px;
+  width: 100%;
+}
+
+/* line 259, ../sass/_topnav.scss */
+#NotConnected:before {
+  clear: both;
+}
+
+/* line 263, ../sass/_topnav.scss */
+#NotConnected span {
+  display: block;
+  padding: 0;
+  line-height: 12px;
+}
+
+/*
+--------------------------------------------------
+Application Content Container
+--------------------------------------------------
+*/
+/* line 7, ../sass/_appcontent.scss */
+#bg_image {
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  padding: 0 0 0 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-position: center top;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* line 21, ../sass/_appcontent.scss */
+#view_content {
+  position: fixed;
+  background-color: transparent;
+  color: white;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+/* line 32, ../sass/_appcontent.scss */
+#view_content #view_content_wrapper {
+  position: relative;
+  margin: 0 0 0 0;
+}
+
+/* line 40, ../sass/_appcontent.scss */
+.inner:after {
+  content: "\0020";
+  display: block;
+  width: 1px;
+  height: 1px;
+  clear: both;
+}
+
+/* standard pages */
+/* line 52, ../sass/_appcontent.scss */
+section.detailView.legal .inner,
+section.detailView.shoppingList .inner,
+section.landingView.shoppingList .inner,
+section.detailView.reward .inner {
+  padding: 90px 15px 15px 15px;
+}
+
+/* these pages have footer */
+/* line 58, ../sass/_appcontent.scss */
+.detailView.product #view_content,
+.detailView.recipe #view_content {
+  bottom: 40px;
+}
+
+/* the content on these pages starts lower to allow room for an image */
+/* line 66, ../sass/_appcontent.scss */
+section.detailView.product .inner,
+section.detailView.recipe .inner,
+section.detailView.department .inner,
+section.detailView.curatorpost .inner {
+  position: relative;
+  margin-top: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 46px;
+  width: 100%;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 10%, rgba(2, 0, 0, 0.7) 100%);
+}
+
+/* curator post detail page needs more room */
+/* line 77, ../sass/_appcontent.scss */
+section.detailView.curatorpost .inner {
+  margin-top: 370px;
+  padding-top: 10px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 4%, rgba(2, 0, 0, 0.7) 100%);
+}
+
+/* these pages don't have view title */
+/* line 88, ../sass/_appcontent.scss */
+.detailView.department #top_ttl,
+.filterView #top_ttl,
+.detailView.store #top_ttl,
+.detailView.reward #top_ttl,
+.detailView.storeKey #top_ttl {
+  display: none;
+}
+
+/* adds list-style-type for ul lists in htm divs */
+/* line 93, ../sass/_appcontent.scss */
+.htm ul {
+  list-style-type: none;
+  margin-left: 15px;
+  padding-left: 5px;
+}
+/* line 98, ../sass/_appcontent.scss */
+.htm ul li {
+  color: #fad214;
+  margin-bottom: 8px;
+  background-image: url("../img/thin_list_disc.png");
+  background-size: 9px 9px;
+  background-repeat: no-repeat;
+  background-position: 0px 4px;
+  margin-left: -15px;
+  padding-left: 20px;
+}
+/* line 107, ../sass/_appcontent.scss */
+.htm ul li span {
+  color: white;
+  position: relative;
+  left: -5px;
+}
+/* line 113, ../sass/_appcontent.scss */
+.htm ul li.group {
+  padding-left: 0px;
+  margin-left: 0px;
+  background-image: none;
+}
+
+/* line 119, ../sass/_appcontent.scss */
+.htm b {
+  font-weight: bold;
+}
+
+/* line 123, ../sass/_appcontent.scss */
+.no_data_message {
+  margin-top: 100px;
+  text-align: center;
+}
+/* line 126, ../sass/_appcontent.scss */
+.no_data_message a, .no_data_message a:link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* line 132, ../sass/_appcontent.scss */
+a#initial-next {
+  display: none;
+}
+
+/*
+--------------------------------------------------
+Mosaic
+--------------------------------------------------
+*/
+/* line 6, ../sass/_mosaic.scss */
+.mosaic {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 42px;
+}
+
+/* line 14, ../sass/_mosaic.scss */
+.mosaic .cell {
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 4px solid black;
+  overflow: hidden;
+  float: left;
+}
+
+/* line 25, ../sass/_mosaic.scss */
+.mosaic .cell img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 30, ../sass/_mosaic.scss */
+.mosaic .cell h6 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-weight: normal;
+}
+
+/* line 38, ../sass/_mosaic.scss */
+.mosaic.hasGradients .cell a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\0020";
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.65) 92%);
+}
+
+/* line 48, ../sass/_mosaic.scss */
+.mosaic .border-bottom {
+  border-bottom: 4px solid black;
+}
+
+/* line 52, ../sass/_mosaic.scss */
+.mosaic .border-right {
+  border-right: 4px solid black;
+}
+
+/* line 56, ../sass/_mosaic.scss */
+.mosaic .cell-narrow {
+  width: 120px;
+  height: 150px;
+  min-width: 35%;
+  max-width: 35%;
+}
+
+/* line 63, ../sass/_mosaic.scss */
+.mosaic .cell-wide {
+  width: 200px;
+  height: 150px;
+  min-width: 65%;
+  max-width: 65%;
+}
+
+/* line 70, ../sass/_mosaic.scss */
+.landing-icon {
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 3.1em;
+  height: 3.1em;
+  z-index: 1;
+}
+
+/* line 80, ../sass/_mosaic.scss */
+.landing-icon:after {
+  position: absolute;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  top: 50%;
+  margin-top: -33px;
+  margin-left: -33px;
+  zoom: 50%;
+}
+
+/* line 92, ../sass/_mosaic.scss */
+.product-cell .landing-icon:after {
+  content: url("../img/mosaic-imgs/Mosaic_IndicatorProducts_66x66.png");
+}
+
+/* line 95, ../sass/_mosaic.scss */
+.recipe-cell .landing-icon:after {
+  content: url("../img/mosaic-imgs/Mosaic_IndicatorRecipe_66x66.png");
+}
+
+/* line 99, ../sass/_mosaic.scss */
+.curatorpost-cell .landing-icon:after {
+  content: url("../img/mosaic-imgs/Mosaic_IndicatorCurator_66x66.png");
+}
+
+/* line 103, ../sass/_mosaic.scss */
+.landing-item {
+  position: absolute;
+  display: block;
+  bottom: 5px;
+  left: 5px;
+  color: #fff;
+  width: 100%;
+  z-index: 1;
+  font-family: 'robotomedium';
+  padding-right: 5px;
+  overflow: hidden;
+  line-height: 13px;
+  max-height: 26px;
+  font-size: 11px;
+}
+
+/* line 118, ../sass/_mosaic.scss */
+.landingView.Home .landing-item {
+  padding-right: 45px;
+}
+
+/* line 121, ../sass/_mosaic.scss */
+.mosaic .no-content {
+  padding: 80px 10px 0px 10px;
+  color: white;
+  font-size: 19px;
+  text-align: center;
+}
+
+/* line 127, ../sass/_mosaic.scss */
+.recipesLanding #view_content, .productsLanding #view_content, .Home #view_content {
+  background: black;
+}
+
+/*
+---------------------------------------------------------
+recipe and product detail pages
+---------------------------------------------------------
+*/
+/* line 106, recipe-details/*.png */
+.recipe-details-sprite, .recipe-details-cook_time, .recipe-details-course, .recipe-details-ex_link, .recipe-details-music, .recipe-details-prep_time, .recipe-details-serving_num, .recipe-details-skill_level, .recipe-details-total_time, .recipe-details-wine_pairing, .icon-cooktime:before, .icon-course:before, .icon-exlink:before, .icon-music:before, .icon-preptime:before, .icon-servingnum:before, .icon-skilllevel:before, .icon-totaltime:before, .icon-winepairing:before {
+  background: url('../img/recipe-details-s7fa8b096e0.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-cook_time {
+  background-position: 0 -240px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-course {
+  background-position: 0 -180px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-ex_link {
+  background-position: 0 -480px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-music {
+  background-position: 0 -420px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-prep_time {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-serving_num {
+  background-position: 0 -360px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-skill_level {
+  background-position: 0 -120px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-total_time {
+  background-position: 0 -60px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.recipe-details-wine_pairing {
+  background-position: 0 -300px;
+}
+
+/* line 10, ../sass/_product-recipe-detail.scss */
+.icon-style.icon-recipedetail:before {
+  display: block;
+  width: 60px;
+  height: 60px;
+  zoom: 50%;
+  margin-left: 0;
+}
+
+/* line 20, ../sass/_product-recipe-detail.scss */
+.icon-cooktime:before {
+  background-position: 0 -240px;
+}
+
+/* line 23, ../sass/_product-recipe-detail.scss */
+.icon-course:before {
+  background-position: 0 -180px;
+}
+
+/* line 26, ../sass/_product-recipe-detail.scss */
+.icon-exlink:before {
+  background-position: 0 -480px;
+}
+
+/* line 29, ../sass/_product-recipe-detail.scss */
+.icon-music:before {
+  background-position: 0 -420px;
+}
+
+/* line 32, ../sass/_product-recipe-detail.scss */
+.icon-preptime:before {
+  background-position: 0 0;
+}
+
+/* line 35, ../sass/_product-recipe-detail.scss */
+.icon-servingnum:before {
+  background-position: 0 -360px;
+}
+
+/* line 38, ../sass/_product-recipe-detail.scss */
+.icon-skilllevel:before {
+  background-position: 0 -120px;
+}
+
+/* line 41, ../sass/_product-recipe-detail.scss */
+.icon-totaltime:before {
+  background-position: 0 -60px;
+}
+
+/* line 44, ../sass/_product-recipe-detail.scss */
+.icon-winepairing:before {
+  background-position: 0 -300px;
+}
+
+/* line 48, ../sass/_product-recipe-detail.scss */
+section.detailView.recipe .blur {
+  -webkit-filter: blur(3px);
+}
+
+/* line 52, ../sass/_product-recipe-detail.scss */
+section.detailView.product .detailSection {
+  margin-top: 320px;
+}
+
+/* line 57, ../sass/_product-recipe-detail.scss */
+section.detailView.product .divider,
+section.detailView.recipe .divider {
+  border-bottom: 1px solid #fad214;
+  padding-bottom: 5px;
+}
+
+/* line 61, ../sass/_product-recipe-detail.scss */
+section.detailView.product .divider {
+  padding-bottom: 15px;
+}
+
+/* line 64, ../sass/_product-recipe-detail.scss */
+section.detailView.product .dept {
+  color: white;
+  font-size: 21px;
+  font-weight: normal;
+  margin-top: 12px;
+}
+
+/* line 71, ../sass/_product-recipe-detail.scss */
+.ingredients, .steps {
+  color: white;
+  font-size: 14px;
+}
+
+/* line 76, ../sass/_product-recipe-detail.scss */
+.ingredients ul, .steps ul {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 81, ../sass/_product-recipe-detail.scss */
+.ingredients li, .steps li {
+  padding-bottom: 10px;
+}
+/* line 83, ../sass/_product-recipe-detail.scss */
+.ingredients li a, .ingredients li a:link, .ingredients li a:visited, .steps li a, .steps li a:link, .steps li a:visited {
+  text-decoration: underline;
+  color: white;
+}
+
+/* line 90, ../sass/_product-recipe-detail.scss */
+li.group {
+  list-style-type: none;
+  font-weight: bold;
+  text-indent: -12px;
+}
+
+/* line 96, ../sass/_product-recipe-detail.scss */
+.description {
+  color: #dcdcdc;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  border-bottom: 1px solid #fad214;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 104, ../sass/_product-recipe-detail.scss */
+.description b {
+  color: #fff;
+}
+/* line 107, ../sass/_product-recipe-detail.scss */
+.description br {
+  display: none;
+}
+
+/* line 112, ../sass/_product-recipe-detail.scss */
+.icons {
+  float: right;
+  color: white;
+  width: 100%;
+}
+
+/* line 118, ../sass/_product-recipe-detail.scss */
+.icons li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+/* line 125, ../sass/_product-recipe-detail.scss */
+a.favorites,
+a.shopping-list {
+  position: relative;
+  display: block;
+  text-align: center;
+  float: left;
+}
+
+/* line 132, ../sass/_product-recipe-detail.scss */
+a.favorites {
+  margin-left: -1px;
+  margin-right: 1px;
+}
+
+/* line 138, ../sass/_product-recipe-detail.scss */
+a.favorites:after,
+a.shopping-list:after {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  content: url("../img/sprite_productdetail.png");
+  left: 50%;
+  top: 50%;
+  zoom: 50%;
+  clip: rect(0px 0px 0px 0px);
+}
+
+/* line 149, ../sass/_product-recipe-detail.scss */
+a.favorites:after {
+  clip: rect(10px 70px 70px 10px);
+  margin-left: -40px;
+  margin-top: -40px;
+}
+
+/* line 155, ../sass/_product-recipe-detail.scss */
+a.shopping-list:after {
+  clip: rect(10px 190px 70px 130px);
+  margin-left: -160px;
+  margin-top: -40px;
+}
+
+/* line 161, ../sass/_product-recipe-detail.scss */
+.dietpref {
+  display: block;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 169, ../sass/_product-recipe-detail.scss */
+section.detailView.product .product_department {
+  padding-bottom: 12px;
+}
+/* line 171, ../sass/_product-recipe-detail.scss */
+section.detailView.product .product_department a {
+  font-size: 14px;
+}
+/* line 175, ../sass/_product-recipe-detail.scss */
+section.detailView.product .dietpref {
+  padding-bottom: 0;
+}
+
+/* line 179, ../sass/_product-recipe-detail.scss */
+.dietpref ul {
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+/* line 185, ../sass/_product-recipe-detail.scss */
+.dietpref ul.count_3, .dietpref ul.count_2, .dietpref ul.count_1 {
+  margin: 0;
+}
+
+/* line 189, ../sass/_product-recipe-detail.scss */
+.dietpref li.icon-style {
+  display: block;
+  float: left;
+  position: relative;
+  margin: 5px;
+  width: 57px;
+  height: 75px;
+  line-height: 12px;
+  padding-top: 53px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* line 202, ../sass/_product-recipe-detail.scss */
+.dietpref ul.count_5 li.icon-style,
+.dietpref ul.count_6 li.icon-style {
+  margin-left: 23px;
+  margin-right: 16px;
+}
+
+/* line 206, ../sass/_product-recipe-detail.scss */
+.dietpref ul.count_4 li.icon-style {
+  margin-left: 7px;
+  margin-right: 8px;
+}
+
+/* line 211, ../sass/_product-recipe-detail.scss */
+.dietpref:before
+, .dietpref:after {
+  display: block;
+  clear: both;
+  content: "\0020";
+  margin-bottom: 10px;
+}
+
+/* line 217, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails {
+  overflow: hidden;
+  position: relative;
+  height: 155px;
+  width: 100%;
+  padding-bottom: 5px;
+}
+/* line 223, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul {
+  width: 50%;
+}
+/* line 226, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul#details_right {
+  float: right;
+  width: 40%;
+}
+/* line 230, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul#details_left {
+  float: left;
+}
+/* line 233, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul li {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  font-size: 15px;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+/* line 241, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul li span {
+  position: absolute;
+  display: block;
+}
+/* line 245, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul li span.icon_style {
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+}
+/* line 251, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul li span.details_heading, .summary div#recipeDetails ul li span.details_content {
+  left: 35px;
+  width: 70%;
+}
+/* line 255, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul li span.details_heading {
+  font-size: 12px;
+  color: #726f6e;
+}
+/* line 259, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul li span.details_content {
+  top: 20px;
+}
+/* line 262, ../sass/_product-recipe-detail.scss */
+.summary div#recipeDetails ul li span#course_1 {
+  top: 35px;
+}
+
+/* line 267, ../sass/_product-recipe-detail.scss */
+.prod_description {
+  font-size: 16px;
+  line-height: 18px;
+  color: #dcdcdc;
+}
+
+/* line 272, ../sass/_product-recipe-detail.scss */
+.prod_attribute {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #fad214;
+}
+/* line 276, ../sass/_product-recipe-detail.scss */
+.prod_attribute span {
+  display: block;
+}
+/* line 279, ../sass/_product-recipe-detail.scss */
+.prod_attribute span.details_heading {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+/* line 283, ../sass/_product-recipe-detail.scss */
+.prod_attribute span.details_content {
+  font-size: 16px;
+  line-height: 18px;
+  color: #dcdcdc;
+}
+
+/* line 289, ../sass/_product-recipe-detail.scss */
+.summary div#wine_pairing_div, .prod_attribute#wine_pairing {
+  height: 63px;
+  position: relative;
+  border-bottom: 1px solid #fad214;
+}
+/* line 293, ../sass/_product-recipe-detail.scss */
+.summary div#wine_pairing_div span, .prod_attribute#wine_pairing span {
+  position: absolute;
+  display: block;
+  top: 8px;
+}
+/* line 298, ../sass/_product-recipe-detail.scss */
+.summary div#wine_pairing_div span.icon-winepairing, .prod_attribute#wine_pairing span.icon-winepairing {
+  left: 0;
+  top: 10px;
+}
+/* line 302, ../sass/_product-recipe-detail.scss */
+.summary div#wine_pairing_div span.details_heading, .prod_attribute#wine_pairing span.details_heading {
+  font-size: 12px;
+  color: #726f6e;
+  left: 35px;
+}
+/* line 307, ../sass/_product-recipe-detail.scss */
+.summary div#wine_pairing_div span.details_content, .prod_attribute#wine_pairing span.details_content {
+  top: 21px;
+  left: 35px;
+  font-size: 15px;
+}
+
+/* line 313, ../sass/_product-recipe-detail.scss */
+.prod_attribute#winepairing {
+  height: 53px;
+}
+
+/* line 316, ../sass/_product-recipe-detail.scss */
+#music-link {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+/* line 320, ../sass/_product-recipe-detail.scss */
+#music-link span {
+  position: absolute;
+  top: 0;
+}
+/* line 324, ../sass/_product-recipe-detail.scss */
+#music-link span.icon-exlink {
+  right: 37px;
+}
+/* line 327, ../sass/_product-recipe-detail.scss */
+#music-link span.icon-music {
+  left: 3px;
+}
+
+/* line 331, ../sass/_product-recipe-detail.scss */
+#music_msg {
+  padding-top: 10px;
+}
+
+/* line 337, ../sass/_product-recipe-detail.scss */
+.detailView .tips .tipsContainer {
+  border-bottom: 1px solid #fad214;
+  padding-bottom: 0px;
+}
+/* line 341, ../sass/_product-recipe-detail.scss */
+.detailView .tips .tipsContainer .ServingTips, .detailView .tips .tipsContainer .PreparationTips, .detailView .tips .tipsContainer .StorageTips {
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-origin: left top;
+  background-size: 30px 30px;
+}
+/* line 348, ../sass/_product-recipe-detail.scss */
+.detailView .tips .tipsContainer .ServingTips {
+  background-image: url("../img/tip_icon_serving.png");
+}
+/* line 351, ../sass/_product-recipe-detail.scss */
+.detailView .tips .tipsContainer .PreparationTips {
+  background-image: url("../img/tip_icon_preparation.png");
+}
+/* line 354, ../sass/_product-recipe-detail.scss */
+.detailView .tips .tipsContainer .StorageTips {
+  background-image: url("../img/tip_icon_storage.png");
+}
+/* line 359, ../sass/_product-recipe-detail.scss */
+.detailView .tips .tipsH2 {
+  color: white;
+  font-size: 15px;
+  font-weight: normal;
+  padding-top: 7px;
+  margin-top: 10px;
+  height: 30px;
+  font-family: 'robotomedium';
+}
+/* line 368, ../sass/_product-recipe-detail.scss */
+.detailView .tips .tipsCopy {
+  color: #dcdcdc;
+  padding-top: 5px;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+/* line 378, ../sass/_product-recipe-detail.scss */
+.detailView.product .dept_li {
+  position: relative;
+}
+/* line 380, ../sass/_product-recipe-detail.scss */
+.detailView.product .dept_li a {
+  font-size: 14px;
+  color: white;
+}
+/* line 384, ../sass/_product-recipe-detail.scss */
+.detailView.product .dept_li a#dept_related_recipes:before {
+  text-align: right;
+  left: 18%;
+  top: 65%;
+  zoom: 40%;
+}
+
+/*
+--------------------------------------------------
+Footer Navigation
+--------------------------------------------------
+*/
+/* line 6, ../sass/_footernav.scss */
+#foot_nav {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  z-index: 30;
+  display: none;
+}
+/* line 15, ../sass/_footernav.scss */
+#foot_nav #standard_footer {
+  width: 100%;
+  height: 100%;
+}
+/* line 20, ../sass/_footernav.scss */
+#foot_nav #shopping_list_edit_view_footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: none;
+}
+/* line 28, ../sass/_footernav.scss */
+#foot_nav #shopping_list_edit_view_footer * {
+  width: 50%;
+  height: 100%;
+  float: left;
+  font-family: 'roboto_condensedlight';
+  font-size: 1em;
+  line-height: 2.8em;
+  text-align: center;
+  color: white;
+}
+/* line 38, ../sass/_footernav.scss */
+#foot_nav #shopping_list_edit_view_footer #delete_checked_items {
+  border-right: 1px solid white;
+}
+
+/*
+------------------------------------------------------------
+	landing filter menu
+-------------------------------------------------------------
+*/
+/* line 8, ../sass/_landing-filter-menu.scss */
+#filter-wrap {
+  position: fixed;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  color: #fff;
+  border-top: 1px solid #8c9180;
+}
+
+/* line 18, ../sass/_landing-filter-menu.scss */
+#filter-wrap a {
+  color: #fff;
+}
+
+/* line 23, ../sass/_landing-filter-menu.scss */
+#filter {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height;
+  -webkit-transition-duration: 0.3s;
+  border-bottom: 1px solid #8c9180;
+}
+
+/* line 39, ../sass/_landing-filter-menu.scss */
+#filter-wrap.showFilter #filter {
+  height: 42px;
+}
+
+/* line 43, ../sass/_landing-filter-menu.scss */
+.storeListMap #filter-wrap.showFilter #filter {
+  height: 90px;
+  overflow: scroll;
+}
+
+/* line 48, ../sass/_landing-filter-menu.scss */
+#filter-wrap.hideFilter #filter {
+  height: 0px;
+}
+
+/* Apply Filters Tab Arrows */
+/* line 53, ../sass/_landing-filter-menu.scss */
+#filter-wrap.showFilter #apply-filters {
+  position: relative;
+}
+
+/* line 56, ../sass/_landing-filter-menu.scss */
+#filter-wrap.showFilter #apply-filters:before, #filter-wrap.showFilter #apply-filters:after {
+  position: absolute;
+  top: 0px;
+  height: 28px;
+  width: 28px;
+  background-size: 28px 28px;
+  content: '';
+  background-image: url("../img/filter-cat-imgs/filtercat-img_arrow-up.png");
+}
+
+/* line 65, ../sass/_landing-filter-menu.scss */
+#filter-wrap.showFilter #apply-filters:before {
+  left: 0px;
+}
+
+/* line 68, ../sass/_landing-filter-menu.scss */
+#filter-wrap.showFilter #apply-filters:after {
+  right: 0px;
+}
+
+/* line 72, ../sass/_landing-filter-menu.scss */
+#filter-wrap.hideFilter #apply-filters {
+  position: relative;
+}
+
+/* line 75, ../sass/_landing-filter-menu.scss */
+#filter-wrap.hideFilter #apply-filters:before, #filter-wrap.hideFilter #apply-filters:after {
+  position: absolute;
+  top: 0px;
+  height: 28px;
+  width: 28px;
+  background-size: 28px 28px;
+  content: '';
+  background-image: url("../img/filter-cat-imgs/filtercat-img_arrow-down.png");
+}
+
+/* line 84, ../sass/_landing-filter-menu.scss */
+#filter-wrap.hideFilter #apply-filters:before {
+  left: 0px;
+}
+
+/* line 87, ../sass/_landing-filter-menu.scss */
+#filter-wrap.hideFilter #apply-filters:after {
+  right: 0px;
+}
+
+/* Apply Filters Tab Arrows */
+/* line 92, ../sass/_landing-filter-menu.scss */
+#filter:after {
+  content: "\0020";
+  clear: both;
+}
+
+/* line 97, ../sass/_landing-filter-menu.scss */
+#filter ul li {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 33.2%;
+  border-top: 1px solid #8c9180;
+  border-bottom: 1px solid #8c9180;
+  height: 45px;
+  line-height: 45px;
+}
+
+/* line 107, ../sass/_landing-filter-menu.scss */
+#filter ul li + li {
+  border-left: 1px solid #8c9180;
+}
+
+/* line 110, ../sass/_landing-filter-menu.scss */
+#filter ul:after {
+  content: "\0020";
+  clear: both;
+  display: block;
+}
+
+/* line 115, ../sass/_landing-filter-menu.scss */
+#filter ul {
+  display: none;
+  /* future release */
+}
+
+/* line 119, ../sass/_landing-filter-menu.scss */
+#featured-prod-link {
+  height: 45px;
+  line-height: 39px;
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* line 129, ../sass/_landing-filter-menu.scss */
+#featured-prod-link:after {
+  position: absolute;
+  top: 9%;
+  content: url("../img/forwardArrow.png");
+  zoom: 50%;
+  text-align: right;
+  padding-left: 54%;
+}
+
+/* line 138, ../sass/_landing-filter-menu.scss */
+#apply-filters {
+  display: block;
+  position: relative;
+  width: 44%;
+  height: 28px;
+  line-height: 28px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+/* line 150, ../sass/_landing-filter-menu.scss */
+#apply-filters span {
+  font-size: 14px;
+}
+
+/*
+------------------------------------------------------------
+	other locations menu
+-------------------------------------------------------------
+*/
+/* line 163, ../sass/_landing-filter-menu.scss */
+.landingView.storeListMap #filter-wrap.showFilter #filter {
+  height: 95px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+  padding-top: 7px;
+}
+/* line 173, ../sass/_landing-filter-menu.scss */
+.landingView.storeListMap #filter-wrap #filter #container_grid {
+  height: 100%;
+  width: 665px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* line 179, ../sass/_landing-filter-menu.scss */
+.landingView.storeListMap #filter-wrap #filter a {
+  color: #fff;
+  display: block;
+  width: 60px;
+  float: left;
+  font-size: 12px;
+  padding-bottom: 0;
+  padding-top: 55px;
+  margin-right: 5px;
+}
+
+/*
+------------------------------------
+ filter page
+------------------------------------
+*/
+/* line 6, ../sass/_filter.scss */
+.onoffswitch {
+  position: relative;
+  width: 52px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* line 10, ../sass/_filter.scss */
+.onoffswitch-checkbox {
+  display: none;
+}
+
+/* line 13, ../sass/_filter.scss */
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #FFFFFF;
+  border-radius: 24px;
+}
+
+/* line 17, ../sass/_filter.scss */
+.onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+/* line 22, ../sass/_filter.scss */
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 26px;
+  padding: 0;
+  line-height: 26px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+
+/* line 28, ../sass/_filter.scss */
+.onoffswitch-inner:before {
+  content: "";
+  padding-left: 10px;
+  background-color: #FAD214;
+  color: #FFFFFF;
+}
+
+/* line 34, ../sass/_filter.scss */
+.onoffswitch-inner:after {
+  content: "";
+  padding-right: 10px;
+  background-color: transparent;
+  color: #999999;
+  text-align: right;
+}
+
+/* line 40, ../sass/_filter.scss */
+.onoffswitch-switch {
+  width: 26px;
+  margin: 0px;
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 25px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* line 48, ../sass/_filter.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+/* line 51, ../sass/_filter.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+/* line 54, ../sass/_filter.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+  border-color: #FAD214;
+}
+
+/*-- - - - - - -  - - - - - -  - - - - - - - - - - - - - - - - - -  - - - - - -  - - - - - - --*/
+/* line 59, ../sass/_filter.scss */
+section.filterView .inner {
+  margin-top: 50px;
+}
+
+/* line 64, ../sass/_filter.scss */
+#dietPrefSettings, .filterCategory {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* line 69, ../sass/_filter.scss */
+.filterLink, .filterLink a {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* line 74, ../sass/_filter.scss */
+#dietPrefSettings {
+  width: 100%;
+  border-bottom: 1px solid #828282;
+}
+
+/* line 81, ../sass/_filter.scss */
+#dietPrefSettings .cell {
+  display: table-cell;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  vertical-align: middle;
+  padding-left: 20px;
+  height: 48px;
+}
+
+/* line 91, ../sass/_filter.scss */
+#dietPrefLink {
+  box-sizing: content-box;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: 400;
+  font-size: 12em;
+  padding: 3px 10px;
+  background-image: url(../img/dietPref.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 50% 50%;
+}
+
+/* line 110, ../sass/_filter.scss */
+.filterCategory {
+  color: #fff;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  height: 48px;
+  line-height: 48px;
+  border-bottom: 1px solid #828282;
+  padding-left: 50px;
+  vertical-align: top;
+  position: relative;
+}
+
+/* line 125, ../sass/_filter.scss */
+.filterCategory.Category:before, .filterCategory.Course:before, .filterCategory.Cusine:before, .filterCategory.Department:before, .filterCategory.Occasion:before, .filterCategory.Season:before {
+  width: 48px;
+  height: 48px;
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: 48px 48px;
+}
+
+/* line 135, ../sass/_filter.scss */
+.filterCategory.Category:before {
+  background-image: url("../img/filter-cat-imgs/filtercat-img_category.png");
+}
+
+/* line 139, ../sass/_filter.scss */
+.filterCategory.Course:before {
+  background-image: url("../img/filter-cat-imgs/filtercat-img_course.png");
+}
+
+/* line 143, ../sass/_filter.scss */
+.filterCategory.Cusine:before {
+  background-image: url("../img/filter-cat-imgs/filtercat-img_cusine.png");
+}
+
+/* line 147, ../sass/_filter.scss */
+.filterCategory.Department:before {
+  background-image: url("../img/filter-cat-imgs/filtercat-img_department.png");
+}
+
+/* line 151, ../sass/_filter.scss */
+.filterCategory.Occasion:before {
+  background-image: url("../img/filter-cat-imgs/filtercat-img_occasion.png");
+}
+
+/* line 155, ../sass/_filter.scss */
+.filterCategory.Season:before {
+  background-image: url("../img/filter-cat-imgs/filtercat-img_season.png");
+}
+
+/* line 161, ../sass/_filter.scss */
+.filterCategory {
+  position: relative;
+  /*content:url('../img/forwardArrow.png');
+  zoom:50%;
+  text-align:right;
+  padding-left:20px;
+  top:1px;
+  height:48px;
+  line-height:48px;*/
+}
+/* line 163, ../sass/_filter.scss */
+.filterCategory .forwardArrowSpan {
+  background: url("../img/forwardArrow.png") no-repeat;
+  height: 20px;
+  background-size: contain;
+  width: 15px;
+  position: absolute;
+  top: 15px;
+  right: 5%;
+}
+
+/* line 181, ../sass/_filter.scss */
+.filterCategory .hasSelection {
+  color: #fad214;
+  display: none;
+}
+
+/* line 186, ../sass/_filter.scss */
+.filterCategory.selected .hasSelection {
+  display: inline;
+}
+
+/* line 191, ../sass/_filter.scss */
+.filterLink {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+}
+
+/* line 200, ../sass/_filter.scss */
+.filterLink.selected {
+  border: 1px solid #fad214;
+  background-color: #fad214;
+}
+
+/* line 205, ../sass/_filter.scss */
+.filterLink.selected a {
+  color: #333333;
+}
+
+/* line 209, ../sass/_filter.scss */
+.filterView h3 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/*
+-----------------------------
+top navigation icons
+-----------------------------
+*/
+/* line 98, topnav-imgs/*.png */
+.topnav-imgs-sprite, .topnav-imgs-favorites, .topnav-imgs-hamburger, .topnav-imgs-products, .topnav-imgs-recipes, #top-nav a#tab-global-nav:after, #top-nav a#tab-products:after, a#dept_related_prod:before, #top-nav a#tab-products.current:after, #top-nav a#tab-recipes:after, a#dept_related_recipes:before, #top-nav a#tab-recipes.current:after, #top-nav a#tab-favorites:after, #top-nav a#tab-favorites.current:after {
+  background: url('../img/topnav-imgs-sa33e888dbd.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.topnav-imgs-favorites {
+  background-position: 0 -64px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.topnav-imgs-hamburger {
+  background-position: 0 -384px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.topnav-imgs-products {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.topnav-imgs-recipes {
+  background-position: 0 -256px;
+}
+
+/* line 11, ../sass/_topnav-icons.scss */
+#top-nav a:after, a#dept_related_prod:before, a#dept_related_recipes:before {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  text-indent: 0;
+  content: '\0020';
+  left: 50%;
+  margin-left: -32px;
+  top: 50%;
+  margin-top: -32px;
+  zoom: 50%;
+}
+
+/* line 24, ../sass/_topnav-icons.scss */
+#top-nav a#tab-global-nav:after {
+  background-position: 0 -384px;
+}
+
+/*-- products --*/
+/* line 29, ../sass/_topnav-icons.scss */
+#top-nav a#tab-products:after, a#dept_related_prod:before {
+  background-position: 0 0;
+}
+
+/* line 33, ../sass/_topnav-icons.scss */
+#top-nav a#tab-products.current:after {
+  background-position: 0 -128px;
+}
+
+/*-- recipies --*/
+/* line 38, ../sass/_topnav-icons.scss */
+#top-nav a#tab-recipes:after, a#dept_related_recipes:before {
+  background-position: 0 -256px;
+}
+
+/* line 42, ../sass/_topnav-icons.scss */
+#top-nav a#tab-recipes.current:after {
+  background-position: 0 -448px;
+}
+
+/*-- favorites --*/
+/* line 47, ../sass/_topnav-icons.scss */
+#top-nav a#tab-favorites:after {
+  background-position: 0 -64px;
+}
+
+/* line 51, ../sass/_topnav-icons.scss */
+#top-nav a#tab-favorites.current:after {
+  background-position: 0 -192px;
+}
+
+/*
+-----------------------------
+diet preference icons
+-----------------------------
+*/
+/* line 226, diet-imgs/*.png */
+.diet-imgs-sprite, .diet-imgs-DietIcons_DF, .diet-imgs-DietIcons_DFa, .diet-imgs-DietIcons_FF, .diet-imgs-DietIcons_FFa, .diet-imgs-DietIcons_GF, .diet-imgs-DietIcons_GFa, .diet-imgs-DietIcons_HF, .diet-imgs-DietIcons_HFa, .diet-imgs-DietIcons_Kosher, .diet-imgs-DietIcons_Koshera, .diet-imgs-DietIcons_LC, .diet-imgs-DietIcons_LCa, .diet-imgs-DietIcons_LF, .diet-imgs-DietIcons_LFa, .diet-imgs-DietIcons_LS, .diet-imgs-DietIcons_LSa, .diet-imgs-DietIcons_SC, .diet-imgs-DietIcons_SCa, .diet-imgs-DietIcons_Vegan, .diet-imgs-DietIcons_Vegana, .diet-imgs-DietIcons_Vegetarian, .diet-imgs-DietIcons_Vegetariana, .diet-imgs-DietIcons_WF, .diet-imgs-DietIcons_WFa, .icon-dairyfree:before, .icon-dairyfree.selected:before, .icon-fatfree:before, .icon-fatfree.selected:before, .icon-glutenfree:before, .icon-glutenfree.selected:before, .icon-highfiber:before, .icon-highfiber.selected:before, .icon-kosher:before, .icon-kosher.selected:before, .icon-lowfat:before, .icon-lowfat.selected:before, .icon-lowsodium:before, .icon-lowsodium.selected:before, .icon-vegetarian:before, .icon-vegetarian.selected:before, .icon-vegan:before, .icon-vegan.selected:before, .icon-wheatfree:before, .icon-wheatfree.selected:before, .icon-sugarconscious:before, .icon-sugarconscious.selected:before, .icon-lowcarb:before, .icon-lowcarb.selected:before {
+  background: url('../img/diet-imgs-s400f79357b.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_DF {
+  background-position: 0 -2324px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_DFa {
+  background-position: 0 -2988px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_FF {
+  background-position: 0 -1494px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_FFa {
+  background-position: 0 -1826px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_GF {
+  background-position: 0 -1992px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_GFa {
+  background-position: 0 -2490px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_HF {
+  background-position: 0 -996px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_HFa {
+  background-position: 0 -1328px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_Kosher {
+  background-position: 0 -1162px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_Koshera {
+  background-position: 0 -1660px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_LC {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_LCa {
+  background-position: 0 -166px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_LF {
+  background-position: 0 -3486px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_LFa {
+  background-position: 0 -3818px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_LS {
+  background-position: 0 -2158px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_LSa {
+  background-position: 0 -2822px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_SC {
+  background-position: 0 -3320px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_SCa {
+  background-position: 0 -3652px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_Vegan {
+  background-position: 0 -2656px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_Vegana {
+  background-position: 0 -3154px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_Vegetarian {
+  background-position: 0 -498px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_Vegetariana {
+  background-position: 0 -830px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_WF {
+  background-position: 0 -332px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.diet-imgs-DietIcons_WFa {
+  background-position: 0 -664px;
+}
+
+/* line 11, ../sass/_diet-icons.scss */
+.icon-style.icon-foodprofile:before {
+  display: block;
+  content: '\0020';
+  width: 166px;
+  height: 166px;
+  zoom: 50%;
+  margin-left: -88px;
+}
+
+/* line 21, ../sass/_diet-icons.scss */
+.icon-style.icon-foodprofile-small:before {
+  display: block;
+  content: '\0020';
+  width: 166px;
+  height: 167px;
+  zoom: 30%;
+  margin-left: -88px;
+}
+
+/* line 31, ../sass/_diet-icons.scss */
+.icon-dairyfree:before {
+  background-position: 0 -2324px;
+}
+
+/* line 35, ../sass/_diet-icons.scss */
+.icon-dairyfree.selected:before {
+  background-position: 0 -2988px;
+}
+
+/* line 39, ../sass/_diet-icons.scss */
+.icon-fatfree:before {
+  background-position: 0 -1494px;
+}
+
+/* line 42, ../sass/_diet-icons.scss */
+.icon-fatfree.selected:before {
+  background-position: 0 -1826px;
+}
+
+/* line 46, ../sass/_diet-icons.scss */
+.icon-glutenfree:before {
+  background-position: 0 -1992px;
+}
+
+/* line 50, ../sass/_diet-icons.scss */
+.icon-glutenfree.selected:before {
+  background-position: 0 -2490px;
+}
+
+/* line 54, ../sass/_diet-icons.scss */
+.icon-highfiber:before {
+  background-position: 0 -996px;
+}
+
+/* line 57, ../sass/_diet-icons.scss */
+.icon-highfiber.selected:before {
+  background-position: 0 -1328px;
+}
+
+/* line 61, ../sass/_diet-icons.scss */
+.icon-kosher:before {
+  background-position: 0 -1162px;
+}
+
+/* line 64, ../sass/_diet-icons.scss */
+.icon-kosher.selected:before {
+  background-position: 0 -1660px;
+}
+
+/* line 68, ../sass/_diet-icons.scss */
+.icon-lowfat:before {
+  background-position: 0 -3486px;
+}
+
+/* line 72, ../sass/_diet-icons.scss */
+.icon-lowfat.selected:before {
+  background-position: 0 -3818px;
+}
+
+/* line 76, ../sass/_diet-icons.scss */
+.icon-lowsodium:before {
+  background-position: 0 -2158px;
+}
+
+/* line 79, ../sass/_diet-icons.scss */
+.icon-lowsodium.selected:before {
+  background-position: 0 -2822px;
+}
+
+/* line 83, ../sass/_diet-icons.scss */
+.icon-vegetarian:before {
+  background-position: 0 -498px;
+}
+
+/* line 86, ../sass/_diet-icons.scss */
+.icon-vegetarian.selected:before {
+  background-position: 0 -830px;
+}
+
+/* line 90, ../sass/_diet-icons.scss */
+.icon-vegan:before {
+  background-position: 0 -2656px;
+}
+
+/* line 93, ../sass/_diet-icons.scss */
+.icon-vegan.selected:before {
+  background-position: 0 -3154px;
+}
+
+/* line 97, ../sass/_diet-icons.scss */
+.icon-wheatfree:before {
+  background-position: 0 -332px;
+}
+
+/* line 101, ../sass/_diet-icons.scss */
+.icon-wheatfree.selected:before {
+  background-position: 0 -664px;
+}
+
+/* line 105, ../sass/_diet-icons.scss */
+.icon-sugarconscious:before {
+  background-position: 0 -3320px;
+}
+
+/* line 109, ../sass/_diet-icons.scss */
+.icon-sugarconscious.selected:before {
+  background-position: 0 -3652px;
+}
+
+/* line 114, ../sass/_diet-icons.scss */
+.icon-lowcarb:before {
+  background-position: 0 0;
+}
+
+/* line 117, ../sass/_diet-icons.scss */
+.icon-lowcarb.selected:before {
+  background-position: 0 -166px;
+}
+
+/* line 121, ../sass/_diet-icons.scss */
+.icon-sugarconscious.selected:before {
+  background-position: 0 -3652px;
+}
+
+/* line 125, ../sass/_diet-icons.scss */
+.icon-lowcarb:before {
+  background-position: 0 0;
+}
+
+/* line 128, ../sass/_diet-icons.scss */
+.icon-lowcarb.selected:before {
+  background-position: 0 -166px;
+}
+
+/*
+-----------------------------
+favorites icons
+-----------------------------
+*/
+/* line 66, favorites-imgs/*.png */
+.favorites-imgs-sprite, .favorites-imgs-favorites-curators, .favorites-imgs-favorites-products, .favorites-imgs-favorites-recipes, .favorites-imgs-favorites-stores, .icon-curators:before, .icon-products:before, .icon-recipes:before, .icon-stores:before {
+  background: url('../img/favorites-imgs-s8e38fa851d.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-imgs-favorites-curators {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-imgs-favorites-products {
+  background-position: 0 -166px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-imgs-favorites-recipes {
+  background-position: 0 -332px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.favorites-imgs-favorites-stores {
+  background-position: 0 -498px;
+}
+
+/* line 11, ../sass/_favorites-icons.scss */
+.icon-style.icon-favorites:before {
+  display: block;
+  content: '\0020';
+  width: 166px;
+  height: 166px;
+  zoom: 50%;
+  margin-left: -88px;
+}
+
+/* line 20, ../sass/_favorites-icons.scss */
+.icon-curators:before {
+  background-position: 0 0;
+}
+
+/* line 24, ../sass/_favorites-icons.scss */
+.icon-products:before {
+  background-position: 0 -166px;
+}
+
+/* line 27, ../sass/_favorites-icons.scss */
+.icon-recipes:before {
+  background-position: 0 -332px;
+}
+
+/* line 30, ../sass/_favorites-icons.scss */
+.icon-stores:before {
+  background-position: 0 -498px;
+}
+
+/*
+-----------------------------
+locations icons
+-----------------------------
+*/
+/* line 130, locations-imgs/*.png */
+.locations-imgs-sprite, .locations-imgs-StoreLtnIcons_NavMap_Brklyn, .locations-imgs-StoreLtnIcons_NavMap_BrklynA, .locations-imgs-StoreLtnIcons_NavMap_CT, .locations-imgs-StoreLtnIcons_NavMap_CTA, .locations-imgs-StoreLtnIcons_NavMap_Mthn, .locations-imgs-StoreLtnIcons_NavMap_MthnA, .locations-imgs-StoreLtnIcons_NavMap_NJ, .locations-imgs-StoreLtnIcons_NavMap_NJA, .locations-imgs-StoreLtnIcons_NavMap_NY, .locations-imgs-StoreLtnIcons_NavMap_NYA, .locations-imgs-StoreLtnIcons_NavMap_Qns, .locations-imgs-StoreLtnIcons_NavMap_QnsA, .ct-southwest:before, .ct-southwest.selected:before, .nj-northeast:before, .nj-northeast.selected:before, .ny-long-island:before, .ny-long-island.selected:before, .ny-westchester:before, .ny-westchester.selected:before, .nyc-brooklyn:before, .nyc-brooklyn.selected:before, .nyc-manhattan:before, .nyc-manhattan.selected:before, .nyc-queens:before, .nyc-queens.selected:before {
+  background: url('../img/locations-imgs-sc1821de8dd.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_Brklyn {
+  background-position: 0 -104px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_BrklynA {
+  background-position: 0 -1040px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_CT {
+  background-position: 0 -416px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_CTA {
+  background-position: 0 -832px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_Mthn {
+  background-position: 0 -208px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_MthnA {
+  background-position: 0 -936px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_NJ {
+  background-position: 0 -728px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_NJA {
+  background-position: 0 -1144px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_NY {
+  background-position: 0 -312px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_NYA {
+  background-position: 0 -624px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_Qns {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.locations-imgs-StoreLtnIcons_NavMap_QnsA {
+  background-position: 0 -520px;
+}
+
+/* line 12, ../sass/_locations-icons.scss */
+.icon-style.icon-locations:before {
+  display: block;
+  content: '\0020';
+  width: 105px;
+  height: 105px;
+  zoom: 83%;
+  margin-left: -53px;
+}
+
+/* line 22, ../sass/_locations-icons.scss */
+.storeListMap .icon-style.icon-locations:before {
+  zoom: 50%;
+}
+
+/* line 27, ../sass/_locations-icons.scss */
+.ct-southwest:before {
+  background-position: 0 -416px;
+}
+
+/* line 30, ../sass/_locations-icons.scss */
+.ct-southwest.selected:before {
+  background-position: 0 -832px;
+}
+
+/* line 34, ../sass/_locations-icons.scss */
+.nj-northeast:before {
+  background-position: 0 -728px;
+}
+
+/* line 37, ../sass/_locations-icons.scss */
+.nj-northeast.selected:before {
+  background-position: 0 -1144px;
+}
+
+/* line 42, ../sass/_locations-icons.scss */
+.ny-long-island:before {
+  background-position: 0 -312px;
+}
+
+/* line 46, ../sass/_locations-icons.scss */
+.ny-long-island.selected:before {
+  background-position: 0 -624px;
+}
+
+/* line 50, ../sass/_locations-icons.scss */
+.ny-westchester:before {
+  background-position: 0 -312px;
+}
+
+/* line 54, ../sass/_locations-icons.scss */
+.ny-westchester.selected:before {
+  background-position: 0 -624px;
+}
+
+/* line 59, ../sass/_locations-icons.scss */
+.nyc-brooklyn:before {
+  background-position: 0 -104px;
+}
+
+/* line 62, ../sass/_locations-icons.scss */
+.nyc-brooklyn.selected:before {
+  background-position: 0 -1040px;
+}
+
+/* line 67, ../sass/_locations-icons.scss */
+.nyc-manhattan:before {
+  background-position: 0 -208px;
+}
+
+/* line 70, ../sass/_locations-icons.scss */
+.nyc-manhattan.selected:before {
+  background-position: 0 -936px;
+}
+
+/* line 74, ../sass/_locations-icons.scss */
+.nyc-queens:before {
+  background-position: 0 0;
+}
+
+/* line 78, ../sass/_locations-icons.scss */
+.nyc-queens.selected:before {
+  background-position: 0 -520px;
+}
+
+/*
+-----------------------------------
+ Departments Icons 
+-----------------------------------
+*/
+/* line 146, dept-imgs/*.png */
+.dept-imgs-sprite, .dept-imgs-DptIcon_Baked, .dept-imgs-DptIcon_Cheese, .dept-imgs-DptIcon_Coffee, .dept-imgs-DptIcon_Dairy, .dept-imgs-DptIcon_DriedFruits, .dept-imgs-DptIcon_FW, .dept-imgs-DptIcon_Fish, .dept-imgs-DptIcon_Generic, .dept-imgs-DptIcon_Kosher, .dept-imgs-DptIcon_Meat, .dept-imgs-DptIcon_Organic, .dept-imgs-DptIcon_Produce, .dept-imgs-DptIcon_Specialty, .dept-imgs-DptIcon_Staples, .icon-department.icon-bakedgoods:before, .icon-department.icon-cheese:before, .icon-department.icon-coffee:before, .icon-department.icon-organic:before, .icon-department.icon-dairy:before, .icon-department.icon-driedfruits:before, .icon-department.icon-fw:before, .icon-department.icon-produce:before, .icon-department.icon-seafood:before, .icon-department.icon-traditionalgrocery:before, .icon-department.icon-meat:before, .icon-department.icon-specialtygrocery:before {
+  background: url('../img/dept-imgs-sb2949a019d.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Baked {
+  background-position: 0 -1155px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Cheese {
+  background-position: 0 -825px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Coffee {
+  background-position: 0 -330px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Dairy {
+  background-position: 0 -1980px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_DriedFruits {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_FW {
+  background-position: 0 -1815px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Fish {
+  background-position: 0 -990px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Generic {
+  background-position: 0 -1485px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Kosher {
+  background-position: 0 -2145px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Meat {
+  background-position: 0 -660px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Organic {
+  background-position: 0 -495px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Produce {
+  background-position: 0 -1650px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Specialty {
+  background-position: 0 -165px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-DptIcon_Staples {
+  background-position: 0 -1320px;
+}
+
+/* landing */
+/* line 13, ../sass/_dept-icons.scss */
+.icon-style.icon-department:before {
+  display: block;
+  width: 166px;
+  height: 166px;
+  margin-left: -88px;
+  zoom: 50%;
+}
+
+/* line 21, ../sass/_dept-icons.scss */
+.icon-department.icon-bakedgoods:before {
+  background-position: 0 -1155px;
+}
+
+/* line 24, ../sass/_dept-icons.scss */
+.icon-department.icon-cheese:before {
+  background-position: 0 -825px;
+}
+
+/* line 27, ../sass/_dept-icons.scss */
+.icon-department.icon-coffee:before {
+  background-position: 0 -330px;
+}
+
+/* line 31, ../sass/_dept-icons.scss */
+.icon-department.icon-organic:before {
+  background-position: 0 -495px;
+}
+
+/* line 35, ../sass/_dept-icons.scss */
+.icon-department.icon-dairy:before {
+  background-position: 0 -1980px;
+}
+
+/* line 39, ../sass/_dept-icons.scss */
+.icon-department.icon-driedfruits:before {
+  background-position: 0 0;
+}
+
+/* line 42, ../sass/_dept-icons.scss */
+.icon-department.icon-fw:before {
+  background-position: 0 -1815px;
+}
+
+/* line 46, ../sass/_dept-icons.scss */
+.icon-department.icon-produce:before {
+  background-position: 0 -1650px;
+}
+
+/* sprite row3  vertical clip 355px... 520px margin-top -340?px*/
+/* line 51, ../sass/_dept-icons.scss */
+.icon-department.icon-seafood:before {
+  background-position: 0 -990px;
+}
+
+/* line 56, ../sass/_dept-icons.scss */
+.icon-department.icon-traditionalgrocery:before {
+  background-position: 0 -1320px;
+}
+
+/* line 59, ../sass/_dept-icons.scss */
+.icon-department.icon-meat:before {
+  background-position: 0 -660px;
+}
+
+/* line 63, ../sass/_dept-icons.scss */
+.icon-department.icon-specialtygrocery:before {
+  background-position: 0 -165px;
+}
+
+/* product detail */
+/* line 146, dept-imgs-btn/*.png */
+.dept-imgs-btn-sprite, .dept-imgs-btn-DptIcon_Baked, .dept-imgs-btn-DptIcon_Cheese, .dept-imgs-btn-DptIcon_Coffee, .dept-imgs-btn-DptIcon_Dairy, .dept-imgs-btn-DptIcon_DriedFruits, .dept-imgs-btn-DptIcon_FW, .dept-imgs-btn-DptIcon_Fish, .dept-imgs-btn-DptIcon_Generic, .dept-imgs-btn-DptIcon_Kosher, .dept-imgs-btn-DptIcon_Meat, .dept-imgs-btn-DptIcon_Organic, .dept-imgs-btn-DptIcon_Produce, .dept-imgs-btn-DptIcon_Specialty, .dept-imgs-btn-DptIcon_Staples, .product_department .long-button.icon-bakedgoods:before, .product_department .long-button.icon-cheese:before, .product_department .long-button.icon-coffee:before, .product_department .long-button.icon-organic:before, .product_department .long-button.icon-dairy:before, .product_department .long-button.icon-driedfruits:before, .product_department .long-button.icon-fw:before, .product_department .long-button.icon-produce:before, .product_department .long-button.icon-seafood:before, .product_department .long-button.icon-traditionalgrocery:before, .product_department .long-button.icon-meat:before, .product_department .long-button.icon-specialtygrocery:before {
+  background: url('../img/dept-imgs-btn-s47122fc222.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Baked {
+  background-position: 0 -1053px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Cheese {
+  background-position: 0 -905px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Coffee {
+  background-position: 0 -609px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Dairy {
+  background-position: 0 -1793px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_DriedFruits {
+  background-position: 0 -165px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_FW {
+  background-position: 0 -1645px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Fish {
+  background-position: 0 -1201px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Generic {
+  background-position: 0 -1349px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Kosher {
+  background-position: 0 -1941px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Meat {
+  background-position: 0 -757px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Organic {
+  background-position: 0 -461px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Produce {
+  background-position: 0 -1497px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Specialty {
+  background-position: 0 -313px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.dept-imgs-btn-DptIcon_Staples {
+  background-position: 0 0;
+}
+
+/* line 72, ../sass/_dept-icons.scss */
+.product_department .long-button {
+  position: relative;
+}
+
+/* line 75, ../sass/_dept-icons.scss */
+.product_department .long-button:before {
+  position: absolute;
+  top: 0px;
+  left: 150px;
+  display: block;
+  width: 166px;
+  height: 166px;
+  content: '';
+  background-color: red;
+  zoom: 20%;
+}
+
+/* line 86, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-bakedgoods:before {
+  background-position: 0 -1053px;
+}
+
+/* line 89, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-cheese:before {
+  background-position: 0 -905px;
+}
+
+/* line 92, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-coffee:before {
+  background-position: 0 -609px;
+}
+
+/* line 95, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-organic:before {
+  background-position: 0 -461px;
+}
+
+/* line 98, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-dairy:before {
+  background-position: 0 -1793px;
+}
+
+/* line 101, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-driedfruits:before {
+  background-position: 0 -165px;
+}
+
+/* line 104, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-fw:before {
+  background-position: 0 -1645px;
+}
+
+/* line 107, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-produce:before {
+  background-position: 0 -1497px;
+}
+
+/* line 110, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-seafood:before {
+  background-position: 0 -1201px;
+}
+
+/* line 113, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-traditionalgrocery:before {
+  background-position: 0 0;
+}
+
+/* line 116, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-meat:before {
+  background-position: 0 -757px;
+}
+
+/* line 119, ../sass/_dept-icons.scss */
+.product_department .long-button.icon-specialtygrocery:before {
+  background-position: 0 -313px;
+}
+
+/*
+-----------------------------
+buttons, misc ui elements
+-----------------------------
+*/
+/* line 8, ../sass/_ui-elements.scss */
+.table-view li {
+  border-top: 1px #bbb solid;
+  border-bottom: 1px #383838 solid;
+}
+
+/* line 13, ../sass/_ui-elements.scss */
+.button {
+  box-sizing: content-box;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px;
+  color: #dcdcdc;
+  height: 20px;
+  line-height: 20px;
+  background-color: rgba(100, 100, 100, 0.7);
+  font-size: 14px;
+}
+
+/* line 27, ../sass/_ui-elements.scss */
+.short-button {
+  width: 80px;
+}
+
+/* line 30, ../sass/_ui-elements.scss */
+.medium-button {
+  width: 128px;
+}
+
+/* line 33, ../sass/_ui-elements.scss */
+.long-button {
+  box-sizing: content-box;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #dcdcdc;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: rgba(100, 100, 100, 0.7);
+}
+
+/* line 45, ../sass/_ui-elements.scss */
+.button-flat {
+  background-color: rgba(190, 190, 190, 0.7);
+  height: 40px;
+  line-height: 20px;
+  width: 50%;
+}
+
+/* line 51, ../sass/_ui-elements.scss */
+.active {
+  color: #fad214;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 56, ../sass/_ui-elements.scss */
+.bottom-border {
+  border-bottom: 1px solid #fad214;
+  padding-bottom: 10px;
+}
+
+/* line 62, ../sass/_ui-elements.scss */
+ul#tab {
+  width: 100%;
+  padding: 0;
+  /**/
+  text-align: center;
+}
+
+/* line 69, ../sass/_ui-elements.scss */
+ul#tab li {
+  margin-right: 0;
+  margin-left: 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* line 77, ../sass/_ui-elements.scss */
+ul#tab.tab2 li {
+  width: 50%;
+}
+
+/* line 81, ../sass/_ui-elements.scss */
+ul#tab.tab2 li:first-child {
+  float: left;
+  text-align: left;
+  margin-left: -2%;
+}
+
+/* line 87, ../sass/_ui-elements.scss */
+ul#tab.tab2 li:last-child {
+  float: right;
+  text-align: right;
+  margin-right: -2%;
+}
+
+/* line 94, ../sass/_ui-elements.scss */
+ul#tab.tab3 li {
+  width: 33%;
+  margin-right: 0;
+  margin-left: 0;
+  display: block;
+  overflow: hidden;
+  float: left;
+}
+
+/* line 103, ../sass/_ui-elements.scss */
+ul#tab.tab3 li:first-child {
+  float: left;
+  margin-left: -3.5%;
+}
+
+/* line 109, ../sass/_ui-elements.scss */
+ul#tab.tab3 li:nth-child(2) {
+  position: relative;
+  left: 3.5%;
+}
+
+/* line 114, ../sass/_ui-elements.scss */
+ul#tab.tab3 li:last-child {
+  float: right;
+  margin-right: -3%;
+}
+
+/* line 120, ../sass/_ui-elements.scss */
+ul#tab:after {
+  display: block;
+  clear: both;
+  content: '\0020';
+  width: 100%;
+  height: 15px;
+}
+
+/*
+------------------------------------
+common styles for:
+department landing
+food profile landing
+favorites landing
+rewards landing
+about landing
+store list landing
+------------------------------------
+*/
+/* line 17, ../sass/_landings.scss */
+section.myFoodProfile .inner
+, section.departmentsLanding .inner
+, section.favoritesLanding .inner
+, section.locations .inner
+, section.about .inner {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 100px;
+}
+
+/* line 23, ../sass/_landings.scss */
+ul.grid, div.grid {
+  display: block;
+}
+
+/* line 27, ../sass/_landings.scss */
+.grid:after {
+  content: '\0020';
+  display: block;
+  clear: both;
+}
+
+/* line 33, ../sass/_landings.scss */
+.grid-item {
+  position: relative;
+  width: 33.2%;
+  overflow: hidden;
+  float: left;
+  display: block;
+  text-align: center;
+  color: #fff;
+  padding-top: 95px;
+  padding-bottom: 18px;
+  min-height: 24px;
+  text-align: center;
+  line-height: 14px;
+  font-size: 14px;
+}
+
+/* line 49, ../sass/_landings.scss */
+.grid-item span {
+  display: block;
+  line-height: 14px;
+  height: 28px;
+}
+
+/* line 55, ../sass/_landings.scss */
+.icon-style:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  content: '\0020';
+  /* change to sprite url i.e url('img/sprite_departments_active.png');*/
+  /* clip: rect(0px, 0px, 0px, 0px); change to actual measurements all taken from top left corner of the sprite image (top, right, bottom, left) */
+  width: 166px;
+  height: 166px;
+  margin-left: -83px;
+  z-index: 1;
+}
+
+/*
+------------------------------------
+ favorites
+------------------------------------
+*/
+/* line 9, ../sass/_favorites.scss */
+section.favoritesLanding .inner {
+  margin-left: 60px;
+  margin-top: 100px;
+}
+
+/*
+-----------------------------   
+top navigation icons
+-----------------------------
+*/
+/* line 82, shoplist-imgs/*.png */
+.shoplist-imgs-sprite, .shoplist-imgs-add, .shoplist-imgs-delete, .shoplist-imgs-deleteRed, .shoplist-imgs-deleteVerti, .shoplist-imgs-edit, .shoplist-imgs-reorder {
+  background: url('../img/shoplist-imgs-sb19da535a4.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.shoplist-imgs-add {
+  background-position: 0 -740px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.shoplist-imgs-delete {
+  background-position: 0 -148px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.shoplist-imgs-deleteRed {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.shoplist-imgs-deleteVerti {
+  background-position: 0 -296px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.shoplist-imgs-edit {
+  background-position: 0 -444px;
+}
+
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.shoplist-imgs-reorder {
+  background-position: 0 -592px;
+}
+
+/*-- products --*/
+/*-- recipies --*/
+/* line 34, ../sass/_shopping-list.scss */
+#shopping_list_ttl {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: right;
+  padding-left: 70%;
+  padding-top: 8px;
+  display: none;
+}
+
+/* line 43, ../sass/_shopping-list.scss */
+#shopping_list_edit_bar {
+  position: absolute;
+  z-index: 800;
+  width: 100%;
+  height: 45px;
+  top: 0px;
+  text-align: center;
+  background-color: #505050;
+  display: none;
+  line-height: 44px;
+  color: white;
+}
+
+/* line 55, ../sass/_shopping-list.scss */
+#shopping_list_edit_cancel_aff {
+  position: absolute;
+  left: 10px;
+  text-align: left;
+  padding-left: 14px;
+}
+
+/* line 61, ../sass/_shopping-list.scss */
+#shopping_list_edit_cancel_aff:before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: url(../img/cancelArrow.png) no-repeat;
+  zoom: 50%;
+  height: 100%;
+  width: 100%;
+  font-size: 2em;
+}
+
+/* line 71, ../sass/_shopping-list.scss */
+.shoppingListEditListViewTitle {
+  font-family: 'roboto_condensedregular';
+  font-size: 1.25em;
+  color: #fad214;
+  height: 100%;
+}
+
+/* line 77, ../sass/_shopping-list.scss */
+.shoppingListAddEditViewTitle {
+  font-family: 'roboto_condensedregular';
+  font-size: 1.25em;
+  color: #fad214;
+  height: 100%;
+}
+
+/* line 83, ../sass/_shopping-list.scss */
+#shopping_list_edit_done_aff {
+  position: absolute;
+  right: 10px;
+}
+
+/* line 92, ../sass/_shopping-list.scss */
+body.shoppingList #top_ttl {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 96, ../sass/_shopping-list.scss */
+.shoppingList #shopping_list_ttl {
+  display: block;
+}
+
+/* line 99, ../sass/_shopping-list.scss */
+.both-lists {
+  margin: 85px 0 0 0;
+}
+
+/* line 102, ../sass/_shopping-list.scss */
+.active-list, .inactive-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 106, ../sass/_shopping-list.scss */
+.active-list {
+  /*border-top: 1px solid white;*/
+  color: white;
+}
+
+/* line 110, ../sass/_shopping-list.scss */
+.inactive-list {
+  color: #000;
+}
+
+/* line 113, ../sass/_shopping-list.scss */
+.list-item {
+  position: relative;
+  display: block;
+  height: 56px;
+  padding: 0 0 0 50px;
+  line-height: 40px;
+  border-bottom: 1px solid #fad214;
+  background-color: transparent;
+}
+/* line 121, ../sass/_shopping-list.scss */
+.list-item span {
+  line-height: 18px;
+  display: block;
+  padding-top: 0px;
+  margin-right: 38px;
+  height: 100%;
+  /*New Flexbox*/
+  display: -webkit-flex;
+  -webkit-flex-orient: vertical;
+  -webkit-flex-pack: center;
+  display: flex;
+  flex-orient: vertical;
+  flex-pack: center;
+  /*Old Flexbox*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+}
+
+/* line 140, ../sass/_shopping-list.scss */
+.list-item-checkbox {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 56px;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+}
+
+/* line 149, ../sass/_shopping-list.scss */
+.list-item-checkbox:before {
+  -webkit-box-sizing: content-box;
+  display: block;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  left: 50%;
+  top: 50%;
+  background-color: transparent;
+  border: 1px solid lightgrey;
+  padding: 0;
+  margin-top: -9px;
+  margin-left: -9px;
+}
+
+/* line 166, ../sass/_shopping-list.scss */
+.list-item-activator {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-image: url(../img/shopping-list-edit-activator.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+
+/* line 177, ../sass/_shopping-list.scss */
+.list-item-activator-active {
+  -webkit-transform: rotate(90deg);
+}
+
+/* line 180, ../sass/_shopping-list.scss */
+.list-item-editor {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-image: url(../img/shopping-list-edit-aff.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+
+/* line 191, ../sass/_shopping-list.scss */
+.list-item-delete {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 73px;
+  height: 55px;
+  display: none;
+  text-align: center;
+  color: white;
+  font-family: 'roboto_condensedlight';
+  font-size: 1.1em;
+  line-height: 3em;
+  background-color: #ff3b30;
+}
+
+/* line 205, ../sass/_shopping-list.scss */
+.list-item-dragger {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  width: 22px;
+  height: 100%;
+  background-image: url(../img/shopping-list-grabber-aff.png);
+  background-repeat: no-repeat;
+  background-size: 22px 9px;
+  background-position: 0px 24px;
+}
+
+/* line 217, ../sass/_shopping-list.scss */
+.active-list .list-item-dragger {
+  display: block;
+}
+
+/* line 220, ../sass/_shopping-list.scss */
+.inactive-list .list-item-dragger {
+  display: none;
+}
+
+/* line 223, ../sass/_shopping-list.scss */
+.inactive-list .list-item-checkbox:before {
+  content: "\2713";
+  font-size: 1em;
+  font-weight: bold;
+  overflow: hidden;
+  color: lightgrey;
+  opacity: 0.5;
+  border: 1px solid lightgrey;
+}
+
+/* line 236, ../sass/_shopping-list.scss */
+#shopping_list_addedit_view {
+  position: fixed;
+  top: 85px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 244, ../sass/_shopping-list.scss */
+#shopping_list_addedit_view input {
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+}
+
+/* line 251, ../sass/_shopping-list.scss */
+.shoppingListAddViewTop {
+  position: relative;
+  margin-top: 25px;
+}
+
+/* line 255, ../sass/_shopping-list.scss */
+#shopping_list_add_aff {
+  display: inline-block;
+  margin-right: 6px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* line 261, ../sass/_shopping-list.scss */
+#shopping_list_edit_aff {
+  display: inline-block;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* line 266, ../sass/_shopping-list.scss */
+#shopping_list_done_aff {
+  position: absolute;
+  top: 3px;
+  right: 40px;
+  overflow: hidden;
+  /* background-color: purple; */
+}
+
+/* line 273, ../sass/_shopping-list.scss */
+#shopping_list_cancel_aff {
+  position: absolute;
+  top: 3px;
+  right: 75%;
+  overflow: hidden;
+  /* background-color: green;  */
+}
+
+/* line 280, ../sass/_shopping-list.scss */
+#shopping_list_addedit_field {
+  width: 90%;
+  height: 44px;
+}
+
+/* line 284, ../sass/_shopping-list.scss */
+.shoppingListAddFieldContainer {
+  margin-top: 20px;
+}
+
+/* line 287, ../sass/_shopping-list.scss */
+#edit_screen_head {
+  position: fixed;
+  top: 80px;
+  height: 45px;
+  width: 100%;
+  background-color: orange;
+  z-index: 8000;
+}
+
+/*
+------------------------------------
+ food profile ( diet preferences )
+------------------------------------
+*/
+/* line 8, ../sass/_food-profile.scss */
+input[type='checkbox'] {
+  display: none;
+}
+
+/*
+------------------------------------
+ stores
+------------------------------------
+*/
+/* line 7, ../sass/_stores.scss */
+#store_list_ttl {
+  display: none;
+}
+
+/* line 12, ../sass/_stores.scss */
+body.storeList #store_list_ttl, body.storeListMap #store_list_ttl {
+  display: block;
+}
+
+/* using smaller font for page view title */
+/* line 18, ../sass/_stores.scss */
+.storeList #top_ttl h3 .page_title_inner, .storeListMap #top_ttl h3 .page_title_inner {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  min-height: 16px;
+}
+
+/* icon mixins */
+/* line 68, ../sass/_stores.scss */
+.regionalStoreList {
+  margin-top: 85px;
+}
+/* line 73, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem {
+  position: relative;
+  /*height: 150px;*/
+  width: 100%;
+  padding: 10px 0 10px 17px;
+  border-bottom: 1px solid #fad214;
+  background-position: left top;
+  background-size: cover;
+  /*
+  .storeListItemAddress:after{
+    content: url('../img/forwardArrow.png') no-repeat;
+    height: 25px;
+    width: 25px;
+    padding-left: 20px;
+    zoom: 50%;
+  }
+  */
+}
+/* line 82, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemTitle {
+  font-family: 'robotoregular';
+  font-size: 24px;
+  margin-bottom: 4px;
+  color: #fff;
+}
+/* line 88, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemAddress {
+  font-family: 'robotothin';
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+/* line 103, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemPhone {
+  font-family: 'robotothin';
+  padding-top: 2px;
+}
+/* line 106, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemPhone a {
+  font-size: 18px;
+  color: #51a7dd;
+  text-decoration: underline;
+}
+/* line 112, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons {
+  margin-top: 10px;
+}
+/* line 114, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons span {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  margin-right: 11px;
+  background-color: transparent;
+  zoom: 50%;
+}
+/* line 29, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-cafe {
+  background: url("../img/storeservices-icons/cafe.png") no-repeat;
+}
+/* line 32, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-restaurant {
+  background: url("../img/storeservices-icons/restaurant.png") no-repeat;
+}
+/* line 35, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-fwtogo {
+  background: url("../img/storeservices-icons/togo.png") no-repeat;
+}
+/* line 38, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-fwwine {
+  background: url("../img/storeservices-icons/wine.png") no-repeat;
+}
+/* line 41, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-watertaxi {
+  background: url("../img/storeservices-icons/watertaxi.png") no-repeat;
+}
+/* line 44, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-floral {
+  background: url("../img/storeservices-icons/florist.png") no-repeat;
+}
+/* line 47, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-catering {
+  background: url("../img/storeservices-icons/catering.png") no-repeat;
+}
+/* line 50, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-shuttle {
+  background: url("../img/storeservices-icons/shuttle.png") no-repeat;
+}
+/* line 53, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-wifi {
+  background: url("../img/storeservices-icons/wifi.png") no-repeat;
+}
+/* line 56, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-delivery {
+  background: url("../img/storeservices-icons/delivery.png") no-repeat;
+}
+/* line 59, ../sass/_stores.scss */
+.regionalStoreList .storeListItems .storeListItem .storeListItemIcons .icon-parking {
+  background: url("../img/storeservices-icons/parking.png") no-repeat;
+}
+
+/* line 128, ../sass/_stores.scss */
+section.detailView.store {
+  padding: 65px 15px 0 15px;
+}
+/* line 132, ../sass/_stores.scss */
+section.detailView.store .storeDetailNeighborhood {
+  font-family: 'robotoregular';
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+/* line 138, ../sass/_stores.scss */
+section.detailView.store .storeDetailAddress {
+  display: inline-block;
+  font-family: 'robotothin';
+  font-size: 18px;
+  font-weight: bold;
+}
+/* line 145, ../sass/_stores.scss */
+section.detailView.store .storeDetailPhone {
+  font-family: 'robotothin';
+  font-size: 18px;
+  color: #51a7dd;
+  text-decoration: underline;
+  display: block;
+  font-weight: bold;
+}
+/* line 154, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons {
+  height: 40px;
+  width: 100%;
+}
+/* line 157, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons span {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  margin-right: 5px;
+  background-color: blue;
+  zoom: 50%;
+}
+/* line 29, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-cafe {
+  background: url("../img/storeservices-icons/cafe.png") no-repeat;
+}
+/* line 32, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-restaurant {
+  background: url("../img/storeservices-icons/restaurant.png") no-repeat;
+}
+/* line 35, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-fwtogo {
+  background: url("../img/storeservices-icons/togo.png") no-repeat;
+}
+/* line 38, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-fwwine {
+  background: url("../img/storeservices-icons/wine.png") no-repeat;
+}
+/* line 41, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-watertaxi {
+  background: url("../img/storeservices-icons/watertaxi.png") no-repeat;
+}
+/* line 44, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-floral {
+  background: url("../img/storeservices-icons/florist.png") no-repeat;
+}
+/* line 47, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-catering {
+  background: url("../img/storeservices-icons/catering.png") no-repeat;
+}
+/* line 50, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-shuttle {
+  background: url("../img/storeservices-icons/shuttle.png") no-repeat;
+}
+/* line 53, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-wifi {
+  background: url("../img/storeservices-icons/wifi.png") no-repeat;
+}
+/* line 56, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-delivery {
+  background: url("../img/storeservices-icons/delivery.png") no-repeat;
+}
+/* line 59, ../sass/_stores.scss */
+section.detailView.store .storeDetailIcons .icon-parking {
+  background: url("../img/storeservices-icons/parking.png") no-repeat;
+}
+/* line 168, ../sass/_stores.scss */
+section.detailView.store #tab.storeDetailDisplayControls {
+  text-align: center;
+  overflow: hidden;
+  width: 107%;
+  margin-left: -3%;
+}
+/* line 173, ../sass/_stores.scss */
+section.detailView.store #tab.storeDetailDisplayControls li {
+  width: 72px;
+  float: left;
+  margin: 0 2px 0 2px;
+}
+/* line 177, ../sass/_stores.scss */
+section.detailView.store #tab.storeDetailDisplayControls li .button {
+  width: 92%;
+  padding: 0 4%;
+}
+/* line 183, ../sass/_stores.scss */
+section.detailView.store .tips, section.detailView.store .summary {
+  padding-top: 13px;
+  border-top: 1px solid #fad214;
+  margin: 0 auto;
+  width: 92%;
+}
+/* line 191, ../sass/_stores.scss */
+section.detailView.store .tips p a, section.detailView.store .tips p a:link, section.detailView.store .tips p a:visited {
+  text-decoration: underline;
+  color: white;
+}
+/* line 202, ../sass/_stores.scss */
+section.detailView.store .storeDetailViewOnMapAff {
+  display: block;
+  width: 92%;
+  margin-top: 13px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 208, ../sass/_stores.scss */
+section.detailView.store .storeDetailViewOnMapAff a {
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  border-radius: 16px;
+  position: relative;
+  font-family: 'roboto_condensedlight';
+  font-size: 17px;
+  padding-left: 21px;
+  display: block;
+  height: 32px;
+  line-height: 1.9em;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+/* line 220, ../sass/_stores.scss */
+section.detailView.store .storeDetailViewOnMapAff a:after {
+  position: absolute;
+  right: 13px;
+  top: 7px;
+  content: url("../img/forwardArrow.png") no-repeat;
+  height: 25px;
+  width: 25px;
+  zoom: 60%;
+}
+
+/* line 232, ../sass/_stores.scss */
+.storeKey, #key_overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.85);
+  top: 0;
+  width: 100%;
+  z-index: 100000;
+  color: white;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+/* line 241, ../sass/_stores.scss */
+.storeKey ul, #key_overlay ul {
+  border-bottom: 1px solid #fad214;
+  padding-bottom: 10px;
+}
+/* line 244, ../sass/_stores.scss */
+.storeKey ul li, #key_overlay ul li {
+  margin-bottom: 5px;
+}
+/* line 248, ../sass/_stores.scss */
+.storeKey .last_true.storeListItems, #key_overlay .last_true.storeListItems {
+  border: 0;
+}
+/* line 251, ../sass/_stores.scss */
+.storeKey #detail-top-nav-key, #key_overlay #detail-top-nav-key {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 7;
+  width: 100%;
+  background-color: #505050;
+  line-height: 3em;
+  border-bottom: 1px #383838 solid;
+  height: 45px;
+}
+/* line 264, ../sass/_stores.scss */
+.storeKey .inner, #key_overlay .inner {
+  margin-top: 45px;
+}
+/* line 267, ../sass/_stores.scss */
+.storeKey .storeListItems, #key_overlay .storeListItems {
+  font-size: 18px;
+}
+/* line 269, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItem, .storeKey .storeListItems .heading, #key_overlay .storeListItems .storeListItem, #key_overlay .storeListItems .heading {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  padding: 10px 0 10px 17px;
+}
+/* line 277, ../sass/_stores.scss */
+.storeKey .storeListItems .heading, #key_overlay .storeListItems .heading {
+  color: white;
+  height: 30px;
+}
+/* line 281, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons, #key_overlay .storeListItems .storeListItemIcons {
+  overflow: hidden;
+}
+/* line 283, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons span, #key_overlay .storeListItems .storeListItemIcons span {
+  float: left;
+}
+/* line 286, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons span.icon_span, #key_overlay .storeListItems .storeListItemIcons span.icon_span {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+  background-color: transparent;
+  background-size: 100%;
+}
+/* line 294, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons span.icon_span.icon-watertaxi, #key_overlay .storeListItems .storeListItemIcons span.icon_span.icon-watertaxi {
+  height: 41px;
+}
+/* line 297, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons span.icon_identifier, #key_overlay .storeListItems .storeListItemIcons span.icon_identifier {
+  padding-top: 8px;
+}
+/* line 29, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-cafe, #key_overlay .storeListItems .storeListItemIcons .icon-cafe {
+  background: url("../img/storeservices-icons/cafe.png") no-repeat;
+}
+/* line 32, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-restaurant, #key_overlay .storeListItems .storeListItemIcons .icon-restaurant {
+  background: url("../img/storeservices-icons/restaurant.png") no-repeat;
+}
+/* line 35, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-fwtogo, #key_overlay .storeListItems .storeListItemIcons .icon-fwtogo {
+  background: url("../img/storeservices-icons/togo.png") no-repeat;
+}
+/* line 38, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-fwwine, #key_overlay .storeListItems .storeListItemIcons .icon-fwwine {
+  background: url("../img/storeservices-icons/wine.png") no-repeat;
+}
+/* line 41, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-watertaxi, #key_overlay .storeListItems .storeListItemIcons .icon-watertaxi {
+  background: url("../img/storeservices-icons/watertaxi.png") no-repeat;
+}
+/* line 44, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-floral, #key_overlay .storeListItems .storeListItemIcons .icon-floral {
+  background: url("../img/storeservices-icons/florist.png") no-repeat;
+}
+/* line 47, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-catering, #key_overlay .storeListItems .storeListItemIcons .icon-catering {
+  background: url("../img/storeservices-icons/catering.png") no-repeat;
+}
+/* line 50, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-shuttle, #key_overlay .storeListItems .storeListItemIcons .icon-shuttle {
+  background: url("../img/storeservices-icons/shuttle.png") no-repeat;
+}
+/* line 53, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-wifi, #key_overlay .storeListItems .storeListItemIcons .icon-wifi {
+  background: url("../img/storeservices-icons/wifi.png") no-repeat;
+}
+/* line 56, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-delivery, #key_overlay .storeListItems .storeListItemIcons .icon-delivery {
+  background: url("../img/storeservices-icons/delivery.png") no-repeat;
+}
+/* line 59, ../sass/_stores.scss */
+.storeKey .storeListItems .storeListItemIcons .icon-parking, #key_overlay .storeListItems .storeListItemIcons .icon-parking {
+  background: url("../img/storeservices-icons/parking.png") no-repeat;
+}
+
+/* line 310, ../sass/_stores.scss */
+#store_list_ttl {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+}
+/* line 316, ../sass/_stores.scss */
+#store_list_ttl div {
+  position: relative;
+  float: right;
+}
+/* line 319, ../sass/_stores.scss */
+#store_list_ttl div img, #store_list_ttl div a {
+  width: 100%;
+  height: 100%;
+}
+/* line 323, ../sass/_stores.scss */
+#store_list_ttl div a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 331, ../sass/_stores.scss */
+#store_list_ttl #map_view_aff, #store_list_ttl #list_view_aff {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+}
+/* line 336, ../sass/_stores.scss */
+#store_list_ttl #map_view_aff {
+  margin-right: 5px;
+}
+/* line 339, ../sass/_stores.scss */
+#store_list_ttl #list_view_aff {
+  margin-right: -4px;
+}
+/* line 342, ../sass/_stores.scss */
+#store_list_ttl #info_view_aff {
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin-left: 22px;
+  margin-top: 11px;
+}
+
+/* line 352, ../sass/_stores.scss */
+body.storeListMap #innerInfoBox.hidden {
+  display: none;
+}
+/* line 355, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper {
+  height: 100%;
+}
+/* line 357, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div {
+  height: 100%;
+}
+/* line 359, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap {
+  height: 100%;
+}
+/* line 361, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner {
+  height: 100%;
+}
+/* line 363, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner #map-canvas {
+  display: block;
+  height: 85%;
+  margin-top: 84px;
+  color: black;
+}
+/* line 369, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner #map-canvas .infoBox img {
+  z-index: 1000;
+  width: 17px;
+  height: 17px;
+  display: none;
+}
+/* line 375, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner #map-canvas .infoBox #innerInfoBox {
+  color: white;
+  position: relative;
+  height: 85px;
+  width: 160px;
+}
+/* line 380, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner #map-canvas .infoBox #innerInfoBox img {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+}
+/* line 388, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner #map-canvas .infoBox #innerInfoBox .infoBoxName {
+  font-size: 19px;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+}
+/* line 395, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner #map-canvas .infoBox #innerInfoBox .infoBoxAddress {
+  font-size: 17px;
+  padding: 5px;
+  padding-top: 0;
+}
+/* line 400, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner #map-canvas .infoBox #innerInfoBox #textBox {
+  position: absolute;
+  top: 15px;
+  color: white;
+  font-size: 15px;
+  z-index: 950;
+}
+/* line 406, ../sass/_stores.scss */
+body.storeListMap #view_content_wrapper #view_div section.storeListMap .inner #map-canvas .infoBox #innerInfoBox #textBox a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 420, ../sass/_stores.scss */
+.disable-link {
+  text-decoration: none !important;
+  color: white !important;
+  cursor: default;
+}
+
+/* line 425, ../sass/_stores.scss */
+#mapview {
+  height: 100%;
+}
+
+/* line 430, ../sass/_stores.scss */
+body.store-map-view #view_content_wrapper {
+  height: 100%;
+}
+/* line 432, ../sass/_stores.scss */
+body.store-map-view #view_content_wrapper #view_div {
+  height: 100%;
+}
+/* line 434, ../sass/_stores.scss */
+body.store-map-view #view_content_wrapper #view_div section.store-map-view {
+  height: 100%;
+}
+/* line 436, ../sass/_stores.scss */
+body.store-map-view #view_content_wrapper #view_div section.store-map-view #map_container {
+  height: 100%;
+}
+/* line 438, ../sass/_stores.scss */
+body.store-map-view #view_content_wrapper #view_div section.store-map-view #map_container #map-canvas {
+  margin-top: 45px;
+  height: 92%;
+}
+
+/* line 447, ../sass/_stores.scss */
+body.detailView.store-map-view #top_nav_bar #top_ttl {
+  display: none;
+}
+
+/* line 451, ../sass/_stores.scss */
+#floorplan_wrap {
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 10px;
+  overflow: scroll;
+}
+
+/* line 459, ../sass/_stores.scss */
+#floorplan_wrap img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 465, ../sass/_stores.scss */
+.storeListMap #filter .selected {
+  color: #FAD214;
+}
+/* line 468, ../sass/_stores.scss */
+.storeListMap #filter .allLocationsIconsWrapper {
+  position: relative;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: auto;
+  overflow: scroll;
+  width: auto;
+}
+/* line 476, ../sass/_stores.scss */
+.storeListMap #filter .allLocationsIcons {
+  position: relative;
+  background-color: transparent;
+  height: 90px;
+  width: 1130px;
+}
+/* line 482, ../sass/_stores.scss */
+.storeListMap #filter .iconWithCopy {
+  display: inline-block;
+  text-decoration: none;
+  width: auto;
+  height: 80px;
+  margin: 4px 0px 4px 14px;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  position: relative;
+  padding-right: 14px;
+}
+/* line 494, ../sass/_stores.scss */
+.storeListMap #filter .iconWithCopy:after {
+  display: block;
+  width: 1px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 0px;
+}
+/* line 506, ../sass/_stores.scss */
+.storeListMap #filter .iconWithCopy:last-child:after {
+  display: none;
+}
+/* line 509, ../sass/_stores.scss */
+.storeListMap #filter .iconCopy {
+  line-height: 130px;
+}
+
+/* line 514, ../sass/_stores.scss */
+.hours_container {
+  border-bottom: 1px solid #fad214;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+/* line 518, ../sass/_stores.scss */
+.hours_container .hours_header {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* line 523, ../sass/_stores.scss */
+.hours_container .hours_content {
+  margin-bottom: 1px;
+}
+
+/* line 528, ../sass/_stores.scss */
+.info_container {
+  border-bottom: 1px solid #fad214;
+  padding-bottom: 13px;
+}
+
+/* line 532, ../sass/_stores.scss */
+.info_container#summary_container {
+  border-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 537, ../sass/_stores.scss */
+.address_container {
+  margin-bottom: 8px;
+}
+
+/* line 541, ../sass/_stores.scss */
+.info_container.best_shop p {
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+/* line 545, ../sass/_stores.scss */
+.info_container.best_shop strong {
+  font-weight: bold;
+  margin-bottom: 2px;
+  display: inline-block;
+  font-size: 17px;
+}
+
+/*
+------------------------------------------------------------------
+	Rewards : Landing and Detail Pages
+------------------------------------------------------------------
+*/
+/* line 9, ../sass/_rewards.scss */
+section.rewardsLanding .inner {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 85px;
+}
+/* line 14, ../sass/_rewards.scss */
+section.rewardsLanding .inner .long-button {
+  position: relative;
+  margin: 0;
+}
+/* line 17, ../sass/_rewards.scss */
+section.rewardsLanding .inner .long-button img {
+  position: absolute;
+}
+/* line 20, ../sass/_rewards.scss */
+section.rewardsLanding .inner .long-button img.more_arrow {
+  position: absolute;
+  right: 11px;
+  top: 5px;
+  width: 4%;
+  height: 71%;
+}
+/* line 27, ../sass/_rewards.scss */
+section.rewardsLanding .inner .long-button #settings_icon, section.rewardsLanding .inner .long-button #rewards_icon {
+  top: 1px;
+  left: 6px;
+  width: 11%;
+  height: 95%;
+  top: 1px;
+}
+/* line 36, ../sass/_rewards.scss */
+section.rewardsLanding #user_business {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 40, ../sass/_rewards.scss */
+section.rewardsLanding #user_business .row {
+  padding-bottom: 20px;
+  margin-top: 10px;
+  border: 0;
+}
+/* line 45, ../sass/_rewards.scss */
+section.rewardsLanding #user_business #signup_copy {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+/* line 52, ../sass/_rewards.scss */
+section.rewardsLanding #barcode_div {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+/* line 56, ../sass/_rewards.scss */
+section.rewardsLanding #barcode_div img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 62, ../sass/_rewards.scss */
+#rewards_business.rewards_false {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+/* line 68, ../sass/_rewards.scss */
+#rewards_business {
+  border-top: 1px solid #fad214;
+}
+/* line 70, ../sass/_rewards.scss */
+#rewards_business #rewards_list {
+  position: relative;
+}
+/* line 73, ../sass/_rewards.scss */
+#rewards_business #rewards_list .row a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 78, ../sass/_rewards.scss */
+#rewards_business #rewards_list .row a img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+/* line 86, ../sass/_rewards.scss */
+#rewards_business #rewards_list .row {
+  height: 150px;
+}
+/* line 88, ../sass/_rewards.scss */
+#rewards_business #rewards_list .row span, #rewards_business #rewards_list .row em {
+  font-size: 18px;
+}
+/* line 92, ../sass/_rewards.scss */
+#rewards_business #rewards_list #rewards_header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  height: 38px;
+  text-align: center;
+  font-family: 'roboto_condensedregular';
+  text-transform: uppercase;
+  padding-top: 10px;
+  min-height: 20px;
+  padding-bottom: 10px;
+  opacity: 0.8;
+  font-size: 17px;
+  z-index: 100;
+  background: black;
+}
+/* line 110, ../sass/_rewards.scss */
+#rewards_business .row {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #fad214;
+}
+/* line 116, ../sass/_rewards.scss */
+#rewards_business .row img, #rewards_business .row span {
+  display: block;
+}
+/* line 119, ../sass/_rewards.scss */
+#rewards_business .row .text_area {
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(2, 0, 0, 0.7) 100%);
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  width: 100%;
+}
+/* line 126, ../sass/_rewards.scss */
+#rewards_business .row span {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  width: 70%;
+}
+/* line 134, ../sass/_rewards.scss */
+#rewards_business .row em {
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 50%;
+  background-color: rgba(250, 210, 20, 0.5);
+  text-align: center;
+  color: #fff;
+}
+
+/* line 157, ../sass/_rewards.scss */
+section.detailView.reward .inner {
+  padding-top: 60px;
+}
+
+/* line 163, ../sass/_rewards.scss */
+body.detailView.reward #view_content {
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 80%, rgba(2, 0, 0, 0.7) 100%);
+}
+
+/* line 167, ../sass/_rewards.scss */
+.detailView.reward #bg_image {
+  -webkit-filter: blur(3px);
+}
+
+/* line 171, ../sass/_rewards.scss */
+#rew_barcode {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+/* line 176, ../sass/_rewards.scss */
+#rew_barcode img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 182, ../sass/_rewards.scss */
+#rew_name, #rew_expdate {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+/* line 186, ../sass/_rewards.scss */
+#rew_name {
+  font-size: 22px;
+}
+
+/* line 189, ../sass/_rewards.scss */
+#rew_present {
+  font-size: 14px;
+}
+
+/* line 192, ../sass/_rewards.scss */
+#rew_desc {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*
+------------------------------------------------------------------
+	rewards : Landing page
+------------------------------------------------------------------
+*/
+/* line 7, ../sass/_about.scss */
+body.landingView.about #top_ttl {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+/* line 13, ../sass/_about.scss */
+section.about {
+  font-size: 17px;
+  font-weight: 200;
+}
+/* line 16, ../sass/_about.scss */
+section.about .company_name {
+  font-weight: 600;
+  font-size: 16px;
+}
+/* line 20, ../sass/_about.scss */
+section.about p {
+  border-bottom: 1px solid #cdaa11;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10px;
+  padding-bottom: 12px;
+}
+/* line 28, ../sass/_about.scss */
+section.about .legal {
+  position: relative;
+}
+/* line 30, ../sass/_about.scss */
+section.about .legal span, section.about .legal a {
+  display: block;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10px;
+  font-size: 17px;
+}
+/* line 37, ../sass/_about.scss */
+section.about .legal span {
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+/* line 41, ../sass/_about.scss */
+section.about .legal a {
+  position: relative;
+  color: #fff;
+  border-bottom: 1px solid #cdaa11;
+  padding-bottom: 12px;
+}
+/* line 46, ../sass/_about.scss */
+section.about .legal a img {
+  position: absolute;
+  width: 6px;
+  height: 13px;
+  top: 13px;
+  right: 13px;
+}
+
+/*section.about p,  section.about .legal a {
+	display:block;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	font-size:14px;
+	font-weight:lighter;
+	border-bottom:1px solid #fad214;
+	color:#fff;
+	padding:10px;
+}*/
+/*
+-----------------------------------
+ Departments Landing Grid Layout
+-----------------------------------
+*/
+/* line 6, ../sass/_departments.scss */
+section.departmentsLanding .grid-item span {
+  height: 28px;
+  width: 99px;
+  font-size: 14px;
+}
+
+/* line 12, ../sass/_departments.scss */
+.detailView.department #bg_image {
+  /*-webkit-filter: blur(3px); */
+}
+
+/* line 16, ../sass/_departments.scss */
+.detailView.department ul.description_ul {
+  width: 91%;
+  padding-top: 15px;
+  border-top: 1px solid #fad214;
+  padding-left: 19px;
+}
+
+/* line 23, ../sass/_departments.scss */
+.detailView.department .htm ul li {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/*.detailView.department .dept_li {
+  position:relative;
+}
+.detailView.department .dept_li a {
+  font-size: 14px;
+  color:#FFFFFF;
+  background-color: rgba(167,167,167,0.7);
+}*/
+/* line 37, ../sass/_departments.scss */
+section.detailView.department .dept_li {
+  position: relative;
+  /*a#dept_related_recipes:after {
+    position: absolute;
+    right:10px;
+    top: 16px;
+    content: '';
+    height: 18px;
+    width: 18px;
+    background-image: url('../img/forwardArrow.png');
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-color: transparent;
+  }*/
+}
+/* line 39, ../sass/_departments.scss */
+section.detailView.department .dept_li a {
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: rgba(167, 167, 167, 0.7);
+}
+/* line 44, ../sass/_departments.scss */
+section.detailView.department .dept_li a#dept_related_recipes {
+  width: 72%;
+  padding-left: 23%;
+}
+/* line 48, ../sass/_departments.scss */
+section.detailView.department .dept_li a#dept_related_prod {
+  width: 70%;
+  padding-left: 22%;
+}
+/* line 52, ../sass/_departments.scss */
+section.detailView.department .dept_li a#dept_related_prod:before, section.detailView.department .dept_li a#dept_related_recipes:before {
+  text-align: right;
+  left: 18%;
+  top: 65%;
+  zoom: 40%;
+}
+/* line 58, ../sass/_departments.scss */
+section.detailView.department .dept_li a#dept_related_prod:before {
+  left: 13%;
+}
+
+/*
+------------------------------------------------------------------
+  User View : Detail page
+------------------------------------------------------------------
+*/
+/* line 7, ../sass/_users.scss */
+section.userView a {
+  position: relative;
+  width: 89%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  height: 24px;
+}
+/* line 14, ../sass/_users.scss */
+section.userView a img {
+  position: absolute;
+  position: absolute;
+  width: 10px;
+  height: 18px;
+  top: 8px;
+}
+/* line 21, ../sass/_users.scss */
+section.userView a img.more_arrow {
+  right: 13px;
+}
+/* line 24, ../sass/_users.scss */
+section.userView a img.info_icon {
+  left: 13px;
+  width: 23px;
+  height: 23px;
+  top: 5px;
+}
+/* line 30, ../sass/_users.scss */
+section.userView a span {
+  position: absolute;
+  top: 6px;
+  left: 53px;
+  font-size: 19px;
+}
+/* line 37, ../sass/_users.scss */
+section.userView .inner {
+  margin-top: 85px;
+}
+/* line 39, ../sass/_users.scss */
+section.userView .inner h2, section.userView .inner #invalid_form_msg {
+  color: white;
+  font-size: 17px;
+  padding: 8px;
+  font-weight: 600;
+}
+/* line 45, ../sass/_users.scss */
+section.userView .inner #invalid_form_msg {
+  background: red;
+}
+/* line 49, ../sass/_users.scss */
+section.userView #input_fields {
+  border-top: 1px solid #fad214;
+  border-bottom: 1px solid #fad214;
+}
+/* line 53, ../sass/_users.scss */
+section.userView .input_container {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  border-bottom: 1px solid #726f6e;
+}
+/* line 58, ../sass/_users.scss */
+section.userView .input_container label, section.userView .input_container input, section.userView .input_container .overlay {
+  position: absolute;
+  top: 16px;
+  font-size: 18px;
+  line-height: 14px;
+}
+/* line 64, ../sass/_users.scss */
+section.userView .input_container label {
+  top: 16px;
+  left: 0;
+  width: 30%;
+  padding-left: 5%;
+}
+/* line 70, ../sass/_users.scss */
+section.userView .input_container input {
+  top: 6px;
+}
+/* line 73, ../sass/_users.scss */
+section.userView .input_container input, section.userView .input_container .overlay {
+  right: 0;
+  width: 65%;
+  color: #726f6e;
+}
+/* line 78, ../sass/_users.scss */
+section.userView .input_container div.invalid_true.empty_true {
+  color: red;
+}
+
+/* line 4, ../sass/_initial-flow.scss */
+body.initialFlow header #top_nav .backLink {
+  display: none;
+}
+/* line 7, ../sass/_initial-flow.scss */
+body.initialFlow header #top_nav #initial-next {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  height: 45px;
+  margin: 0;
+  padding: 0 0 0 15px;
+  position: static;
+  font-family: 'roboto_condensedlight';
+  text-align: center;
+  right: 10px;
+  top: -1px;
+  position: absolute;
+  z-index: 1000;
+}
+/* line 22, ../sass/_initial-flow.scss */
+body.initialFlow header #top_nav #initial-next-arrow {
+  width: 12px;
+  height: 12px;
+  margin-left: -5px;
+}
+
+/* line 31, ../sass/_initial-flow.scss */
+body.initialFlow-agreement {
+  text-align: center;
+}
+/* line 33, ../sass/_initial-flow.scss */
+body.initialFlow-agreement header #top_nav {
+  display: none;
+}
+/* line 38, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement {
+  padding-top: 13px;
+}
+/* line 40, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider {
+  padding: 10px;
+  border-bottom: 1px solid #fad214;
+}
+/* line 43, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider p {
+  margin-bottom: 6px;
+}
+/* line 46, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider #after_info {
+  margin-bottom: 0;
+}
+/* line 49, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider a {
+  margin: 0;
+}
+/* line 52, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider #agreement_box {
+  margin-bottom: 5px;
+}
+/* line 54, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider #agreement_box a {
+  position: relative;
+  padding-left: 13px;
+  width: 95%;
+}
+/* line 58, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider #agreement_box a img {
+  position: absolute;
+  top: 6px;
+  height: 17px;
+  right: 14px;
+}
+/* line 67, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider#img_container {
+  text-align: center;
+  border-bottom: 0;
+}
+/* line 70, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider#img_container h2 {
+  font-size: 23px;
+  margin-top: 10px;
+}
+/* line 74, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider#img_container img {
+  width: 100%;
+}
+/* line 78, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider#view_agreement_container {
+  border-bottom: 1px solid #726f6e;
+}
+/* line 81, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider#note_container {
+  border: 0;
+  text-align: center;
+  font-weight: 600;
+}
+/* line 85, ../sass/_initial-flow.scss */
+body.initialFlow-agreement section.initialFlow-agreement .divider#note_container p {
+  margin-bottom: 0;
+}
+
+/* line 93, ../sass/_initial-flow.scss */
+section.initialFlow .inner {
+  margin-top: 90px;
+}
+
+/* line 99, ../sass/_initial-flow.scss */
+body.userView.first-time header {
+  display: none;
+}
+/* line 102, ../sass/_initial-flow.scss */
+body.userView.first-time .inner {
+  margin-top: 0;
+}
+/* line 104, ../sass/_initial-flow.scss */
+body.userView.first-time .inner h2 {
+  font-size: 14px;
+  padding: 5px;
+  font-weight: 600;
+}
+/* line 109, ../sass/_initial-flow.scss */
+body.userView.first-time .inner #input_fields {
+  border-top: 1px solid #726f6e;
+}
+/* line 112, ../sass/_initial-flow.scss */
+body.userView.first-time .inner .input_container {
+  height: 40px;
+  font-size: 16px;
+}
+/* line 115, ../sass/_initial-flow.scss */
+body.userView.first-time .inner .input_container label, body.userView.first-time .inner .input_container .overlay {
+  top: 12px;
+}
+/* line 118, ../sass/_initial-flow.scss */
+body.userView.first-time .inner .input_container input {
+  top: 2px;
+}
+/* line 123, ../sass/_initial-flow.scss */
+body.userView.first-time #welcome_msg, body.userView.first-time #note_msg {
+  padding: 13px;
+  font-size: 21px;
+  text-align: center;
+}
+/* line 128, ../sass/_initial-flow.scss */
+body.userView.first-time #welcome_header {
+  border-bottom: 1px solid #fad214;
+  overflow: hidden;
+  padding-left: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'roboto_condensedregular';
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/* line 137, ../sass/_initial-flow.scss */
+body.userView.first-time #welcome_header span {
+  display: block;
+  float: left;
+  margin-left: 3px;
+  margin-top: 2px;
+}
+/* line 143, ../sass/_initial-flow.scss */
+body.userView.first-time #welcome_header img {
+  height: 25px;
+  width: 25px;
+  float: left;
+}
+/* line 149, ../sass/_initial-flow.scss */
+body.userView.first-time #note_msg {
+  font-size: 12px;
+  font-weight: 600;
+}

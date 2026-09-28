@@ -1,0 +1,121 @@
+/*
+-----------------------------------
+ Departments Icons 
+-----------------------------------
+*/
+
+
+@import "dept-imgs/*.png";
+@include all-dept-imgs-sprites;
+
+
+/* landing */
+.icon-style.icon-department:before {
+    display:block;
+    width: 166px;
+    height:166px;
+    margin-left:-88px;
+    zoom:50%;
+}
+
+.icon-department.icon-bakedgoods:before{
+    @include dept-imgs-sprite(DptIcon_Baked);  
+}
+.icon-department.icon-cheese:before{
+    @include dept-imgs-sprite(DptIcon_Cheese);
+}
+.icon-department.icon-coffee:before {
+    @include dept-imgs-sprite(DptIcon_Coffee);
+}
+
+.icon-department.icon-organic:before {
+    @include dept-imgs-sprite(DptIcon_Organic);
+}
+
+.icon-department.icon-dairy:before {
+    @include dept-imgs-sprite(DptIcon_Dairy);
+}
+
+.icon-department.icon-driedfruits:before{
+    @include dept-imgs-sprite(DptIcon_DriedFruits);
+}
+.icon-department.icon-fw:before {
+    @include dept-imgs-sprite(DptIcon_FW);
+}
+
+.icon-department.icon-produce:before {
+    @include dept-imgs-sprite(DptIcon_Produce);
+}
+
+/* sprite row3  vertical clip 355px... 520px margin-top -340?px*/
+.icon-department.icon-seafood:before {
+    @include dept-imgs-sprite(DptIcon_Fish);
+}
+
+
+.icon-department.icon-traditionalgrocery:before{
+    @include dept-imgs-sprite(DptIcon_Staples);
+}
+.icon-department.icon-meat:before {
+    @include dept-imgs-sprite(DptIcon_Meat);
+}
+
+.icon-department.icon-specialtygrocery:before {
+    @include dept-imgs-sprite(DptIcon_Specialty);
+}
+
+/* product detail */
+
+
+@import "dept-imgs-btn/*.png";
+@include all-dept-imgs-btn-sprites;
+.product_department .long-button{
+    position: relative;
+}
+.product_department .long-button:before {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    display:block;
+    width: 166px;
+    height:166px;
+    content: '';
+    background-color: red;
+    zoom: 20%;
+}
+.product_department .long-button.icon-bakedgoods:before{
+    @include dept-imgs-btn-sprite(DptIcon_Baked);  
+}
+.product_department .long-button.icon-cheese:before{
+    @include dept-imgs-btn-sprite(DptIcon_Cheese);
+}
+.product_department .long-button.icon-coffee:before {
+    @include dept-imgs-btn-sprite(DptIcon_Coffee);
+}
+.product_department .long-button.icon-organic:before {
+    @include dept-imgs-btn-sprite(DptIcon_Organic);
+}
+.product_department .long-button.icon-dairy:before {
+    @include dept-imgs-btn-sprite(DptIcon_Dairy);
+}
+.product_department .long-button.icon-driedfruits:before{
+    @include dept-imgs-btn-sprite(DptIcon_DriedFruits);
+}
+.product_department .long-button.icon-fw:before {
+    @include dept-imgs-btn-sprite(DptIcon_FW);
+}
+.product_department .long-button.icon-produce:before {
+    @include dept-imgs-btn-sprite(DptIcon_Produce);
+}
+.product_department .long-button.icon-seafood:before {
+    @include dept-imgs-btn-sprite(DptIcon_Fish);
+}
+.product_department .long-button.icon-traditionalgrocery:before{
+    @include dept-imgs-btn-sprite(DptIcon_Staples);
+}
+.product_department .long-button.icon-meat:before {
+    @include dept-imgs-btn-sprite(DptIcon_Meat);
+}
+.product_department .long-button.icon-specialtygrocery:before {
+    @include dept-imgs-btn-sprite(DptIcon_Specialty);
+}

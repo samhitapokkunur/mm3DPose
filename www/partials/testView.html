@@ -1,0 +1,28 @@
+<section class = "{{viewClass}}">
+  <div class="inner">
+        <!--
+        <strong id="rew_name">{{params.Name}}</strong>
+        <div id="rew_barcode"><img src="{{params.ImagePathBarcode}}"/></div>
+        <div>{{params.BarCodeMessage}}</div>       
+        <div id="rew_desc" ng-bind-html-unsafe="params.Description"></div>  
+        <strong id="rew_expdate">This Reward Expires: {{params.ExpireDate}}</strong>
+
+          
+        Days:<b id="days">{{params.TimeLeftDays}}</b>
+        Hrs:<b id="hrs">{{params.TimeLeftHrs}}</b>
+        Min:<b id="min">{{params.TimeLeftMin}}</b>
+        Sec:<b id="sec">{{params.TimeLeftSec}}</b>
+          -->
+      <div id="filter-wrap" class="{{filterState}} slideMe">
+        <nav id="filter">
+          <div id="container_grid" class="grid">
+            <a ng-repeat="location in params.otherLocations" class="grid-item icon-style icon-locations {{ location.class }}" href="index.html#/store-list/{{ location.id }}/">
+              <span>{{ location.label }} ({{ location.count }})</span>
+            </a>
+          </div>
+        </nav>
+        <div id="apply-filters" ng-click="filterState=(filterState == 'hideFilter')?'showFilter':'hideFilter'"><span>Other Locations</span>
+        </div>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+
+<section class = "{{viewClass}}" >	
+    <div class="inner" ng-model="params.list">
+        <div id="user_business">
+        <div class="row" ng-show = "user">
+            <div id="barcode_div"><img src ="{{userBarcode}}"/></div>
+            <div id="register_copy">Present this barcode to the Fairway cashier at  checkout to redeem your offer(s).</div>
+        </div>
+        <div class="row" ng-hide="user">
+            <div id="signup_copy">
+                <p>Fairway’s exclusive mobile offers are a great way to explore  Fairway’s specialty imported products. When we put our  label on a product at Fairway, we mean business.</p>
+                <p>Please tell us a little about yourself to get started!</p>
+            </div>
+            
+            <a class="button long-button" href="index.html#/app-settings/">
+                <img src="img/gnav-imgs/appsettings.png" id="settings_icon">
+                Create My Profile
+                <img src="img/more_arrow.png" class="more_arrow">
+            </a>
+        </div>
+        </div>
+        <div id="rewards_business" class="rewards_{{showRewards}}">
+            <!--<a href="index.html#/rewards-landing/true" id="show_rewards" class="button long-button" ng-show="!showRewards">
+                <img src="img/gnav-imgs/rewards.png" id="rewards_icon">
+                Current Special Offer Rewards
+                <img src="img/more_arrow.png" class="more_arrow">
+            </a>-->
+            <div id="rewards_list">
+    		    <div class="no_data_message" ng-show = "params.activeCount < 1">
+                    <span>No rewards at this time</span>
+        		</div>
+                <div id="rewards_header">Current Offers</div>
+                <div class="row" ng-hide="params.activeCount < 1" ng-repeat = "item in rewards">
+                    <a href="index.html#/reward-view/{{item.RewardID}}">
+                        <img src ="{{item.ImagePathSmall}}"/>
+                    <div class="text_area">
+                        <span>{{item.Name}}</span>
+                        <em ng-show="item.ValueMessage != ''">{{item.ValueMessage}}</em>
+                    </div>
+                    </a>	
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

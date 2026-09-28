@@ -1,0 +1,82 @@
+/*
+------------------------------------------------------------------
+  User View : Detail page
+------------------------------------------------------------------
+*/
+section.userView {
+    a {
+    position:relative;
+    width:89%;
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    height:24px;
+    img {
+      position:absolute;
+      position: absolute;
+      width: 10px;
+      height: 18px;
+      top: 8px;
+    }
+    img.more_arrow {
+      right: 13px;
+    }
+    img.info_icon {
+      left:13px;
+      width: 23px;
+      height: 23px;
+      top: 5px;
+    }
+    span {
+      position:absolute;
+      top:6px;
+      left:53px;
+      font-size:19px;
+    }
+  }
+  .inner {
+    margin-top:85px;
+    h2, #invalid_form_msg {
+      color:white;
+      font-size: 17px;
+      padding: 8px;
+      font-weight: 600;
+    }
+    #invalid_form_msg {
+      background:red;
+    }
+  }
+  #input_fields {
+    border-top: 1px solid #fad214;
+    border-bottom: 1px solid #fad214;
+  }
+  .input_container {
+    width:100%;
+    height:50px;
+    position:relative;
+    border-bottom: 1px solid #726f6e;
+    label, input, .overlay {
+      position:absolute;
+      top: 16px;
+      font-size:18px;
+      line-height:14px;
+    }
+    label {
+      top: 16px;
+      left: 0;
+      width: 30%;
+      padding-left: 5%;
+    }
+    input {
+      top: 6px;
+    }
+    input, .overlay {
+      right: 0;
+      width: 65%;
+      color: #726f6e;
+    }
+    div.invalid_true.empty_true {
+      color: red;
+    }
+  }
+}

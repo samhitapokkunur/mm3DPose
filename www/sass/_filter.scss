@@ -1,0 +1,214 @@
+/*
+------------------------------------
+ filter page
+------------------------------------
+*/
+.onoffswitch {
+    position: relative; width: 52px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 1px solid #FFFFFF; border-radius: 24px;
+}
+.onoffswitch-inner {
+    width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    float: left; width: 50%; height: 26px; padding: 0; line-height: 26px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  border-radius:24px;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #FAD214;
+  color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: transparent; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    width: 26px; margin: 0px;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF; border-radius: 20px;
+    position: absolute; top: 0; bottom: 0; right: 25px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+  border-color:#FAD214;
+}
+/*-- - - - - - -  - - - - - -  - - - - - - - - - - - - - - - - - -  - - - - - -  - - - - - - --*/
+
+section.filterView .inner {
+  margin-top: 50px;
+}
+
+
+#dietPrefSettings, .filterCategory {
+  font-size:16px;
+  color: #fff;
+}
+
+.filterLink, .filterLink a{
+  font-size:14px;
+  color: #fff;
+}
+
+#dietPrefSettings {
+  width:100%;
+   border-bottom:1px solid #828282;
+ }
+
+
+#dietPrefSettings .cell
+{
+  display:table-cell;
+  box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  vertical-align:middle;
+  padding-left:20px;
+  height:48px;
+}
+
+#dietPrefLink
+{
+  box-sizing:content-box;
+  display:inline-block;
+  width:20px;
+  height:20px;
+  border:1px solid #fff;
+  border-radius:8px;
+  margin-left:5px;
+  margin-right:5px;
+  font-weight:400;
+  font-size:12em;
+  padding:3px 10px;
+  background-image:url(../img/dietPref.png);
+  background-repeat:no-repeat;
+  background-size:20px 20px;
+  background-position: 50% 50%;
+}
+
+.filterCategory
+{
+  color:#fff;
+  font-weight:400;
+  display:block;
+  width:100%;
+  text-align:left;
+  font-size:16px;
+  height:48px;
+  line-height:48px;
+  border-bottom:1px solid #828282;
+  padding-left:50px;
+  vertical-align:top;
+  position: relative
+}
+
+%filterIconProps{
+  width: 48px;
+  height: 48px;
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: 48px 48px;
+}
+
+.filterCategory.Category:before{
+  @extend %filterIconProps;
+  background-image: url('../img/filter-cat-imgs/filtercat-img_category.png');
+}
+.filterCategory.Course:before{
+  @extend %filterIconProps;
+  background-image: url('../img/filter-cat-imgs/filtercat-img_course.png');
+}
+.filterCategory.Cusine:before{
+  @extend %filterIconProps;
+  background-image: url('../img/filter-cat-imgs/filtercat-img_cusine.png');
+}
+.filterCategory.Department:before{
+  @extend %filterIconProps;
+  background-image: url('../img/filter-cat-imgs/filtercat-img_department.png');
+}
+.filterCategory.Occasion:before{
+  @extend %filterIconProps;
+  background-image: url('../img/filter-cat-imgs/filtercat-img_occasion.png');
+}
+.filterCategory.Season:before{
+  @extend %filterIconProps;
+  background-image: url('../img/filter-cat-imgs/filtercat-img_season.png');
+}
+
+.filterCategory
+{
+  position:relative;
+  .forwardArrowSpan {
+    background:url('../img/forwardArrow.png') no-repeat;
+    height:20px;
+    background-size:contain;
+    width:15px;
+    position:absolute;
+    top:15px;
+    right:5%;
+  }
+  /*content:url('../img/forwardArrow.png');
+  zoom:50%;
+  text-align:right;
+  padding-left:20px;
+  top:1px;
+  height:48px;
+  line-height:48px;*/
+}
+
+.filterCategory .hasSelection {
+  color: #fad214;
+   display:none;
+}
+
+.filterCategory.selected .hasSelection {
+   display:inline;
+}
+
+.filterLink
+{
+  display:inline-block;
+  border:1px solid #fff;
+  border-radius:8px;
+  padding:10px;
+  margin:5px;
+}
+
+.filterLink.selected
+{
+  border:1px solid #fad214;
+  background-color: #fad214;
+}
+
+.filterLink.selected a {
+  color:#333333;
+}
+
+.filterView h3 {
+  text-align:center;
+  margin-top:10px;
+  margin-bottom: 10px;
+  text-transform:uppercase;
+}

@@ -1,0 +1,15 @@
+
+<section class = "{{viewClass}}">
+	
+    <div class="inner">
+        <div class="grid large-grid" id="listview">
+            <!--<div ng-bind-html-unsafe="params.geoHTML">-->
+            <div>
+              <a ng-repeat="location in locations" class="grid-item icon-style icon-locations {{ location.IconClass }}" href="index.html#/store-list-map/{{ location.GeoRegionID }}/">
+                <span>{{ location.Label }} ({{ location.Count }})</span>
+              </a>
+            </div>  
+        </div>        
+    </div>
+</section>
+

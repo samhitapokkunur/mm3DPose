@@ -1,0 +1,40 @@
+<section class="regionalStoreList">
+  
+    <!-- <div class="inner"> -->
+        <!-- <b>{{params.GeoRegionName}}</b> -->
+        <!-- 
+        <p><br/></p>
+        <div id="listlink">
+            List | <a id="" href="index.html#/store-list/{{params.GeoRegionID}}/maps/">Map</a>
+        </div>
+        <div id="maplink">
+            <a  href="index.html#/store-list/{{params.GeoRegionID}}/">List</a> | Map   
+        </div>
+        <a href="index.html#/store-key/">Key</a>
+        -->
+        
+        <div id="listview">
+            <div>
+                <ul class="storeListItems">
+                    <li ng-repeat="item in items" class="storeListItem">
+                        <a href="index.html#/store-view/{{ item.StoreID }}/">
+                            <p class="storeListItemTitle">{{ item.Name }}</p>
+                            <p class="storeListItemAddress">{{ item.Address1 }}</p>
+                            <p class="storeListItemAddress">{{ item.Address2 }}</p>
+                        </a>
+                        <p class="storeListItemPhone"><a href="tel:{{ item.Phone | clean_up_phone }}">{{ item.Phone }}</a></p>
+                        <div class="storeListItemIcons">
+                            <span ng-repeat="icon in item.icons" class="{{ icon }}"></span>
+                        </div>
+                    </li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    <!-- </div> -->
+
+</section>
+

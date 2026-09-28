@@ -1,0 +1,51 @@
+<style>
+.inner {
+  min-height: 600px;
+  padding: 120px 15px 15px 15px;
+  background-color: #fff;
+  text-align:center;
+  color:#1b1b1b;
+}
+h4 {
+  padding:20px;
+  font-weight:bold;
+  font-size:20px;
+}
+
+</style>
+
+
+<section class = "{{viewClass}}">
+  <div class="inner">
+        <h4>{{server}}</h4>
+        <center ng-show="isOnline">
+        <div id="loader" name="loader">
+            <img src="img/ajax-loader.gif" />
+            <div> Loading <span id="imgcount"></span> of <span id="totalimagecount"> Images</span> </div>
+            <div> Loading <span id="itemcount"></span> of <span id="totalitemcount"> Objects</span> </div>
+        </div>
+        <div id="loaded" name="loaded" style="text-align:center;display:none">
+            Data Load is Done<br/>
+            Time Elapsed: <span id="elapsedtime"></span> milliseconds.
+
+        </div>
+        </center>
+        <div id="dataParsed" class="dataParsed"></div>
+  </div>
+</section>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<script src="js/dataLoadDelta.js"></script>
+<script>
+$(function() {
+ 
+   var errorCB = function(e) {
+      console.log("TX error in dataLoadDelta - there we go again");
+      console.log (e.message);
+   };
+
+   db = window.openDatabase("FairwayMarket", "1.0", "Fairway Market", 200000);
+   db.transaction(getNewData, errorCB, successCB);
+             
+  });
+</script>
